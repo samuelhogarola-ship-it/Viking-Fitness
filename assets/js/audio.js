@@ -68,7 +68,7 @@ window.VFAudio = (function () {
   }
 
   function mute() {
-    if (player && player.mute) player.mute();
+    if (player && player.pauseVideo) player.pauseVideo();
   }
 
   function unmute() {
