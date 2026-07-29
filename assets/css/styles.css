@@ -94,7 +94,7 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 #portal.is-open { opacity: 0; visibility: hidden; pointer-events: none; }
 
 .portal-inner { display: grid; gap: 20px; justify-items: center; padding: 24px; max-width: 460px; }
-.portal-inner img.mark { width: 56px; height: 56px; margin-bottom: 4px; opacity: .9; mix-blend-mode: lighten; border-radius: 8px; }
+.portal-inner img.mark { width: 56px; height: 56px; margin-bottom: 4px; opacity: .9; }
 
 .portal-title { font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.6rem); letter-spacing: .01em; }
 .portal-title em { font-style: normal; color: var(--gold-lit); }
@@ -143,7 +143,7 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 }
 .nav-inner { width: var(--shell); margin-inline: auto; display: flex; align-items: center; gap: 22px; height: 70px; }
 .brand { display: flex; align-items: center; gap: 10px; margin-right: auto; }
-.brand svg, .brand img { width: 30px; height: 30px; border-radius: 4px; }
+.brand svg, .brand img { width: 30px; height: 30px; }
 .brand-name { font-family: var(--f-display); font-weight: 600; letter-spacing: .04em; font-size: .92rem; }
 .brand-name span { color: var(--gold-lit); }
 
@@ -210,7 +210,7 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .hero-emblem { margin-bottom: 28px; }
 .rune-badge { position: relative; width: clamp(140px, 18vw, 200px); height: clamp(140px, 18vw, 200px); margin: 0 auto; display: block; }
 .rune-badge svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 32s linear infinite; }
-.rune-badge img { position: absolute; inset: 0; margin: auto; width: 55%; mix-blend-mode: lighten; border-radius: 50%; }
+.rune-badge img { position: absolute; inset: 0; margin: auto; width: 55%; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .hero .eyebrow { margin-bottom: 12px; }
@@ -409,6 +409,43 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
    CTA FINAL
    ============================================================ */
 /* ---------- Sobre mí ---------- */
+#sobre { padding-top: 0; }
+
+.about-photo {
+  position: relative;
+  width: 100%;
+  max-height: 520px;
+  overflow: hidden;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+.about-photo img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+.about-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      transparent 30%,
+      rgba(10,12,15,.6) 40%,
+      rgba(10,12,15,.7) 42%,
+      rgba(10,12,15,.6) 44%,
+      transparent 54%),
+    linear-gradient(0deg,
+      rgba(10,12,15,.9) 0%,
+      rgba(10,12,15,.3) 30%,
+      transparent 60%),
+    linear-gradient(180deg,
+      rgba(10,12,15,.5) 0%,
+      transparent 20%);
+  pointer-events: none;
+}
+
 .about-body { max-width: 72ch; }
 .about-body p { color: var(--ash); margin-bottom: 1.2em; line-height: 1.75; }
 .about-body p:last-child { margin-bottom: 0; }
