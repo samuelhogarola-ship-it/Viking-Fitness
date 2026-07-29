@@ -90,7 +90,6 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
   background:
     radial-gradient(circle at 50% 42%, rgba(216,182,103,.26), transparent 24%),
     linear-gradient(180deg, rgba(5,6,7,.04), rgba(5,6,7,.38)),
-    url('../img/portal-valhalla.png') center / cover no-repeat,
     #050607;
   text-align: center;
   overflow: hidden;
@@ -107,6 +106,23 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
   pointer-events: none;
 }
 #portal.is-open { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.portal-bg {
+  position: absolute;
+  inset: -18px;
+  width: calc(100% + 36px);
+  height: calc(100% + 36px);
+  object-fit: cover;
+  opacity: .45;
+  filter: blur(18px) brightness(.74) saturate(.9);
+  transform: scale(1.03);
+  transition: opacity 1s var(--ease), filter 1.2s var(--ease), transform 1.2s var(--ease);
+}
+#portal.is-bg-ready .portal-bg {
+  opacity: 1;
+  filter: blur(0) brightness(1.08) saturate(1.04);
+  transform: scale(1);
+}
 
 .portal-inner { position: relative; z-index: 1; display: grid; gap: 20px; justify-items: center; padding: 24px; width: min(590px, 92vw); }
 .portal-scene { position: relative; width: min(460px, 88vw); min-height: clamp(230px, 44vw, 350px); display: grid; place-items: center; }

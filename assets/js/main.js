@@ -28,6 +28,12 @@
 
   /* ---------- Portal de entrada ---------- */
   const portal = $('#portal');
+  const portalBg = portal ? $('.portal-bg', portal) : null;
+  if (portalBg) {
+    const showPortalBg = () => portal.classList.add('is-bg-ready');
+    portalBg.complete ? showPortalBg() : portalBg.addEventListener('load', showPortalBg, { once: true });
+  }
+
   function openGates(withSound) {
     if (!portal) return;
     if (withSound) { muted = false; localStorage.setItem('vf_muted', '0'); VFAudio.start(true); }
