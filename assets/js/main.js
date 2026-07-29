@@ -32,7 +32,10 @@
   const portal = $('#portal');
   const portalBg = portal ? $('.portal-bg', portal) : null;
   if (portalBg) {
-    const showPortalBg = () => setTimeout(() => portal.classList.add('is-bg-ready'), 650);
+    const showPortalBg = () => setTimeout(() => {
+      portal.classList.add('is-bg-ready');
+      startDefaultSound();
+    }, 650);
     portalBg.complete ? showPortalBg() : portalBg.addEventListener('load', showPortalBg, { once: true });
   }
 
@@ -43,6 +46,7 @@
   function startDefaultSound() {
     if (!muted && !VFAudio.running) VFAudio.start(false);
   }
+  startDefaultSound();
 
   function openGates(withSound) {
     if (!portal) return;
@@ -79,7 +83,7 @@
     localStorage.setItem('vf_muted', muted ? '1' : '0');
     syncSoundIcon();
   });
-  ['click', 'keydown'].forEach(type => {
+  ['pointerdown', 'touchstart', 'mousedown', 'click', 'keydown'].forEach(type => {
     document.addEventListener(type, startDefaultSound, { once: true, passive: true });
   });
   document.addEventListener('vf:audio', syncSoundIcon);

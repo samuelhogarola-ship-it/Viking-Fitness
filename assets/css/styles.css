@@ -125,9 +125,37 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
   filter: blur(0) brightness(1.1) saturate(1.08);
   transform: scale(1);
 }
+.portal-torch {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  top: 14%;
+  width: clamp(118px, 14vw, 230px);
+  height: auto;
+  opacity: 0;
+  filter: blur(12px) brightness(1.06) saturate(1.2) drop-shadow(0 0 34px rgba(240,122,32,.34));
+  transition: opacity 2.4s var(--ease) .35s, filter 2.8s var(--ease) .35s, transform 2.8s var(--ease) .35s;
+  pointer-events: none;
+}
+.portal-torch--left {
+  left: max(18px, 7vw);
+  transform: translateX(-18px) scale(.96);
+}
+.portal-torch--right {
+  right: max(18px, 7vw);
+  transform: translateX(18px) scale(.96);
+}
+#portal.is-bg-ready .portal-torch {
+  opacity: .9;
+  filter: blur(0) brightness(1.12) saturate(1.26) drop-shadow(0 0 42px rgba(240,122,32,.46));
+}
+#portal.is-bg-ready .portal-torch--left,
+#portal.is-bg-ready .portal-torch--right {
+  transform: translateX(0) scale(1);
+}
 
 .portal-inner {
-  position: relative; z-index: 1; display: grid; gap: 20px; justify-items: center; padding: 24px; width: min(590px, 92vw);
+  position: relative; z-index: 2; display: grid; gap: 20px; justify-items: center; padding: 24px; width: min(590px, 92vw);
   opacity: 0;
   filter: blur(16px);
   transform: translateY(18px) scale(.97);
@@ -653,6 +681,15 @@ tr:hover td { background: rgba(255,255,255,.02); }
   .footer-grid { grid-template-columns: 1fr; }
   .card { padding: 24px 20px; }
   .brand-name { display: none; }
+  .portal-torch {
+    display: block;
+    top: 16%;
+    width: 112px;
+    opacity: 0;
+  }
+  .portal-torch--left { left: -16px; }
+  .portal-torch--right { right: -16px; }
+  #portal.is-bg-ready .portal-torch { opacity: .82; }
   .hero {
     min-height: 100svh;
     align-items: flex-end;
