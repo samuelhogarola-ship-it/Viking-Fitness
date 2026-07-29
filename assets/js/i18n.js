@@ -107,6 +107,12 @@ es: {
   'plans.p4.t':'Titán','plans.p4.s':'Hipertrofia pura. Volumen, densidad muscular y venosidad.','plans.p4.price':'Consultar',
   'plans.p4.l1':'Rutina de hipertrofia con técnicas avanzadas','plans.p4.l2':'Periodización por volumen, intensidad y deload','plans.p4.l3':'Plan nutricional de bulk/cut según fase','plans.p4.l4':'Acceso completo a la app de registro','plans.p4.l5':'Soporte por chat',
 
+  'about.eyebrow':'Quién está detrás','about.title':'Sobre mí',
+  'about.p1':'Deportista y profesor de Educación Física. Llevo años combinando el entrenamiento de fuerza con el estudio de la historia del movimiento humano. Viking Fitness nace de una pregunta: ¿y si los métodos de entrenamiento que hoy valida la ciencia moderna ya los practicaban los pueblos del norte de Europa hace siglos?',
+  'about.p2':'Los vikingos levantaban piedras naturales como prueba de fuerza — el Húsafell Stone en Islandia o las piedras de vigor escandinavas eran ritos de paso. Remaban distancias enormes, luchaban glíma y cargaban troncos. Su alimentación se basaba en lo que hoy llamamos paleo: pescado salvaje, caza, tubérculos, bayas, lácteos fermentados como el skyr y grasas animales de calidad.',
+  'about.p3':'Hoy sabemos por qué funcionaba. La ciencia confirma que el entrenamiento de fuerza explosiva aumenta la densidad ósea, que las dietas ricas en proteína y grasas saludables optimizan la composición corporal, y que la periodización por bloques — algo que los guerreros nórdicos hacían por instinto entre campañas — es el estándar en rendimiento deportivo moderno.',
+  'about.p4':'Este método no es mejor ni peor que otro. Es una forma de concebir la optimización física apoyada en evidencia científica y enraizada en la tradición de fuerza del norte de Europa. Sin humo, sin marketing de suplementos, sin dietas de hambre: hierro, comida real y un plan que se mide.',
+
   'quotes.eyebrow':'El clan habla','quotes.title':'Sagas de quienes ya entrenan',
   'quotes.q1':'«Llevaba años estancado. En catorce semanas subí 22 kg en peso muerto y por primera vez no he pasado hambre haciendo definición.»',
   'quotes.q2':'«La parte nórdica fue la sorpresa. Como más que antes, entreno más fuerte y por fin se movió mi composición corporal.»',
@@ -236,6 +242,12 @@ en: {
   'plans.p4.t':'Titan','plans.p4.s':'Pure hypertrophy. Volume, muscle density and vascularity.',
   'plans.p4.l1':'Hypertrophy programme with advanced techniques','plans.p4.l2':'Volume, intensity and deload periodisation','plans.p4.l3':'Bulk/cut nutrition plan by phase','plans.p4.l4':'Full access to the tracking app','plans.p4.l5':'Chat support',
 
+  'about.eyebrow':'Who\'s behind this','about.title':'About me',
+  'about.p1':'Athlete and Physical Education teacher. I\'ve spent years combining strength training with the study of the history of human movement. Viking Fitness was born from a question: what if the training methods that modern science validates today were already practised by the peoples of northern Europe centuries ago?',
+  'about.p2':'Vikings lifted natural stones as tests of strength — the Húsafell Stone in Iceland or the Scandinavian vigour stones were rites of passage. They rowed vast distances, wrestled glíma and carried logs. Their diet was based on what we now call paleo: wild fish, game, root vegetables, berries, fermented dairy like skyr and quality animal fats.',
+  'about.p3':'Today we know why it worked. Science confirms that explosive strength training increases bone density, that diets rich in protein and healthy fats optimise body composition, and that block periodisation — something Nordic warriors did instinctively between campaigns — is the standard in modern sports performance.',
+  'about.p4':'This method is neither better nor worse than any other. It is a way of conceiving physical optimisation backed by scientific evidence and rooted in the strength tradition of northern Europe. No smoke, no supplement marketing, no starvation diets: iron, real food and a plan that gets measured.',
+
   'quotes.eyebrow':'The clan speaks','quotes.title':'Sagas from those already training',
   'quotes.q1':'“I was stuck for years. In fourteen weeks I added 22 kg to my deadlift and for the first time I wasn\'t hungry while cutting.”',
   'quotes.q2':'“The Nordic food part was the surprise. I eat more than before, I train harder, and my body composition finally moved.”',
@@ -364,6 +376,12 @@ fi: {
   'plans.p4.t':'Titaani','plans.p4.s':'Puhdasta hypertrofiaa. Volyymi, lihastiheys ja suonikkuus.',
   'plans.p4.l1':'Hypertrofiaohjelma edistyneillä tekniikoilla','plans.p4.l2':'Volyymi-, intensiteetti- ja deload-jaksotus','plans.p4.l3':'Bulk/cut-ravintosuunnitelma vaiheen mukaan','plans.p4.l4':'Täysi pääsy seurantasovellukseen','plans.p4.l5':'Chat-tuki',
 
+  'about.eyebrow':'Kuka tämän takana on','about.title':'Minusta',
+  'about.p1':'Urheilija ja liikunnanopettaja. Olen yhdistänyt voimaharjoittelun ja ihmisen liikkumisen historian tutkimisen vuosien ajan. Viking Fitness syntyi kysymyksestä: entä jos nykytiede vahvistaa harjoitusmenetelmiä, joita Pohjois-Euroopan kansat harjoittivat jo vuosisatoja sitten?',
+  'about.p2':'Viikingit nostivat luonnonkiviä voiman osoituksena — Húsafell-kivi Islannissa ja skandinaaviset voimakivet olivat siirtymäriittejä. He soutivat valtavia matkoja, painivat glímaa ja kantoivat tukkeja. Heidän ruokavalionsa perustui siihen, mitä nykyään kutsumme paleoksi: villikala, riista, juurekset, marjat, fermentoidut maitotuotteet kuten skyr ja laadukkaat eläinrasvat.',
+  'about.p3':'Nykyään tiedämme miksi se toimi. Tiede vahvistaa, että räjähtävä voimaharjoittelu lisää luutiheyttä, proteiini- ja terverasvapitoinen ruokavalio optimoi kehonkoostumusta, ja blokkijaksotus — jota pohjoismaiset soturit tekivät vaistomaisesti sotaretkien välillä — on moderni urheilusuorituksen standardi.',
+  'about.p4':'Tämä menetelmä ei ole parempi eikä huonompi kuin mikään muu. Se on tapa käsittää fyysinen optimointi tieteelliseen näyttöön perustuen, juurtuneena Pohjois-Euroopan voimaperinteeseen. Ei savua, ei lisäravinnemarkkinointia, ei nälkädieettiä: rautaa, oikeaa ruokaa ja mitattava suunnitelma.',
+
   'quotes.eyebrow':'Klaani puhuu','quotes.title':'Saagoja jo harjoittelevilta',
   'quotes.q1':'”Olin jumissa vuosia. Neljässätoista viikossa maastavetoni nousi 22 kg, enkä ensimmäistä kertaa nähnyt nälkää rasvanpudotuksessa.”',
   'quotes.q2':'”Pohjoismainen ruokaosuus oli yllätys. Syön enemmän kuin ennen, harjoittelen kovempaa, ja kehonkoostumukseni vihdoin liikkui.”',
@@ -491,6 +509,12 @@ no: {
   'plans.p3.l1':'Personlig styrke-utholdenhets-program','plans.p3.l2':'Kardio- og kondisjonsprogrammering','plans.p3.l3':'Ernæringsplan for aerob ytelse','plans.p3.l4':'Full tilgang til sporingsappen','plans.p3.l5':'Chat-støtte',
   'plans.p4.t':'Titan','plans.p4.s':'Ren hypertrofi. Volum, muskeltetthet og vaskularitet.',
   'plans.p4.l1':'Hypertrofiprogram med avanserte teknikker','plans.p4.l2':'Volum-, intensitets- og deload-periodisering','plans.p4.l3':'Bulk/cut-ernæringsplan etter fase','plans.p4.l4':'Full tilgang til sporingsappen','plans.p4.l5':'Chat-støtte',
+
+  'about.eyebrow':'Hvem står bak','about.title':'Om meg',
+  'about.p1':'Idrettsutøver og kroppsøvingslærer. Jeg har i årevis kombinert styrketrening med studiet av menneskets bevegelseshistorie. Viking Fitness ble født av et spørsmål: hva om treningsmetodene som moderne vitenskap bekrefter i dag, allerede ble praktisert av Nord-Europas folk for århundrer siden?',
+  'about.p2':'Vikingene løftet natursteiner som styrkeprøver — Húsafell-steinen på Island eller de skandinaviske kraftsteinene var overgangsriter. De rodde enorme avstander, brøt glíma og bar tømmerstokker. Kostholdet deres var basert på det vi i dag kaller paleo: villfisk, vilt, rotgrønnsaker, bær, fermenterte melkeprodukter som skyr og animalsk fett av kvalitet.',
+  'about.p3':'I dag vet vi hvorfor det fungerte. Vitenskapen bekrefter at eksplosiv styrketrening øker beintettheten, at kosthold rike på protein og sunt fett optimaliserer kroppssammensetningen, og at blokkperiodisering — noe nordiske krigere gjorde instinktivt mellom felttog — er standarden i moderne idrettsprestasjon.',
+  'about.p4':'Denne metoden er verken bedre eller dårligere enn noen annen. Det er en måte å tenke fysisk optimalisering på, støttet av vitenskapelig evidens og forankret i Nord-Europas styrkretradisjon. Ingen røyk, ingen kosttilskuddsmarkedsføring, ingen sultedie: jern, ekte mat og en plan som måles.',
 
   'quotes.eyebrow':'Klanen taler','quotes.title':'Sagaer fra dem som allerede trener',
   'quotes.q1':'«Jeg sto fast i årevis. På fjorten uker økte markløftet mitt med 22 kg, og for første gang sultet jeg ikke i en nedtrapping.»',

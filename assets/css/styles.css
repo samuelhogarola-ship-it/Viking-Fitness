@@ -408,6 +408,11 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 /* ============================================================
    CTA FINAL
    ============================================================ */
+/* ---------- Sobre mí ---------- */
+.about-body { max-width: 72ch; }
+.about-body p { color: var(--ash); margin-bottom: 1.2em; line-height: 1.75; }
+.about-body p:last-child { margin-bottom: 0; }
+
 .cta { text-align: center; }
 .cta h2 { font-size: clamp(1.9rem, 1.4rem + 2vw, 3rem); margin: .6rem auto 1.2rem; max-width: 20ch; }
 .cta .lede { margin-inline: auto; }
