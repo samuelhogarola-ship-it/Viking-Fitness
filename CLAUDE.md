@@ -38,17 +38,16 @@ assets/
 3. **Tu camino** — Acordeón con Entrenamientos (4 bloques + fases) y Nutrición (patrón nórdico)
 4. **Ciencia** — 6 artículos con enlaces a papers reales (Bone, Diabetologia, etc.)
 5. **La App** — Showcase con mockup de teléfono (datos ficticios)
-6. **Planes** — 4 planes sin precios ("Consultar"): Karl, Berserker, Cazador, Titán
+6. **Planes** — 3 planes sin precios ("Consultar"): Berserker, Cazador, Titán
 7. **Testimonios** — 3 testimonios (Marcos/Madrid, Emma/Helsinki, Lars/Oslo)
 8. **FAQ** — 5 preguntas frecuentes en acordeón
 9. **Sobre mí** — Foto `about.jpg` con gradientes CSS para ocultar costuras + texto histórico
 10. **Contacto** — Formulario con nombre, email, objetivo, plan, mensaje
 11. **Footer** — Links, runas, idiomas
 
-## 4 Planes de entrenamiento
+## 3 Planes de entrenamiento
 | Plan | Enfoque |
 |------|---------|
-| **Karl** | Recomposición corporal: fuerza + movilidad + nutrición paleo |
 | **Berserker** | Explosividad pura: powerlifting y potencia (el más elegido) |
 | **Cazador** | Resistencia y durabilidad: fuerza-resistencia, cardio, remo |
 | **Titán** | Hipertrofia muscular: volumen, densidad, venosidad |
