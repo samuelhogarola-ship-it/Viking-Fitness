@@ -292,9 +292,16 @@
 
   /* ---------- Sonido ---------- */
   const soundBtn = $('#soundToggle');
-  let muted = localStorage.getItem('vf_muted') === '1';
+  const storedMute = localStorage.getItem('vf_muted');
+  let muted = storedMute === '1';
+  if (storedMute === null) localStorage.setItem('vf_muted', '0');
+
+  function startDefaultSound() {
+    if (!muted && !VFAudio.running) VFAudio.start(false);
+  }
+
   function syncSound() {
-    const on = VFAudio.running && !muted;
+    const on = !muted;
     soundBtn.classList.toggle('is-off', !on);
     soundBtn.setAttribute('aria-pressed', String(on));
     soundBtn.title = on ? VF.t('sound.off') : VF.t('sound.on');
@@ -306,6 +313,12 @@
     localStorage.setItem('vf_muted', muted ? '1' : '0');
     syncSound();
   });
+  ['click', 'keydown'].forEach(type => {
+    document.addEventListener(type, startDefaultSound, { once: true, passive: true });
+  });
+  document.addEventListener('vf:audio', syncSound);
+  document.addEventListener('vf:lang', syncSound);
+  syncSound();
 
   /* ---------- Idioma ---------- */
   const lang = $('#lang'), langBtn = $('#langBtn');

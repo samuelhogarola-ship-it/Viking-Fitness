@@ -34,9 +34,20 @@
     portalBg.complete ? showPortalBg() : portalBg.addEventListener('load', showPortalBg, { once: true });
   }
 
+  const soundBtn = $('#soundToggle');
+  const storedMute = localStorage.getItem('vf_muted');
+  let muted = storedMute === '1';
+  if (storedMute === null) localStorage.setItem('vf_muted', '0');
+
+  function startDefaultSound() {
+    if (!muted && !VFAudio.running) VFAudio.start(false);
+  }
+
   function openGates(withSound) {
     if (!portal) return;
-    if (withSound) { muted = false; localStorage.setItem('vf_muted', '0'); VFAudio.start(true); }
+    muted = !withSound;
+    localStorage.setItem('vf_muted', muted ? '1' : '0');
+    if (!muted) VFAudio.start(true);
     portal.classList.add('is-open');
     document.body.classList.remove('is-locked');
     syncSoundIcon();
@@ -51,12 +62,9 @@
   portal && portal.addEventListener('transitionend', () => sessionStorage.setItem('vf_entered', '1'));
 
   /* ---------- Sonido ---------- */
-  const soundBtn = $('#soundToggle');
-  let muted = localStorage.getItem('vf_muted') === '1';
-
   function syncSoundIcon() {
     if (!soundBtn) return;
-    const on = VFAudio.running && !muted;
+    const on = !muted;
     soundBtn.classList.toggle('is-off', !on);
     soundBtn.setAttribute('aria-pressed', String(on));
     soundBtn.title = on ? VF.t('sound.off') : VF.t('sound.on');
@@ -69,6 +77,10 @@
     localStorage.setItem('vf_muted', muted ? '1' : '0');
     syncSoundIcon();
   });
+  ['click', 'keydown'].forEach(type => {
+    document.addEventListener(type, startDefaultSound, { once: true, passive: true });
+  });
+  document.addEventListener('vf:audio', syncSoundIcon);
   document.addEventListener('vf:lang', syncSoundIcon);
   syncSoundIcon();
 

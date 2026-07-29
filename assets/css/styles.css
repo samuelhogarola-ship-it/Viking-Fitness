@@ -228,9 +228,29 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
   color: var(--ash); transition: .2s var(--ease);
 }
 .icon-btn:hover { color: var(--gold-lit); border-color: rgba(255,255,255,.24); }
-.sound-btn .slash { opacity: 0; stroke: var(--blood); stroke-width: 2.2; transition: opacity .2s; }
+.sound-btn {
+  width: 42px;
+  height: 42px;
+  color: var(--gold-lit);
+  background: rgba(216,182,103,.12);
+  border-color: rgba(216,182,103,.55);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.24) inset, 0 0 22px rgba(216,182,103,.18);
+}
+.sound-btn svg { width: 21px; height: 21px; }
+.sound-btn:hover {
+  color: #f5d88a;
+  border-color: rgba(216,182,103,.8);
+  background: rgba(216,182,103,.18);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.24) inset, 0 0 28px rgba(216,182,103,.26);
+}
+.sound-btn .slash { opacity: 0; stroke: var(--blood); stroke-width: 2.6; transition: opacity .2s; }
 .sound-btn .wave { transition: opacity .2s; }
-.sound-btn.is-off { color: var(--fog); }
+.sound-btn.is-off {
+  color: var(--fog);
+  background: rgba(255,255,255,.035);
+  border-color: rgba(255,255,255,.12);
+  box-shadow: none;
+}
 .sound-btn.is-off .slash { opacity: 1; }
 .sound-btn.is-off .wave { opacity: .12; }
 

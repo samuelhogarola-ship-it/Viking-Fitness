@@ -8,6 +8,10 @@ window.VFAudio = (function () {
   let apiReady = false;
   let pendingStart = null;
 
+  function notify() {
+    document.dispatchEvent(new Event('vf:audio'));
+  }
+
   function loadAPI() {
     if (document.getElementById('yt-api')) return;
     const tag = document.createElement('script');
@@ -47,6 +51,7 @@ window.VFAudio = (function () {
           e.target.setVolume(50);
           e.target.playVideo();
           running = true;
+          notify();
         },
         onStateChange: function (e) {
           if (e.data === YT.PlayerState.ENDED) {
@@ -61,7 +66,7 @@ window.VFAudio = (function () {
     loadAPI();
     if (apiReady) {
       if (!player) createPlayer(withFanfare);
-      else { player.playVideo(); running = true; }
+      else { player.playVideo(); running = true; notify(); }
     } else {
       pendingStart = function () { createPlayer(withFanfare); };
     }
@@ -69,6 +74,8 @@ window.VFAudio = (function () {
 
   function mute() {
     if (player && player.pauseVideo) player.pauseVideo();
+    running = false;
+    notify();
   }
 
   function unmute() {
@@ -76,6 +83,7 @@ window.VFAudio = (function () {
     if (player.unMute) player.unMute();
     if (player.playVideo) player.playVideo();
     running = true;
+    notify();
   }
 
   function strike() {}
