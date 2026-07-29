@@ -433,19 +433,19 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
       rgba(10,12,15,.7) 50%,
       transparent 58%),
     linear-gradient(180deg,
-      transparent 30%,
-      rgba(10,12,15,.6) 42%,
-      rgba(10,12,15,.8) 46%,
-      rgba(10,12,15,.6) 50%,
-      transparent 58%)
+      transparent 34%,
+      rgba(10,12,15,.4) 43%,
+      rgba(10,12,15,.55) 46%,
+      rgba(10,12,15,.4) 49%,
+      transparent 56%)
       no-repeat 0 0 / 48% 100%,
     linear-gradient(0deg,
-      rgba(10,12,15,.9) 0%,
-      rgba(10,12,15,.3) 20%,
-      transparent 45%),
+      rgba(10,12,15,.6) 0%,
+      rgba(10,12,15,.15) 15%,
+      transparent 35%),
     linear-gradient(180deg,
-      rgba(10,12,15,.4) 0%,
-      transparent 12%);
+      rgba(10,12,15,.3) 0%,
+      transparent 10%);
   pointer-events: none;
 }
 
