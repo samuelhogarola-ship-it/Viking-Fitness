@@ -292,9 +292,8 @@
 
   /* ---------- Sonido ---------- */
   const soundBtn = $('#soundToggle');
-  const storedMute = localStorage.getItem('vf_muted');
-  let muted = storedMute === '1';
-  if (storedMute === null) localStorage.setItem('vf_muted', '0');
+  localStorage.setItem('vf_muted', '0');
+  let muted = false;
 
   function startDefaultSound() {
     if (!muted && !VFAudio.running) VFAudio.start(false);

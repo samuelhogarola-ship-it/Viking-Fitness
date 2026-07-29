@@ -5,6 +5,8 @@
   const $  = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (!location.hash) requestAnimationFrame(() => scrollTo(0, 0));
 
   /* ---------- Idioma ---------- */
   VF.apply();
@@ -35,9 +37,8 @@
   }
 
   const soundBtn = $('#soundToggle');
-  const storedMute = localStorage.getItem('vf_muted');
-  let muted = storedMute === '1';
-  if (storedMute === null) localStorage.setItem('vf_muted', '0');
+  localStorage.setItem('vf_muted', '0');
+  let muted = false;
 
   function startDefaultSound() {
     if (!muted && !VFAudio.running) VFAudio.start(false);
@@ -58,6 +59,7 @@
   if (sessionStorage.getItem('vf_entered') && portal) {
     portal.classList.add('is-open');
     document.body.classList.remove('is-locked');
+    if (!location.hash) requestAnimationFrame(() => scrollTo(0, 0));
   }
   portal && portal.addEventListener('transitionend', () => sessionStorage.setItem('vf_entered', '1'));
 
