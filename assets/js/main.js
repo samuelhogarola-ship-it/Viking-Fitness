@@ -30,7 +30,7 @@
   const portal = $('#portal');
   const portalBg = portal ? $('.portal-bg', portal) : null;
   if (portalBg) {
-    const showPortalBg = () => setTimeout(() => portal.classList.add('is-bg-ready'), 280);
+    const showPortalBg = () => setTimeout(() => portal.classList.add('is-bg-ready'), 650);
     portalBg.complete ? showPortalBg() : portalBg.addEventListener('load', showPortalBg, { once: true });
   }
 

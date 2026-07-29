@@ -106,22 +106,6 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
   opacity: .78;
   pointer-events: none;
 }
-#portal::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 13% 43%, rgba(255,191,84,.46), rgba(176,72,35,.24) 10%, transparent 23%),
-    radial-gradient(circle at 87% 43%, rgba(255,191,84,.46), rgba(176,72,35,.24) 10%, transparent 23%),
-    url('../img/portal-valhalla.webp') left center / auto 100% no-repeat,
-    url('../img/portal-valhalla.webp') right center / auto 100% no-repeat;
-  -webkit-mask-image: linear-gradient(90deg, #000 0 28%, transparent 43% 57%, #000 72% 100%);
-  mask-image: linear-gradient(90deg, #000 0 28%, transparent 43% 57%, #000 72% 100%);
-  opacity: .82;
-  filter: brightness(1.18) saturate(1.12);
-  pointer-events: none;
-}
 #portal.is-open { opacity: 0; visibility: hidden; pointer-events: none; }
 
 .portal-bg {
@@ -131,18 +115,29 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
   width: calc(100% + 36px);
   height: calc(100% + 36px);
   object-fit: cover;
-  opacity: .36;
-  filter: blur(28px) brightness(.64) saturate(.82);
-  transform: scale(1.08);
-  transition: opacity 1.45s var(--ease), filter 1.65s var(--ease), transform 1.65s var(--ease);
+  opacity: 0;
+  filter: blur(30px) brightness(.68) saturate(.84);
+  transform: scale(1.1);
+  transition: opacity 3s var(--ease), filter 3.4s var(--ease), transform 3.4s var(--ease);
 }
 #portal.is-bg-ready .portal-bg {
-  opacity: .92;
-  filter: blur(0) brightness(1.12) saturate(1.08);
+  opacity: .95;
+  filter: blur(0) brightness(1.1) saturate(1.08);
   transform: scale(1);
 }
 
-.portal-inner { position: relative; z-index: 1; display: grid; gap: 20px; justify-items: center; padding: 24px; width: min(590px, 92vw); }
+.portal-inner {
+  position: relative; z-index: 1; display: grid; gap: 20px; justify-items: center; padding: 24px; width: min(590px, 92vw);
+  opacity: 0;
+  filter: blur(16px);
+  transform: translateY(18px) scale(.97);
+  transition: opacity 2.8s var(--ease) .45s, filter 3s var(--ease) .45s, transform 3s var(--ease) .45s;
+}
+#portal.is-bg-ready .portal-inner {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
 .portal-scene { position: relative; width: min(460px, 88vw); min-height: clamp(230px, 44vw, 350px); display: grid; place-items: center; }
 .portal-emblem { position: relative; width: clamp(214px, 36vw, 308px); aspect-ratio: 1; display: grid; place-items: center; filter: drop-shadow(0 26px 38px rgba(0,0,0,.54)); }
 .portal-emblem::before {
