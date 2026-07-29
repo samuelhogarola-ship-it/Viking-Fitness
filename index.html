@@ -17,7 +17,19 @@
 <!-- ══════════════ PORTAL DE ENTRADA ══════════════ -->
 <div id="portal" role="dialog" aria-modal="true" aria-labelledby="portalTitle">
   <div class="portal-inner">
-    <img class="mark" src="assets/img/logo.png" alt="">
+    <div class="portal-scene" aria-hidden="true">
+      <div class="portal-emblem">
+        <svg class="portal-ring" viewBox="0 0 200 200">
+          <defs>
+            <path id="portalTextCircle" d="M100 100 m -78 0 a 78 78 0 1 1 156 0 a 78 78 0 1 1 -156 0"></path>
+          </defs>
+          <text>
+            <textPath href="#portalTextCircle" startOffset="0%" textLength="490" lengthAdjust="spacingAndGlyphs">VIKING FITNESS ᛟ VALHALLA ᛟ VIKING FITNESS ᛟ VALHALLA ᛟ VIKING FITNESS ᛟ</textPath>
+          </text>
+        </svg>
+        <img class="mark" src="assets/img/logo.png" alt="">
+      </div>
+    </div>
     <p class="eyebrow" data-i18n="portal.eyebrow">Viking Fitness</p>
     <h1 class="portal-title" id="portalTitle" data-i18n-html="portal.title">Bienvenidos al <em>Valhalla</em></h1>
     <p class="portal-sub" data-i18n="portal.sub">Entrenamiento de fuerza explosiva y nutrición nórdica, con música ambiental opcional.</p>

@@ -87,14 +87,52 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 #portal {
   position: fixed; inset: 0; z-index: 9999;
   display: grid; place-items: center;
-  background: #08090b;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(216,182,103,.26), transparent 24%),
+    linear-gradient(180deg, rgba(5,6,7,.04), rgba(5,6,7,.38)),
+    url('../img/portal-valhalla.png') center / cover no-repeat,
+    #050607;
   text-align: center;
+  overflow: hidden;
   transition: opacity .6s var(--ease), visibility .6s;
+}
+#portal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 38%, transparent 0 24%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.34) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.16), transparent 25%, transparent 75%, rgba(0,0,0,.16));
+  opacity: .78;
+  pointer-events: none;
 }
 #portal.is-open { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.portal-inner { display: grid; gap: 20px; justify-items: center; padding: 24px; max-width: 460px; }
-.portal-inner img.mark { width: 56px; height: 56px; margin-bottom: 4px; opacity: .9; }
+.portal-inner { position: relative; z-index: 1; display: grid; gap: 20px; justify-items: center; padding: 24px; width: min(590px, 92vw); }
+.portal-scene { position: relative; width: min(460px, 88vw); min-height: clamp(230px, 44vw, 350px); display: grid; place-items: center; }
+.portal-emblem { position: relative; width: clamp(214px, 36vw, 308px); aspect-ratio: 1; display: grid; place-items: center; filter: drop-shadow(0 26px 38px rgba(0,0,0,.54)); }
+.portal-emblem::before {
+  content: '';
+  position: absolute;
+  inset: 13%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(238,208,135,.34), rgba(184,146,60,.12) 48%, transparent 74%),
+    rgba(5,6,7,.08);
+  box-shadow: 0 0 62px rgba(216,182,103,.25), 0 0 0 1px rgba(216,182,103,.12) inset;
+}
+.portal-inner img.mark { position: relative; width: 54%; height: 54%; opacity: .99; filter: drop-shadow(0 0 18px rgba(216,182,103,.18)); }
+.portal-ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 28s linear infinite; }
+.portal-ring text {
+  font-family: var(--f-display);
+  font-size: 11.6px;
+  font-weight: 700;
+  letter-spacing: 0;
+  fill: #f0d58e;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 7px rgba(216,182,103,.46));
+}
+.portal-ring path { fill: none; }
 
 .portal-title { font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.6rem); letter-spacing: .01em; }
 .portal-title em { font-style: normal; color: var(--gold-lit); }
