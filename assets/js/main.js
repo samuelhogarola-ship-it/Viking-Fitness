@@ -34,19 +34,26 @@
   if (portalBg) {
     const showPortalBg = () => setTimeout(() => {
       portal.classList.add('is-bg-ready');
-      startDefaultSound();
     }, 650);
     portalBg.complete ? showPortalBg() : portalBg.addEventListener('load', showPortalBg, { once: true });
   }
 
   const soundBtn = $('#soundToggle');
-  localStorage.setItem('vf_muted', '0');
-  let muted = false;
+  localStorage.setItem('vf_muted', '1');
+  let muted = true;
 
+  // El audio solo puede arrancar con sonido real a partir de un gesto del
+  // usuario (click/tecla/touch). Arrancarlo antes (p. ej. al cargar la
+  // imagen de fondo) hace que el navegador bloquee el sonido para siempre
+  // en ese iframe, aunque el player siga "reproduciendo" en silencio.
   function startDefaultSound() {
+    // Mientras el portal sigue bloqueado, la decisión de sonido/silencio
+    // es la de sus botones: no dejamos que un pointerdown sobre "Entrar en
+    // silencio" dispare el sonido por defecto antes de que su propio click
+    // marque muted = true.
+    if (portal && document.body.classList.contains('is-locked')) return;
     if (!muted && !VFAudio.running) VFAudio.start(false);
   }
-  startDefaultSound();
 
   function openGates(withSound) {
     if (!portal) return;
@@ -99,6 +106,14 @@
   const burger = $('#burger'), navLinks = $('#navLinks');
   burger && burger.addEventListener('click', () => navLinks.classList.toggle('open'));
   $$('#navLinks a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  /* ---------- Enlaces "próximamente" (app aún no disponible) ---------- */
+  $$('[data-coming-soon]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      vfToast(VF.t('soon.msg'));
+    });
+  });
 
   /* ---------- Reveal al hacer scroll ---------- */
   const io = new IntersectionObserver(entries => {
@@ -162,11 +177,9 @@
   /* ---------- Formulario ---------- */
   const form = $('#contactForm');
   form && form.addEventListener('submit', e => {
-    e.preventDefault();
-    if (!form.reportValidity()) return;
+    if (!form.reportValidity()) { e.preventDefault(); return; }
     VFAudio.strike();
     vfToast(VF.t('cta.sent'));
-    form.reset();
   });
 
   /* ---------- Año ---------- */
