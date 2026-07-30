@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Viking Fitness — Despierta al vikingo que llevas dentro</title>
-<meta name="description" content="Entrenamiento de fuerza explosiva y nutrición nórdica basada en evidencia. Rutinas, asesoramiento y app propia para registrar entrenos, comidas y progreso. Bienvenido al Valhalla del hierro.">
+<title>Viking Fitness — Fuerza explosiva y nutrición nórdica</title>
+<meta name="description" content="La fuerza es una capacidad, no una estética. Entrenamiento de fuerza explosiva y patrón dietético nórdico aplicados con evidencia, con una app propia para registrar entrenos, comidas y progreso.">
 <meta name="theme-color" content="#06080a">
-<meta property="og:title" content="Viking Fitness — El Valhalla del hierro">
-<meta property="og:description" content="Fuerza explosiva, huesos de acero, masa magra. Método moderno inspirado en el norte de Europa.">
+<link rel="canonical" href="https://www.vikingfitness.es/">
+<meta property="og:site_name" content="Viking Fitness">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Viking Fitness — La fuerza es una capacidad, no una estética">
+<meta property="og:description" content="Cinco capacidades: fuerza, movilidad, resistencia, salud metabólica y composición corporal. Método nórdico aplicado con evidencia.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://viking-fitness-zeta.vercel.app/">
-<meta property="og:image" content="https://viking-fitness-zeta.vercel.app/assets/img/social-preview.jpg">
+<meta property="og:url" content="https://www.vikingfitness.es/">
+<meta property="og:image" content="https://www.vikingfitness.es/assets/img/social-preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Viking Fitness — Bienvenidos al Valhalla">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Viking Fitness — El Valhalla del hierro">
-<meta name="twitter:description" content="Fuerza explosiva, huesos de acero, masa magra. Método moderno inspirado en el norte de Europa.">
-<meta name="twitter:image" content="https://viking-fitness-zeta.vercel.app/assets/img/social-preview.jpg">
+<meta name="twitter:title" content="Viking Fitness — La fuerza es una capacidad, no una estética">
+<meta name="twitter:description" content="Cinco capacidades: fuerza, movilidad, resistencia, salud metabólica y composición corporal. Método nórdico aplicado con evidencia.">
+<meta name="twitter:image" content="https://www.vikingfitness.es/assets/img/social-preview.jpg">
 <link rel="icon" href="assets/img/logo.png" type="image/png">
 <link rel="preload" href="assets/img/portal-valhalla.webp" as="image">
 <link rel="preload" href="assets/img/portal-torch-left.webp" as="image">
@@ -45,15 +48,15 @@
         <img class="mark" src="assets/img/logo.png" alt="">
       </div>
     </div>
-    <p class="eyebrow" data-i18n="portal.eyebrow">Viking Fitness</p>
+    <p class="eyebrow" data-i18n="portal.eyebrow">El umbral</p>
     <h1 class="portal-title" id="portalTitle" data-i18n-html="portal.title">Bienvenidos al <em>Valhalla</em></h1>
-    <p class="portal-sub" data-i18n="portal.sub">Entrenamiento de fuerza explosiva y nutrición nórdica, con música ambiental opcional.</p>
+    <p class="portal-sub" data-i18n="portal.sub">Fuerza explosiva y nutrición nórdica. Con música ambiental, si quieres.</p>
 
     <div class="portal-actions">
       <button class="btn btn--solid" id="enterSound" data-i18n="portal.enterSound">Entrar con sonido</button>
       <button class="btn btn--ghost" id="enterSilent" data-i18n="portal.enterSilent">Entrar en silencio</button>
     </div>
-    <p class="portal-hint" data-i18n="portal.hint2">Puedes silenciarlo en cualquier momento desde el icono del menú</p>
+    <p class="portal-hint" data-i18n="portal.hint2">Puedes silenciarlo cuando quieras desde el icono del menú</p>
   </div>
 </div>
 
@@ -71,9 +74,9 @@
       <a href="#nutricion" data-i18n="nav.nutrition">Nutrición</a>
       <a href="#ciencia" data-i18n="nav.science">Ciencia</a>
       <a href="#app" data-i18n="nav.app">La App</a>
-      <a href="#sobre" data-i18n="nav.about">Sobre mí</a>
       <a href="#planes" data-i18n="nav.plans">Planes</a>
-      <a href="app.html" class="only-mobile" data-i18n="nav.cta">Abrir la App</a>
+      <a href="#sobre" data-i18n="nav.about">Sobre mí</a>
+      <a href="#" class="only-mobile is-disabled" data-coming-soon data-i18n="nav.cta">Abrir la App</a>
     </nav>
 
     <div class="nav-tools">
@@ -99,7 +102,7 @@
         </div>
       </div>
 
-      <a class="btn btn--sm btn--solid" href="app.html" data-i18n="nav.cta">Abrir la App</a>
+      <a class="btn btn--sm btn--solid is-disabled" href="#" data-coming-soon data-i18n="nav.cta">Abrir la App</a>
 
       <button class="icon-btn burger" id="burger" aria-label="Menú">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -117,16 +120,16 @@
   </div>
 
   <div class="shell hero-content">
-    <p class="eyebrow" data-i18n="hero.eyebrow">Método de entrenamiento vikingo</p>
+    <p class="eyebrow" data-i18n="hero.eyebrow">Raíz nórdica, método contemporáneo</p>
     <h1 data-i18n-html="hero.title">Bienvenidos al <span>Valhalla</span></h1>
-    <p class="lede" data-i18n="hero.lede">Entrenamiento de fuerza explosiva y alimentación nórdica basada en evidencia. Sin dietas de hambre, sin humo: hierro, comida real y un método que se registra en tu propia app.</p>
+    <p class="lede" data-i18n="hero.lede">Fuerza explosiva y alimentación nórdica, aplicadas con evidencia. Un método medible, sin dietas de hambre ni promesas de atajo.</p>
 
     <div class="hero-cta">
-      <a class="btn btn--solid" href="app.html" data-i18n="hero.cta1">Empezar ahora</a>
+      <a class="btn btn--solid" href="#contacto" data-i18n="hero.cta1">Quiero empezar</a>
       <a class="btn-link" href="#camino" data-i18n="hero.cta2">Ver el método ↓</a>
     </div>
 
-    <p class="hero-fineprint" data-i18n="hero.fineprint">+1.200 personas entrenadas · Coaching en Español, English, Suomi y Norsk</p>
+    <p class="hero-fineprint" data-i18n="hero.fineprint">Asesoramiento en Español, English, Suomi y Norsk</p>
   </div>
 </section>
 
@@ -134,13 +137,15 @@
 <section id="camino">
   <div class="shell">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="path.eyebrow">Tu camino</p>
-      <h2 data-i18n="path.title">Dos pilares, un mismo método</h2>
-      <p class="lede" data-i18n="path.lede">Tomamos lo que la ciencia del ejercicio y la nutrición nórdica ya han demostrado. Explora cada bloque para ver cómo se aplica.</p>
+      <p class="eyebrow" data-i18n="path.eyebrow">El concepto</p>
+      <h2 data-i18n="path.title">La fuerza es una capacidad, no una estética</h2>
+      <p class="lede" data-i18n="path.lede">Viking Fitness no persigue una figura. Entrena cinco capacidades —fuerza, movilidad, resistencia, salud metabólica y composición corporal— para que tu cuerpo siga respondiendo dentro de cuarenta años. Se trabajan por dos vías: el hierro y la mesa.</p>
       <div class="principles">
-        <span data-i18n="path.chip1">Fuerza explosiva</span>
-        <span data-i18n="path.chip2">Huesos de acero</span>
-        <span data-i18n="path.chip3">Comer como el norte</span>
+        <span data-i18n="path.chip1">Fuerza</span>
+        <span data-i18n="path.chip2">Movilidad</span>
+        <span data-i18n="path.chip3">Resistencia</span>
+        <span data-i18n="path.chip4">Salud metabólica</span>
+        <span data-i18n="path.chip5">Composición corporal</span>
       </div>
     </div>
 
@@ -151,76 +156,15 @@
         <button class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-train">
           <span class="acc-num">01</span>
           <span class="acc-head">
-            <strong data-i18n="train.eyebrow">Entrenamientos</strong>
+            <strong data-i18n="train.eyebrow">Entrenamiento</strong>
             <span data-i18n="path.train.sub">Fuerza pesada, trabajo balístico y acondicionamiento real</span>
           </span>
           <span class="acc-chev" aria-hidden="true">+</span>
         </button>
         <div class="acc-panel" id="acc-panel-train">
           <div class="acc-panel-inner"><div>
-            <p class="lede" data-i18n="train.lede">Cuatro sesiones semanales, ninguna de relleno. Cada bloque tiene un propósito medible y cada ejercicio se registra en la app.</p>
+            <p class="lede" data-i18n="train.lede">Una metodología que no persigue la estética sino la capacidad. Cuatro sesiones semanales de entrenamiento de fuerza y movimiento, diseñadas para que a los cuarenta años tu cuerpo siga respondiendo. Sin fórmulas mágicas ni máquinas especiales: solo carga progresiva, intención y consistencia. El asesoramiento es personalizado según tu punto de partida. La periodización sigue las lecciones que la ciencia ha validado: bloques de trabajo con objetivos claros, descarga programada y revisión constante del progreso.</p>
 
-            <div class="grid-2" style="margin-top:22px">
-              <article class="card">
-                <h3 data-i18n="train.b1.t">Bloque de fuerza pesada</h3>
-                <p data-i18n="train.b1.d">Sentadilla, peso muerto, press y remo entre el 80 y el 90 % de tu máximo. Series bajas, descansos largos, técnica intachable.</p>
-                <ul class="axe-list">
-                  <li data-i18n="train.b1.l1">3–5 series de 3–5 repeticiones</li>
-                  <li data-i18n="train.b1.l2">Progresión de carga registrada semana a semana</li>
-                  <li data-i18n="train.b1.l3">Vídeo de técnica revisado por tu entrenador</li>
-                </ul>
-              </article>
-              <article class="card">
-                <h3 data-i18n="train.b2.t">Bloque balístico</h3>
-                <p data-i18n="train.b2.d">Saltos al cajón, cargadas, lanzamientos de balón y arrancadas con kettlebell. Cargas moderadas movidas a máxima velocidad.</p>
-                <ul class="axe-list">
-                  <li data-i18n="train.b2.l1">Trabajo de alta velocidad, sin llegar al fallo</li>
-                  <li data-i18n="train.b2.l2">Impacto controlado para estimular el hueso</li>
-                  <li data-i18n="train.b2.l3">Progresión de altura y volumen de saltos</li>
-                </ul>
-              </article>
-              <article class="card">
-                <h3 data-i18n="train.b3.t">Bloque de acondicionamiento</h3>
-                <p data-i18n="train.b3.d">Trineo, cuerda, transporte de carga y remo. Corazón fuerte y espalda capaz de aguantar la vida real.</p>
-                <ul class="axe-list">
-                  <li data-i18n="train.b3.l1">Circuitos de 12 a 20 minutos</li>
-                  <li data-i18n="train.b3.l2">Trabajo unilateral y de agarre</li>
-                  <li data-i18n="train.b3.l3">Escalable de principiante a veterano</li>
-                </ul>
-              </article>
-              <article class="card">
-                <h3 data-i18n="train.b4.t">Bloque de recuperación</h3>
-                <p data-i18n="train.b4.d">Movilidad de cadera y hombro, respiración, trabajo de core antirrotación y caminata larga.</p>
-                <ul class="axe-list">
-                  <li data-i18n="train.b4.l1">Rutina guiada de 20 minutos</li>
-                  <li data-i18n="train.b4.l2">Control de sueño y fatiga en la app</li>
-                  <li data-i18n="train.b4.l3">Semana de descarga cada 5 semanas</li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="phase-row">
-              <div class="phase">
-                <span class="phase-n" data-i18n="method.s.phase">Fase 01</span>
-                <h4 data-i18n="method.s1.t">Forja — semanas 1 a 4</h4>
-                <p data-i18n="method.s1.short">Base técnica y evaluación inicial.</p>
-              </div>
-              <div class="phase">
-                <span class="phase-n" data-i18n="method.s.phase2">Fase 02</span>
-                <h4 data-i18n="method.s2.t">Yunque — semanas 5 a 9</h4>
-                <p data-i18n="method.s2.short">Sube la carga, entra el trabajo balístico.</p>
-              </div>
-              <div class="phase">
-                <span class="phase-n" data-i18n="method.s.phase3">Fase 03</span>
-                <h4 data-i18n="method.s3.t">Saqueo — semanas 10 a 14</h4>
-                <p data-i18n="method.s3.short">Picos de intensidad y ajuste al objetivo.</p>
-              </div>
-              <div class="phase">
-                <span class="phase-n" data-i18n="method.s.phase4">Continuo</span>
-                <h4 data-i18n="method.s4.t">Consejo del clan</h4>
-                <p data-i18n="method.s4.short">Revisión quincenal y videollamada.</p>
-              </div>
-            </div>
           </div></div>
         </div>
       </div>
@@ -242,7 +186,7 @@
               <figcaption data-i18n-html="path.food.credit">Salón de banquetes reconstruido, Midgard Vikingsenter (Noruega) · <a href="https://commons.wikimedia.org/wiki/Category:Gildehallen_Borre" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
             </figure>
 
-            <p class="lede" data-i18n="food.lede">Nuestro asesoramiento parte del patrón dietético nórdico, uno de los mejor estudiados de Europa, y lo ajusta a un cuerpo que entrena fuerte. Comes mucho, comes bien y no pasas hambre.</p>
+            <p class="lede" data-i18n="food.lede">El asesoramiento parte del patrón dietético nórdico, uno de los mejor estudiados de Europa, y lo ajusto a un cuerpo que entrena fuerte. Comes mucho, comes bien y no pasas hambre.</p>
 
             <div class="grid-3" style="margin-top:22px">
               <article class="card">
@@ -259,7 +203,7 @@
               </article>
               <article class="card">
                 <h3 data-i18n="food.c4.t">Grasa que sirve</h3>
-                <p data-i18n="food.c4.d">Aceite de colza, frutos secos y pescado azul. Omega-3, vitamina D y saciedad sin ultraprocesados.</p>
+                <p data-i18n="food.c4.d">Aceite de oliva, frutos secos y pescado azul. Omega-3, vitamina D y saciedad sin ultraprocesados.</p>
               </article>
               <article class="card">
                 <h3 data-i18n="food.c5.t">Sin dietas de hambre</h3>
@@ -284,7 +228,7 @@
     <div class="section-head reveal">
       <p class="eyebrow" data-i18n="sci.eyebrow">Fundamentación</p>
       <h2 data-i18n="sci.title">Por qué funciona (y dónde está publicado)</h2>
-      <p class="lede" data-i18n="sci.lede">No inventamos nada. Reunimos evidencia existente sobre entrenamiento de alta velocidad y patrón dietético nórdico, y la aplicamos con criterio.</p>
+      <p class="lede" data-i18n="sci.lede">No invento nada. Reúno la evidencia publicada sobre entrenamiento de alta velocidad y patrón dietético nórdico, y la aplico con criterio.</p>
     </div>
 
     <div class="sci-grid">
@@ -346,7 +290,7 @@
         <li data-i18n="app.l5">Tus datos se guardan en tu navegador — nada sale de tu dispositivo</li>
       </ul>
       <div class="hero-cta" style="margin-top:30px">
-        <a class="btn btn--solid" href="app.html" data-i18n="app.cta">Entrar en la app</a>
+        <a class="btn btn--solid is-disabled" href="#" data-coming-soon data-i18n="app.cta">Entrar en la app</a>
       </div>
     </div>
 
@@ -390,16 +334,16 @@
 <section id="planes">
   <div class="shell">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="plans.eyebrow">Programa mensual</p>
-      <h2 data-i18n="plans.title">Reconstrucción corporal</h2>
-      <p class="lede" data-i18n="plans.lede">Pérdida de grasa, aumento de masa muscular y movilidad. Nutrición paleo-proteica con optimización de grasas. Sin permanencia, pago mensual.</p>
+      <p class="eyebrow" data-i18n="plans.eyebrow">Acompañamiento mensual</p>
+      <h2 data-i18n="plans.title">Tres énfasis, el mismo método</h2>
+      <p class="lede" data-i18n="plans.lede">El método no cambia; cambia el acento. Elige el que quieras que domine tu año de entrenamiento. Sin permanencia, pago mensual.</p>
     </div>
 
     <div class="plans">
       <article class="plan plan--featured reveal">
         <span class="plan-tag" data-i18n="plans.popular">El más elegido</span>
         <h3 data-i18n="plans.p2.t">Berserker</h3>
-        <p style="color:var(--ash);font-size:.92rem" data-i18n="plans.p2.s">Explosividad pura. Powerlifting y potencia con estructura.</p>
+        <p style="color:var(--ash);font-size:.92rem" data-i18n="plans.p2.s">Explosividad. Powerlifting y potencia con estructura.</p>
         <div class="price" data-i18n="plans.p2.price">Consultar</div>
         <ul>
           <li data-i18n="plans.p2.l1">Programación de fuerza máxima y potencia</li>
@@ -427,40 +371,16 @@
 
       <article class="plan reveal">
         <h3 data-i18n="plans.p4.t">Titán</h3>
-        <p style="color:var(--ash);font-size:.92rem" data-i18n="plans.p4.s">Hipertrofia pura. Volumen, densidad muscular y venosidad.</p>
+        <p style="color:var(--ash);font-size:.92rem" data-i18n="plans.p4.s">Hipertrofia. Volumen y densidad muscular con criterio.</p>
         <div class="price" data-i18n="plans.p4.price">Consultar</div>
         <ul>
           <li data-i18n="plans.p4.l1">Rutina de hipertrofia con técnicas avanzadas</li>
-          <li data-i18n="plans.p4.l2">Periodización por volumen, intensidad y deload</li>
-          <li data-i18n="plans.p4.l3">Plan nutricional de bulk/cut según fase</li>
+          <li data-i18n="plans.p4.l2">Periodización por volumen, intensidad y descarga</li>
+          <li data-i18n="plans.p4.l3">Plan nutricional por fases de ganancia y definición</li>
           <li data-i18n="plans.p4.l4">Acceso completo a la app de registro</li>
           <li data-i18n="plans.p4.l5">Soporte por chat</li>
         </ul>
         <a class="btn" href="#contacto" data-i18n="plans.choose">Elegir</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ TESTIMONIOS ══════════════ -->
-<section>
-  <div class="shell">
-    <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="quotes.eyebrow">El clan habla</p>
-      <h2 data-i18n="quotes.title">Sagas de quienes ya entrenan</h2>
-    </div>
-    <div class="quotes">
-      <article class="quote reveal">
-        <p data-i18n="quotes.q1">«Llevaba años estancado. En catorce semanas subí 22 kg en peso muerto y por primera vez no he pasado hambre haciendo definición.»</p>
-        <footer><div class="avatar">MR</div><div>Marcos R.<span data-i18n="quotes.a1">Madrid · 8 meses</span></div></footer>
-      </article>
-      <article class="quote reveal">
-        <p data-i18n="quotes.q2">«The Nordic food part was the surprise. I eat more than before, I train harder, and my body composition finally moved.»</p>
-        <footer><div class="avatar">EK</div><div>Emma K.<span data-i18n="quotes.a2">Helsinki · 5 meses</span></div></footer>
-      </article>
-      <article class="quote reveal">
-        <p data-i18n="quotes.q3">«Det eksplosive arbeidet forandret alt. Jeg er raskere, sterkere, og ryggen min plager meg ikke lenger.»</p>
-        <footer><div class="avatar">LH</div><div>Lars H.<span data-i18n="quotes.a3">Oslo · 11 meses</span></div></footer>
       </article>
     </div>
   </div>
@@ -482,14 +402,14 @@
       </details>
       <details>
         <summary data-i18n="faq.q2">¿Tengo que comer solo comida nórdica?</summary>
-        <p data-i18n="faq.a2">No. Usamos el patrón nórdico como marco: cereal entero, verdura de raíz y col, pescado, proteína suficiente y grasa de calidad. Eso se traduce a lo que tengas en tu supermercado, sea en Oslo o en Sevilla.</p>
+        <p data-i18n="faq.a2">No. Uso el patrón nórdico como marco: cereal entero, verdura de raíz y col, pescado, proteína suficiente y grasa de calidad. Eso se traduce a lo que tengas en tu supermercado, sea en Oslo o en Sevilla.</p>
       </details>
       <details>
         <summary data-i18n="faq.q3">¿Hace falta un gimnasio grande?</summary>
         <p data-i18n="faq.a3">Con barra, discos, un rack y un par de kettlebells hay de sobra. Existe una variante del plan para gimnasios básicos y otra para entrenar en casa con material mínimo.</p>
       </details>
       <details>
-        <summary data-i18n="faq.q4">¿En qué idiomas dais el asesoramiento?</summary>
+        <summary data-i18n="faq.q4">¿En qué idiomas das el asesoramiento?</summary>
         <p data-i18n="faq.a4">Español e inglés en directo. Los materiales, planes y la app están además en finés y noruego.</p>
       </details>
       <details>
@@ -500,7 +420,6 @@
   </div>
 </section>
 
-<!-- ══════════════ CTA / CONTACTO ══════════════ -->
 <!-- ══════════════ SOBRE MÍ ══════════════ -->
 <section id="sobre">
   <div class="about-photo">
@@ -515,7 +434,7 @@
       <p data-i18n="about.p1">Deportista y profesor de Educación Física. Llevo años combinando el entrenamiento de fuerza con el estudio de la historia del movimiento humano. Viking Fitness nace de una pregunta: ¿y si los métodos de entrenamiento que hoy valida la ciencia moderna ya los practicaban los pueblos del norte de Europa hace siglos?</p>
       <p data-i18n="about.p2">Los vikingos levantaban piedras naturales como prueba de fuerza — el Húsafell Stone en Islandia o las piedras de vigor escandinavas eran ritos de paso. Remaban distancias enormes, luchaban glíma y cargaban troncos. Su alimentación se basaba en lo que hoy llamamos paleo: pescado salvaje, caza, tubérculos, bayas, lácteos fermentados como el skyr y grasas animales de calidad.</p>
       <p data-i18n="about.p3">Hoy sabemos por qué funcionaba. La ciencia confirma que el entrenamiento de fuerza explosiva aumenta la densidad ósea, que las dietas ricas en proteína y grasas saludables optimizan la composición corporal, y que la periodización por bloques — algo que los guerreros nórdicos hacían por instinto entre campañas — es el estándar en rendimiento deportivo moderno.</p>
-      <p data-i18n="about.p4">Este método no es mejor ni peor que otro. Es una forma de concebir la optimización física apoyada en evidencia científica y enraizada en la tradición de fuerza del norte de Europa. Sin humo, sin marketing de suplementos, sin dietas de hambre: hierro, comida real y un plan que se mide.</p>
+      <p data-i18n="about.p4">Este método no es mejor ni peor que otro. Es una forma de entender la optimización física apoyada en evidencia y enraizada en la tradición de fuerza del norte de Europa. Sin marketing de suplementos y sin dietas de hambre: hierro, comida real y un plan que se mide.</p>
     </div>
   </div>
 </section>
@@ -524,11 +443,11 @@
 
 <section class="cta" id="contacto">
   <div class="shell">
-    <p class="eyebrow reveal" data-i18n="cta.eyebrow">Última llamada</p>
-    <h2 class="reveal" data-i18n="cta.title">El Valhalla no acoge a los que esperan</h2>
-    <p class="lede reveal" data-i18n="cta.lede">Cuéntanos dónde estás y a dónde quieres llegar. Te devolvemos una propuesta concreta en 48 horas, sin compromiso.</p>
+    <p class="eyebrow reveal" data-i18n="cta.eyebrow">Primer paso</p>
+    <h2 class="reveal" data-i18n="cta.title">Empieza por una conversación</h2>
+    <p class="lede reveal" data-i18n="cta.lede">Cuéntame dónde estás y a dónde quieres llegar. Te devuelvo una propuesta concreta en 48 horas, sin compromiso.</p>
 
-    <form class="form-grid reveal" id="contactForm" style="max-width:720px;margin:34px auto 0;text-align:left" novalidate>
+    <form class="form-grid reveal" id="contactForm" method="POST" action="https://formsubmit.co/info@webfuengirola.com" style="max-width:720px;margin:34px auto 0;text-align:left" novalidate>
       <div class="field"><label for="cf-name" data-i18n="cta.f.name">Nombre</label><input id="cf-name" name="name" required></div>
       <div class="field"><label for="cf-mail" data-i18n="cta.f.mail">Email</label><input id="cf-mail" name="email" type="email" required></div>
       <div class="field"><label for="cf-goal" data-i18n="cta.f.goal">Objetivo</label>
@@ -542,10 +461,10 @@
       <div class="field"><label for="cf-plan" data-i18n="cta.f.plan">Plan de interés</label>
         <select id="cf-plan" name="plan"><option selected>Berserker</option><option>Cazador</option><option>Titán</option></select>
       </div>
-      <div class="field full"><label for="cf-msg" data-i18n="cta.f.msg">Cuéntanos tu situación</label><textarea id="cf-msg" name="message" rows="4"></textarea></div>
+      <div class="field full"><label for="cf-msg" data-i18n="cta.f.msg">Cuéntame tu situación</label><textarea id="cf-msg" name="message" rows="4"></textarea></div>
       <div class="full" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-        <button class="btn btn--solid" type="submit" data-i18n="cta.f.send">Enviar y despertar</button>
-        <span class="form-note" data-i18n="cta.f.note">Respondemos en 48 h. Sin spam, sin permanencia.</span>
+        <button class="btn btn--solid" type="submit" data-i18n="cta.f.send">Enviar</button>
+        <span class="form-note" data-i18n="cta.f.note">Respondo en 48 h. Sin spam, sin permanencia.</span>
       </div>
     </form>
   </div>
@@ -561,7 +480,7 @@
           <img src="assets/img/logo.png" alt="">
           <span class="brand-name">VIKING<span>·</span>FITNESS</span>
         </a>
-        <p data-i18n="footer.tag">Fuerza explosiva, comida del norte y una app que no deja que te engañes. Despierta tus instintos, vuelve a tus orígenes.</p>
+        <p data-i18n="footer.tag">Fuerza explosiva, comida del norte y un registro honesto. Entrenar hoy para que el cuerpo siga funcionando dentro de cuarenta años.</p>
       </div>
       <div>
         <h5 data-i18n="footer.h1">Método</h5>
@@ -576,7 +495,8 @@
         <h5 data-i18n="footer.h2">Clan</h5>
         <ul>
           <li><a href="#planes" data-i18n="nav.plans">Planes</a></li>
-          <li><a href="app.html" data-i18n="nav.app">La App</a></li>
+          <li><a href="#app" data-i18n="nav.app">La App</a></li>
+          <li><a href="#sobre" data-i18n="nav.about">Sobre mí</a></li>
           <li><a href="#contacto" data-i18n="footer.contact">Contacto</a></li>
         </ul>
       </div>

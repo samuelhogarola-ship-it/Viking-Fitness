@@ -217,6 +217,11 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .btn--ghost { border-color: var(--line); color: var(--ash); }
 .btn--ghost:hover { color: var(--bone); border-color: rgba(255,255,255,.24); }
 .btn--sm { padding: .55rem 1rem; font-size: .82rem; }
+.btn.is-disabled {
+  background: transparent; color: var(--ash); border-color: var(--line);
+  box-shadow: none; cursor: default; opacity: .7;
+}
+.btn.is-disabled:hover { background: transparent; color: var(--ash); border-color: var(--line); }
 
 .btn-link {
   display: inline-flex; align-items: center; gap: .4rem;
@@ -668,6 +673,7 @@ tr:hover td { background: rgba(255,255,255,.02); }
   .nav-links.open { transform: none; }
   .nav-links a { display: block; padding: 14px 4vw; }
   .nav-links .only-mobile { color: var(--gold-lit); }
+  .nav-links .only-mobile.is-disabled { color: var(--ash); opacity: .7; }
   .burger { display: grid; }
   .nav-tools > .btn--sm { display: none; }
   .nav-inner { gap: 10px; }
