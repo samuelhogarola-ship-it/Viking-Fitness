@@ -31,37 +31,35 @@
   /* ---------- Portal de entrada ---------- */
   const portal = $('#portal');
   const portalBg = portal ? $('.portal-bg', portal) : null;
+  const soundBtn = $('#soundToggle');
+  let muted = localStorage.getItem('vf_muted') === '1';
   if (portalBg) {
     const showPortalBg = () => setTimeout(() => {
       portal.classList.add('is-bg-ready');
+      if (!muted) VFAudio.startPreview(true);
     }, 650);
     portalBg.complete ? showPortalBg() : portalBg.addEventListener('load', showPortalBg, { once: true });
   }
 
-  const soundBtn = $('#soundToggle');
-  localStorage.setItem('vf_muted', '1');
-  let muted = true;
-
-  // El audio solo puede arrancar con sonido real a partir de un gesto del
-  // usuario (click/tecla/touch). Arrancarlo antes (p. ej. al cargar la
-  // imagen de fondo) hace que el navegador bloquee el sonido para siempre
-  // en ese iframe, aunque el player siga "reproduciendo" en silencio.
-  function startDefaultSound() {
-    // Mientras el portal sigue bloqueado, la decisión de sonido/silencio
-    // es la de sus botones: no dejamos que un pointerdown sobre "Entrar en
-    // silencio" dispare el sonido por defecto antes de que su propio click
-    // marque muted = true.
-    if (portal && document.body.classList.contains('is-locked')) return;
-    if (!muted && !VFAudio.running) VFAudio.start(false);
+  // Prepage y main usan fuentes distintas: el portal intenta arrancar su
+  // ambiente sintetico al revelarse, y la main activa YouTube solo al entrar.
+  function startMainSoundWhenTitleIsReady() {
+    const heroTitle = $('.hero h1');
+    if (!heroTitle || muted) return;
+    requestAnimationFrame(() => {
+      heroTitle.scrollIntoView({ block: 'center' });
+      setTimeout(() => VFAudio.startMain(), 420);
+    });
   }
 
   function openGates(withSound) {
     if (!portal) return;
     muted = !withSound;
     localStorage.setItem('vf_muted', muted ? '1' : '0');
-    if (!muted) VFAudio.start(true);
+    if (muted) VFAudio.mute();
     portal.classList.add('is-open');
     document.body.classList.remove('is-locked');
+    if (!muted) startMainSoundWhenTitleIsReady();
     syncSoundIcon();
   }
   $('#enterSound') && $('#enterSound').addEventListener('click', () => openGates(true));
@@ -71,6 +69,7 @@
     portal.classList.add('is-open');
     document.body.classList.remove('is-locked');
     if (!location.hash) requestAnimationFrame(() => scrollTo(0, 0));
+    if (!muted) VFAudio.startMain();
   }
   portal && portal.addEventListener('transitionend', () => sessionStorage.setItem('vf_entered', '1'));
 
@@ -85,13 +84,10 @@
   }
 
   soundBtn && soundBtn.addEventListener('click', () => {
-    if (!VFAudio.running) { muted = false; VFAudio.start(false); }
+    if (!VFAudio.running) { muted = false; VFAudio.startMain(); }
     else { muted = !muted; muted ? VFAudio.mute() : VFAudio.unmute(); }
     localStorage.setItem('vf_muted', muted ? '1' : '0');
     syncSoundIcon();
-  });
-  ['pointerdown', 'touchstart', 'mousedown', 'click', 'keydown'].forEach(type => {
-    document.addEventListener(type, startDefaultSound, { once: true, passive: true });
   });
   document.addEventListener('vf:audio', syncSoundIcon);
   document.addEventListener('vf:lang', syncSoundIcon);
