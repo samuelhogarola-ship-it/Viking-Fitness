@@ -1,20 +1,30 @@
 /* ============================================================
-   VIKING FITNESS — Audio ambiental generado con Web Audio
-   Trompas suaves de Ragnarok + tambores graves en crescendo.
+   VIKING FITNESS — Audio
+   - Prepage: Web Audio con trompas suaves + tambores en crescendo.
+   - Main page: musica ambiente via YouTube.
    ============================================================ */
 window.VFAudio = (function () {
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
+  const youtubeId = 'tG7fk_DUz5g';
+
   let ctx = null;
   let master = null;
   let ambient = null;
   let drums = null;
   let horns = null;
   let noiseBuffer = null;
-  let running = false;
   let drumTimer = null;
   let hornTimer = null;
   let startedAt = 0;
   let ambienceStarted = false;
+  let previewRunning = false;
+
+  let player = null;
+  let apiReady = false;
+  let apiLoading = false;
+  let pendingMainStart = false;
+  let mainRunning = false;
+  let activeMode = null;
 
   function notify() {
     document.dispatchEvent(new Event('vf:audio'));
@@ -97,7 +107,7 @@ window.VFAudio = (function () {
   }
 
   function hitDrum(accent = 1) {
-    if (!running || !ctx) return;
+    if (!previewRunning || !ctx) return;
     const now = ctx.currentTime;
     const osc = ctx.createOscillator();
     const body = ctx.createGain();
@@ -165,7 +175,7 @@ window.VFAudio = (function () {
   }
 
   function playRagnarokCall() {
-    if (!running || !ctx) return;
+    if (!previewRunning || !ctx) return;
     hornNote(110, 0, 4.1, .055);
     hornNote(146.83, .45, 3.9, .04);
     hornNote(196, 1.15, 3.25, .032);
@@ -177,7 +187,7 @@ window.VFAudio = (function () {
     hornTimer = setInterval(playRagnarokCall, 22000);
   }
 
-  async function start(withFanfare) {
+  async function startPreview(withFanfare) {
     if (!ensureContext()) return;
     if (ctx.state === 'suspended') await ctx.resume();
     if (!ambienceStarted) {
@@ -186,35 +196,125 @@ window.VFAudio = (function () {
       startDrone();
       ambienceStarted = true;
     }
-    if (!running) running = true;
+    previewRunning = true;
+    activeMode = 'preview';
     scheduleDrums();
     scheduleHorns(Boolean(withFanfare));
-    rampParam(master.gain, .34, 1.4);
+    rampParam(master.gain, .32, 1.2);
     notify();
   }
 
-  function mute() {
-    if (!ctx || !running) return;
-    rampParam(master.gain, 0, .18);
+  function stopPreview() {
+    if (!ctx || !previewRunning) return;
+    rampParam(master.gain, 0, .22);
     clearInterval(drumTimer);
     clearInterval(hornTimer);
-    running = false;
+    previewRunning = false;
+  }
+
+  function loadYouTubeAPI() {
+    if (apiReady || apiLoading || document.getElementById('yt-api')) return;
+    apiLoading = true;
+    const tag = document.createElement('script');
+    tag.id = 'yt-api';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+  }
+
+  window.onYouTubeIframeAPIReady = function () {
+    apiReady = true;
+    apiLoading = false;
+    if (pendingMainStart) {
+      pendingMainStart = false;
+      startMain();
+    }
+  };
+
+  function createPlayer() {
+    const div = document.createElement('div');
+    div.id = 'yt-player';
+    div.style.cssText = 'position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;bottom:0;left:0;';
+    document.body.appendChild(div);
+
+    player = new YT.Player('yt-player', {
+      videoId: youtubeId,
+      playerVars: {
+        autoplay: 1,
+        loop: 1,
+        playlist: youtubeId,
+        controls: 0,
+        disablekb: 1,
+        fs: 0,
+        modestbranding: 1,
+        rel: 0
+      },
+      events: {
+        onReady: function (e) {
+          e.target.setVolume(42);
+          e.target.playVideo();
+          mainRunning = true;
+          activeMode = 'main';
+          notify();
+        },
+        onStateChange: function (e) {
+          if (e.data === YT.PlayerState.ENDED) e.target.playVideo();
+          if (e.data === YT.PlayerState.PLAYING) {
+            mainRunning = true;
+            activeMode = 'main';
+            notify();
+          }
+        }
+      }
+    });
+  }
+
+  function startMain() {
+    stopPreview();
+    loadYouTubeAPI();
+    if (!apiReady) {
+      pendingMainStart = true;
+      notify();
+      return;
+    }
+    if (!player) createPlayer();
+    else {
+      if (player.unMute) player.unMute();
+      if (player.setVolume) player.setVolume(42);
+      if (player.playVideo) player.playVideo();
+      mainRunning = true;
+      activeMode = 'main';
+      notify();
+    }
+  }
+
+  function mute() {
+    stopPreview();
+    if (player && player.pauseVideo) player.pauseVideo();
+    mainRunning = false;
+    activeMode = null;
+    pendingMainStart = false;
     notify();
   }
 
   function unmute() {
-    start(false);
+    startMain();
   }
 
   function strike() {
-    if (running) hitDrum(1.5);
+    if (previewRunning) hitDrum(1.5);
   }
 
+  loadYouTubeAPI();
+
   return {
-    start,
+    primeMain: loadYouTubeAPI,
+    start: startMain,
+    startMain,
+    startPreview,
     mute,
     unmute,
     strike,
-    get running() { return running; }
+    get running() { return previewRunning || mainRunning || pendingMainStart; },
+    get mode() { return activeMode; }
   };
 })();
