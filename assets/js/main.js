@@ -39,8 +39,7 @@
   }
 
   const soundBtn = $('#soundToggle');
-  localStorage.setItem('vf_muted', '1');
-  let muted = true;
+  let muted = localStorage.getItem('vf_muted') !== '0';
 
   // El audio solo puede arrancar con sonido real a partir de un gesto del
   // usuario (click/tecla/touch). Arrancarlo antes (p. ej. al cargar la
@@ -55,13 +54,22 @@
     if (!muted && !VFAudio.running) VFAudio.start(false);
   }
 
+  function startWhenMainTitleIsReady(withFanfare) {
+    const heroTitle = $('.hero h1');
+    if (!heroTitle || muted) return;
+    requestAnimationFrame(() => {
+      heroTitle.scrollIntoView({ block: 'center' });
+      requestAnimationFrame(() => VFAudio.start(withFanfare));
+    });
+  }
+
   function openGates(withSound) {
     if (!portal) return;
     muted = !withSound;
     localStorage.setItem('vf_muted', muted ? '1' : '0');
-    if (!muted) VFAudio.start(true);
     portal.classList.add('is-open');
     document.body.classList.remove('is-locked');
+    if (!muted) startWhenMainTitleIsReady(true);
     syncSoundIcon();
   }
   $('#enterSound') && $('#enterSound').addEventListener('click', () => openGates(true));

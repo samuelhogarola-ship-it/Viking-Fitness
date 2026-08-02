@@ -106,6 +106,14 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
   opacity: .78;
   pointer-events: none;
 }
+#portal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+}
 #portal.is-open { opacity: 0; visibility: hidden; pointer-events: none; }
 
 .portal-bg {
@@ -697,12 +705,18 @@ tr:hover td { background: rgba(255,255,255,.02); }
   .card { padding: 24px 20px; }
   .brand-name { display: none; }
   .portal-torch {
-    top: clamp(146px, 17svh, 180px);
-    width: 136px;
+    display: none;
   }
-  .portal-torch--left { left: -6px; }
-  .portal-torch--right { right: -6px; }
-  #portal.is-bg-ready .portal-torch { opacity: .95; }
+  #portal::after {
+    display: block;
+    background:
+      radial-gradient(circle at 9% 33%, rgba(255,142,42,.42), rgba(216,96,28,.18) 9%, transparent 23%),
+      radial-gradient(circle at 91% 33%, rgba(255,142,42,.42), rgba(216,96,28,.18) 9%, transparent 23%);
+    opacity: 0;
+    filter: blur(1px);
+    transition: opacity 2.4s var(--ease) .35s;
+  }
+  #portal.is-bg-ready::after { opacity: .82; }
   .hero {
     min-height: 100svh;
     align-items: flex-end;
