@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://www.vikingfitness.es/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/logo.png</image:loc>
+      <image:title>Logo Viking Fitness Fuengirola — entrenamiento de fuerza nórdico</image:title>
+      <image:caption>Escudo vikingo con hachas cruzadas y barra de pesas — logotipo oficial de Viking Fitness Fuengirola</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/hero.jpg</image:loc>
+      <image:title>Sala de entrenamiento Viking Fitness Fuengirola — gym de fuerza explosiva con estética nórdica</image:title>
+      <image:caption>Interior del gimnasio Viking Fitness en Fuengirola: equipamiento de fuerza con ambientación de salón vikingo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/about.jpg</image:loc>
+      <image:title>Samuel Hogarola, entrenador personal de fuerza Viking Fitness Fuengirola</image:title>
+      <image:caption>Samuel Hogarola, profesor de Educación Física y coach de fuerza explosiva en Viking Fitness Fuengirola, Costa del Sol</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/portal-valhalla.webp</image:loc>
+      <image:title>Portal de entrada al Valhalla — Viking Fitness Fuengirola</image:title>
+      <image:caption>Pantalla de bienvenida de Viking Fitness: portal nórdico con runas y logo del gimnasio de Fuengirola</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/social-preview.jpg</image:loc>
+      <image:title>Viking Fitness Fuengirola — Fuerza explosiva y nutrición nórdica</image:title>
+      <image:caption>Imagen de redes sociales de Viking Fitness: entrenamiento de fuerza y método nórdico en Fuengirola</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.vikingfitness.es/blog/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vikingfitness.es/blog/4-tipos-de-cuerpo-alimentacion.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

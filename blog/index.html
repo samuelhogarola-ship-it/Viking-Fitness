@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog Viking Fitness Fuengirola — Fuerza, nutrición nórdica y método</title>
+<meta name="description" content="Artículos sobre entrenamiento de fuerza explosiva, nutrición nórdica y composición corporal. Método Viking Fitness aplicado con evidencia científica. Coach personal en Fuengirola.">
+<meta name="keywords" content="blog fitness Fuengirola, entrenamiento fuerza Costa del Sol, nutrición deportiva, Viking Fitness blog, coach personal Fuengirola">
+<link rel="canonical" href="https://www.vikingfitness.es/blog/">
+<meta property="og:site_name" content="Viking Fitness">
+<meta property="og:title" content="Blog Viking Fitness Fuengirola — Fuerza, nutrición y método nórdico">
+<meta property="og:description" content="Artículos sobre entrenamiento de fuerza, nutrición y composición corporal con evidencia científica. Coach personal en Fuengirola.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.vikingfitness.es/blog/">
+<meta property="og:image" content="https://www.vikingfitness.es/assets/img/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/logo.png" type="image/png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+.blog-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,12,15,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.blog-nav .shell { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.blog-nav .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.blog-nav .brand img { width: 32px; height: auto; }
+.blog-nav .brand-name { font-family: var(--f-display); font-size: .9rem; letter-spacing: .12em; color: var(--bone); }
+.blog-nav .brand-name span { color: var(--gold); }
+.blog-nav a.home-link { font-size: .82rem; color: var(--ash); display: flex; align-items: center; gap: 6px; transition: color .2s; }
+.blog-nav a.home-link:hover { color: var(--gold-lit); }
+
+.blog-hero {
+  padding: clamp(64px, 8vw, 110px) 0 clamp(48px, 6vw, 80px);
+  border-bottom: 1px solid var(--line);
+}
+.blog-hero h1 {
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+  margin: .4rem 0 1rem;
+}
+.blog-hero h1 em { font-style: normal; color: var(--gold-lit); }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  padding: clamp(48px, 6vw, 88px) 0;
+}
+
+.post-card {
+  background: var(--stone);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: border-color .2s, transform .2s;
+  text-decoration: none;
+  color: inherit;
+}
+.post-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+.post-card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--iron);
+  flex-shrink: 0;
+}
+.post-card-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s var(--ease);
+}
+.post-card:hover .post-card-thumb img { transform: scale(1.04); }
+
+.post-card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+.post-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.post-tag {
+  background: rgba(184,146,60,.12);
+  border: 1px solid rgba(184,146,60,.25);
+  color: var(--gold-lit); font-size: .7rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 100px;
+}
+.post-card h2 {
+  font-size: clamp(1.1rem, .95rem + .6vw, 1.35rem);
+  margin-bottom: .6rem; line-height: 1.25;
+  color: var(--bone);
+}
+.post-card p { font-size: .88rem; color: var(--ash); line-height: 1.65; margin-bottom: 20px; flex: 1; }
+.post-card-foot { display: flex; align-items: center; justify-content: space-between; }
+.post-date { font-size: .75rem; color: var(--fog); }
+.post-read { font-size: .78rem; color: var(--gold-lit); font-weight: 500; display: flex; align-items: center; gap: 5px; }
+
+.blog-footer {
+  background: var(--obsidian);
+  border-top: 1px solid var(--line);
+  padding: 40px 0;
+  text-align: center;
+}
+.blog-footer p { color: var(--fog); font-size: .82rem; margin: 0; }
+.blog-footer a { color: var(--gold-lit); }
+
+@media (max-width: 540px) {
+  .blog-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="shell">
+    <a class="brand" href="/">
+      <img src="../assets/img/logo.png" alt="Logo Viking Fitness Fuengirola — entrenador personal de fuerza nórdico">
+      <span class="brand-name">VIKING<span>·</span>FITNESS</span>
+    </a>
+    <a class="home-link" href="/">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Inicio
+    </a>
+  </div>
+</nav>
+
+<header class="blog-hero">
+  <div class="shell">
+    <p class="eyebrow">El conocimiento también es fuerza</p>
+    <h1>Blog <em>Viking Fitness</em></h1>
+    <p class="lede">Artículos sobre entrenamiento de fuerza explosiva, nutrición nórdica y composición corporal — con evidencia, sin bulos.</p>
+  </div>
+</header>
+
+<main>
+  <div class="shell">
+    <div class="blog-grid">
+
+      <a class="post-card" href="/blog/4-tipos-de-cuerpo-alimentacion.html">
+        <div class="post-card-thumb">
+          <img src="../assets/img/4-cuerpos.png" alt="4 tipos de cuerpo y su alimentación para definir — ectomorfo mesomorfo endomorfo mixto — Viking Fitness Fuengirola" loading="lazy">
+        </div>
+        <div class="post-card-body">
+          <div class="post-tags">
+            <span class="post-tag">Nutrición</span>
+            <span class="post-tag">Composición corporal</span>
+          </div>
+          <h2>4 tipos de cuerpo y su alimentación para definir</h2>
+          <p>Ectomorfo, mesomorfo, endomorfo o mixto: descubre cuál es tu biotipo y qué distribución de macros y alimentos necesitas para ganar músculo y perder grasa con el método nórdico.</p>
+          <div class="post-card-foot">
+            <time class="post-date" datetime="2026-08-02">2 agosto 2026</time>
+            <span class="post-read">Leer artículo →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Placeholder para futuros artículos
+      <a class="post-card" href="#">
+        <div class="post-card-body">
+          <div class="post-tags"><span class="post-tag">Entrenamiento</span></div>
+          <h2>Próximamente</h2>
+          <p>Nuevos artículos sobre fuerza explosiva, periodización y método nórdico.</p>
+          <div class="post-card-foot">
+            <span class="post-date">Próximamente</span>
+          </div>
+        </div>
+      </a>
+      -->
+
+    </div>
+  </div>
+</main>
+
+<footer class="blog-footer">
+  <p>© <script>document.write(new Date().getFullYear())</script> <a href="/">Viking Fitness Fuengirola</a> — Entrenamiento de fuerza y nutrición nórdica</p>
+  <p style="margin-top:8px;font-size:.75rem;opacity:.5">Diseñado por <a href="https://wf-studio.es" target="_blank" rel="noopener" style="color:inherit">WF-Studio</a></p>
+</footer>
+
+<a class="whatsapp-horn" href="https://wa.me/34634002661" target="_blank" rel="noopener" aria-label="Llamar al clan por WhatsApp">
+  <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="none">
+    <ellipse cx="11" cy="32" rx="9" ry="18" class="horn-body"/>
+    <ellipse cx="11" cy="32" rx="4.5" ry="11" fill="#0e1114" stroke="none"/>
+    <path d="M18 16 L58 26 L58 38 L18 48 Z" class="horn-body"/>
+    <line x1="32" y1="18.5" x2="32" y2="45.5" stroke="#251a09" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="44" y1="21.5" x2="44" y2="42.5" stroke="#251a09" stroke-width="1.8" stroke-linecap="round"/>
+    <ellipse cx="58" cy="32" rx="3.5" ry="7" class="horn-mouth"/>
+    <ellipse cx="58" cy="32" rx="1.5" ry="3.5" fill="#0e1114" stroke="none"/>
+  </svg>
+  <span>WhatsApp</span>
+</a>
+
+</body>
+</html>
