@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutrición Viking Fitness Fuengirola — Planes nutricionales y método nórdico</title>
+<meta name="description" content="Método nutricional Viking Fitness en Fuengirola: patrón nórdico, grasas saludables, baja ingesta de carbohidratos refinados y recetas reales. Planes nutricionales adaptados a fuerza máxima y composición corporal.">
+<meta name="keywords" content="nutrición Fuengirola, planes nutricionales Costa del Sol, patrón nórdico alimentación, dieta fuerza máxima, recetas fitness nórdico, Viking Fitness nutrición">
+<link rel="canonical" href="https://www.vikingfitness.es/nutricion.html">
+<meta property="og:site_name" content="Viking Fitness">
+<meta property="og:title" content="Nutrición Viking Fitness Fuengirola — Patrón nórdico y planes nutricionales">
+<meta property="og:description" content="Grasas saludables como combustible, proteína de calidad, bajo índice glucémico y sin ultraprocesados. Recetas reales del patrón nórdico adaptadas a tu objetivo en Fuengirola.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.vikingfitness.es/nutricion.html">
+<meta property="og:image" content="https://www.vikingfitness.es/assets/img/social-preview.jpg">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+.page-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,12,15,.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line); padding: 14px 0;
+}
+.page-nav .shell { display: flex; align-items: center; justify-content: space-between; }
+.page-nav .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.page-nav .brand img { width: 32px; height: 32px; object-fit: contain; }
+.page-nav .brand-name { font-family: var(--f-display); font-size: .9rem; letter-spacing: .12em; color: var(--bone); }
+.page-nav .brand-name span { color: var(--gold); }
+.page-nav a.back { font-size: .82rem; color: var(--ash); display: flex; align-items: center; gap: 6px; transition: color .2s; }
+.page-nav a.back:hover { color: var(--gold-lit); }
+
+.nutri-hero { padding: clamp(72px,9vw,120px) 0 clamp(48px,6vw,80px); border-bottom: 1px solid var(--line); }
+.nutri-hero h1 { font-size: clamp(2rem,1.5rem+2.5vw,3.4rem); margin: .4rem 0 1rem; }
+.nutri-hero h1 em { font-style: normal; color: var(--gold-lit); }
+
+.nutri-section { padding: clamp(48px,6vw,88px) 0; border-bottom: 1px solid var(--line-soft); }
+.nutri-section:last-child { border-bottom: none; }
+
+.content-body h2 { font-family: var(--f-display); font-size: clamp(1.5rem,1.2rem+1.4vw,2.1rem); margin: 0 0 .8rem; }
+.content-body h3 { font-family: var(--f-display); font-size: clamp(1rem,.9rem+.5vw,1.2rem); color: var(--gold-lit); margin: 1.8rem 0 .5rem; }
+.content-body p { color: var(--ash); line-height: 1.75; margin-bottom: 1.1rem; }
+.content-body ul { padding-left: 1.4rem; margin-bottom: 1.1rem; }
+.content-body li { color: var(--ash); line-height: 1.7; margin-bottom: .35rem; }
+.content-body strong { color: var(--bone); font-weight: 600; }
+.content-body em { color: var(--gold-lit); font-style: normal; }
+
+.pillar-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px; margin: clamp(28px,3.5vw,48px) 0;
+}
+.pillar-card {
+  background: var(--stone); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px 20px;
+}
+.pillar-card h4 { font-family: var(--f-display); font-size: .95rem; color: var(--bone); margin-bottom: .4rem; }
+.pillar-card p { font-size: .85rem; color: var(--ash); line-height: 1.6; margin: 0; }
+.pillar-card .ic { font-size: 1.6rem; margin-bottom: 10px; display: block; }
+
+/* Recipe cards */
+.recipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: clamp(28px,3.5vw,48px); }
+.recipe-card {
+  background: var(--stone); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+}
+.recipe-card-head { padding: 22px 22px 0; }
+.recipe-card-head .tag {
+  display: inline-block; background: rgba(184,146,60,.12); border: 1px solid rgba(184,146,60,.25);
+  color: var(--gold-lit); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 100px; margin-bottom: 10px;
+}
+.recipe-card h3 { font-family: var(--f-display); font-size: 1.05rem; color: var(--bone); margin-bottom: 6px; }
+.recipe-card .meta { font-size: .76rem; color: var(--fog); margin-bottom: 14px; }
+.recipe-card .meta span { margin-right: 12px; }
+.recipe-card-body { padding: 0 22px 22px; }
+.recipe-card p { font-size: .85rem; color: var(--ash); line-height: 1.65; margin-bottom: 12px; }
+.recipe-card ul { padding-left: 1.2rem; }
+.recipe-card li { font-size: .83rem; color: var(--ash); margin-bottom: .25rem; }
+.recipe-divider { border: none; border-top: 1px solid var(--line-soft); margin: 14px 0; }
+
+.callout {
+  background: rgba(184,146,60,.08); border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 18px 20px; margin: 24px 0;
+}
+.callout p { margin: 0; color: var(--ash); font-size: .92rem; }
+.callout strong { color: var(--gold-lit); }
+
+.page-cta {
+  background: var(--stone); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: clamp(32px,4vw,52px); text-align: center; margin-top: clamp(40px,5vw,64px);
+}
+.page-cta h2 { font-size: clamp(1.4rem,1.1rem+1.2vw,1.9rem); margin-bottom: .5rem; }
+.page-cta p { color: var(--ash); margin-bottom: 28px; }
+.btn--solid {
+  display: inline-block; background: var(--gold); color: var(--void);
+  font-family: var(--f-display); font-size: .82rem; letter-spacing: .1em;
+  text-transform: uppercase; font-weight: 700; padding: 14px 32px;
+  border-radius: var(--radius-sm); text-decoration: none; transition: background .2s;
+}
+.btn--solid:hover { background: var(--gold-lit); color: var(--void); }
+
+.page-footer { background: var(--obsidian); border-top: 1px solid var(--line); padding: 40px 0; text-align: center; }
+.page-footer p { color: var(--fog); font-size: .82rem; margin: 0; }
+.page-footer a { color: var(--gold-lit); }
+</style>
+</head>
+<body>
+
+<nav class="page-nav">
+  <div class="shell">
+    <a class="brand" href="/">
+      <img src="assets/img/logo.png" alt="Logo Viking Fitness Fuengirola — nutrición y fuerza">
+      <span class="brand-name">VIKING<span>·</span>FITNESS</span>
+    </a>
+    <a class="back" href="/#nutricion">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Inicio
+    </a>
+  </div>
+</nav>
+
+<header class="nutri-hero">
+  <div class="shell">
+    <p class="eyebrow">Viking Fitness Fuengirola · Nutrición</p>
+    <h1>Come como un <em>nórdico</em></h1>
+    <p class="lede">Proteína real, grasas de calidad, carbohidratos de bajo índice glucémico y cero ultraprocesados. No es una dieta de moda: es el patrón alimentario con mayor evidencia para la composición corporal y la salud ósea a largo plazo.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- PILARES -->
+<section class="nutri-section">
+  <div class="shell">
+    <div class="content-body" style="max-width:72ch; margin-bottom: clamp(32px,4vw,56px)">
+      <p class="eyebrow">Los principios</p>
+      <h2>El método nutricional Viking Fitness</h2>
+      <p>El método no se basa en contar calorías de forma obsesiva ni en eliminar grupos de alimentos. Se basa en <strong>elegir mejor</strong>: alimentos reales, densos en nutrientes, que sacian y alimentan sin inflación inflamatoria.</p>
+      <p>La grasa corporal desaparece cuando hay un <em>déficit calórico sostenido</em>. Y la forma más eficiente de crear ese déficit es comer alimentos que sacian más con menos calorías totales — exactamente lo que hace el patrón nórdico.</p>
+    </div>
+
+    <div class="pillar-grid">
+      <div class="pillar-card"><span class="ic">🐟</span><h4>Proteína animal de calidad</h4><p>Pescado azul (salmón, arenque, caballa), carne de pasto, huevos camperos y skyr. Mínimo 1.8–2g por kg de peso corporal.</p></div>
+      <div class="pillar-card"><span class="ic">🫒</span><h4>Grasas saludables</h4><p>Aceite de oliva virgen extra, aguacate, frutos secos, yema de huevo y la grasa propia del pescado azul. Son el combustible principal.</p></div>
+      <div class="pillar-card"><span class="ic">🫘</span><h4>Carbohidratos de raíz</h4><p>Batata, remolacha, nabo, zanahoria y legumbres. Bajo índice glucémico, alta saciedad, sin los picos de insulina del azúcar refinado.</p></div>
+      <div class="pillar-card"><span class="ic">🥦</span><h4>Volumen vegetal</h4><p>Coles, kale, espinacas y bayas del bosque. Alto contenido en micronutrientes y fibra. Llena el plato sin cargar las calorías.</p></div>
+      <div class="pillar-card"><span class="ic">🚫</span><h4>Sin ultraprocesados</h4><p>Nada de bollería industrial, refrescos, embutidos de baja calidad ni aceites de semillas refinados. No es moralismo: es fisiología.</p></div>
+      <div class="pillar-card"><span class="ic">📊</span><h4>Déficit calórico real</h4><p>Sin dietas de hambre. Un déficit de 300–500 kcal/día es sostenible y preserva la masa muscular. La app registra y calcula.</p></div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Por qué grasas saludables y no carbohidratos como base:</strong> cuando reduces la ingesta de carbohidratos refinados, el cuerpo aprende a oxidar ácidos grasos como sustrato energético principal. Eso es especialmente útil durante el entrenamiento de fuerza, donde la energía necesaria proviene más del metabolismo anaeróbico que del glucolítico.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RECETAS -->
+<section class="nutri-section">
+  <div class="shell">
+    <p class="eyebrow">Ejemplos prácticos</p>
+    <h2 style="font-family:var(--f-display);font-size:clamp(1.5rem,1.2rem+1.4vw,2.1rem);margin-bottom:8px">Recetas del patrón nórdico</h2>
+    <p style="color:var(--ash);max-width:62ch;margin-bottom:0">No hace falta cocinar complicado. Estas recetas combinan lo que dice la ciencia con lo que tienes en el supermercado de Fuengirola o cualquier ciudad española.</p>
+
+    <div class="recipe-grid">
+
+      <div class="recipe-card">
+        <div class="recipe-card-head">
+          <span class="tag">Proteína · Omega-3</span>
+          <h3>Salmón al horno con batata y kale</h3>
+          <div class="meta">
+            <span>⏱ 25 min</span>
+            <span>~550 kcal</span>
+            <span>~42g proteína</span>
+          </div>
+        </div>
+        <div class="recipe-card-body">
+          <p>Un plato completo con proteína de alta calidad, grasas omega-3 del salmón y carbohidratos de bajo índice glucémico de la batata. El kale aporta calcio y vitamina K, dos nutrientes clave para la mineralización ósea.</p>
+          <hr class="recipe-divider">
+          <ul>
+            <li>200g lomo de salmón (fresco o descongelado)</li>
+            <li>1 batata mediana, en cubos</li>
+            <li>100g kale o espinacas</li>
+            <li>2 cucharadas aceite de oliva virgen extra</li>
+            <li>Limón, ajo, sal marina, pimienta negra</li>
+          </ul>
+          <hr class="recipe-divider">
+          <p style="font-size:.8rem;margin:0">Hornea batata 15 min a 200°C. Añade el salmón sazonado 10 min más. Saltea el kale en la sartén con ajo y aceite.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-card-head">
+          <span class="tag">Fuerza · Alta proteína</span>
+          <h3>Bowl vikingo de carne y remolacha</h3>
+          <div class="meta">
+            <span>⏱ 20 min</span>
+            <span>~620 kcal</span>
+            <span>~48g proteína</span>
+          </div>
+        </div>
+        <div class="recipe-card-body">
+          <p>Carne de ternera o venado con remolacha cocida y un puñado de nueces. La remolacha mejora la circulación y el rendimiento en entrenamiento de fuerza (nitratos naturales). Las nueces aportan omega-3 de origen vegetal y grasas saludables.</p>
+          <hr class="recipe-divider">
+          <ul>
+            <li>200g ternera magra o solomillo en tiras</li>
+            <li>2 remolachas cocidas, en láminas</li>
+            <li>Puñado de nueces o avellanas</li>
+            <li>Brotes de espinaca o rúcula</li>
+            <li>Vinagreta de mostaza antigua y aceite de oliva</li>
+          </ul>
+          <hr class="recipe-divider">
+          <p style="font-size:.8rem;margin:0">Marca la carne a fuego alto 3-4 min. Monta el bowl en frío: hojas, remolacha, carne, nueces y vinagreta.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-card-head">
+          <span class="tag">Recuperación · Anti-inflamatorio</span>
+          <h3>Skyr con bayas y semillas de chía</h3>
+          <div class="meta">
+            <span>⏱ 3 min</span>
+            <span>~320 kcal</span>
+            <span>~28g proteína</span>
+          </div>
+        </div>
+        <div class="recipe-card-body">
+          <p>El skyr es el lácteo fermentado nórdico con la mejor ratio proteína/calorías del mercado. Las bayas (arándanos, frambuesas) aportan antioxidantes que reducen el daño oxidativo post-entrenamiento. Las semillas de chía añaden fibra y omega-3 de cadena corta.</p>
+          <hr class="recipe-divider">
+          <ul>
+            <li>200g skyr natural sin azúcar</li>
+            <li>Puñado de arándanos o frambuesas (frescas o congeladas)</li>
+            <li>1 cucharada semillas de chía</li>
+            <li>Opcional: canela, cacao puro en polvo</li>
+          </ul>
+          <hr class="recipe-divider">
+          <p style="font-size:.8rem;margin:0">Mezcla y listo. Ideal como desayuno pre-entreno o merienda post-entreno.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-card-head">
+          <span class="tag">Fuerza resistencia · Energía sostenida</span>
+          <h3>Tortilla de huevos con aguacate y centeno</h3>
+          <div class="meta">
+            <span>⏱ 10 min</span>
+            <span>~480 kcal</span>
+            <span>~32g proteína</span>
+          </div>
+        </div>
+        <div class="recipe-card-body">
+          <p>La combinación de huevos enteros + aguacate es la fórmula nórdica para energía sostenida sin picos de insulina. El pan de centeno (preferiblemente masa madre) tiene un índice glucémico mucho menor que el pan blanco y aporta fibra que ralentiza la absorción de glucosa.</p>
+          <hr class="recipe-divider">
+          <ul>
+            <li>3 huevos camperos</li>
+            <li>½ aguacate maduro</li>
+            <li>1-2 rebanadas pan de centeno integral</li>
+            <li>Tomate cherry, sal marina, pimienta</li>
+            <li>Aceite de oliva virgen extra</li>
+          </ul>
+          <hr class="recipe-divider">
+          <p style="font-size:.8rem;margin:0">Bate los huevos y cuaja en sartén antiadherente. Sirve sobre pan de centeno con aguacate aplastado y tomates.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-card-head">
+          <span class="tag">Hueso · Calcio · Omega-3</span>
+          <h3>Arenque marinado con pepino y eneldo</h3>
+          <div class="meta">
+            <span>⏱ 5 min</span>
+            <span>~280 kcal</span>
+            <span>~26g proteína</span>
+          </div>
+        </div>
+        <div class="recipe-card-body">
+          <p>El arenque es el pescado con mayor concentración de vitamina D y omega-3 por euro. La vitamina D es esencial para la absorción del calcio y la mineralización ósea — sin ella, ni el calcio que comes ni el entrenamiento de fuerza llegan a proteger el hueso de forma óptima.</p>
+          <hr class="recipe-divider">
+          <ul>
+            <li>150g arenque marinado (en conserva o fresco)</li>
+            <li>½ pepino en rodajas finas</li>
+            <li>Eneldo fresco o seco</li>
+            <li>1 cucharada aceite de oliva</li>
+            <li>Limón, cebolleta</li>
+          </ul>
+          <hr class="recipe-divider">
+          <p style="font-size:.8rem;margin:0">Sirve frío sobre tostada de centeno o como ensalada. Perfecto como cena ligera post-entreno.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-card-head">
+          <span class="tag">Pre-entreno · Carbos lentos</span>
+          <h3>Porridge de avena con canela y nueces</h3>
+          <div class="meta">
+            <span>⏱ 8 min</span>
+            <span>~420 kcal</span>
+            <span>~18g proteína</span>
+          </div>
+        </div>
+        <div class="recipe-card-body">
+          <p>La avena es el carbohidrato de base del patrón nórdico. Su fibra soluble (betaglucano) ralentiza la absorción de glucosa, mantiene la energía estable durante el entrenamiento y tiene efectos probados sobre el colesterol y la microbiota intestinal.</p>
+          <hr class="recipe-divider">
+          <ul>
+            <li>80g avena en copos (no instantánea)</li>
+            <li>250ml leche entera o bebida de avena</li>
+            <li>Puñado de nueces o almendras</li>
+            <li>Canela, una pizca de sal</li>
+            <li>Opcional: una cucharada de mantequilla de almendra</li>
+          </ul>
+          <hr class="recipe-divider">
+          <p style="font-size:.8rem;margin:0">Cuece la avena en la leche 5 min a fuego medio. Añade las nueces, la canela y sirve caliente.</p>
+        </div>
+      </div>
+
+    </div><!-- /recipe-grid -->
+
+    <div class="page-cta">
+      <p class="eyebrow">Plan personalizado</p>
+      <h2>Tu plan nutricional adaptado a tu objetivo</h2>
+      <p>Una evaluación en Fuengirola para establecer tus necesidades calóricas reales, tu distribución de macros y un plan de alimentación que puedas sostener. Sin suplementos innecesarios, sin dietas de hambre.</p>
+      <a class="btn--solid" href="/#contacto">Contactar con Viking Fitness Fuengirola</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="page-footer">
+  <p>© <script>document.write(new Date().getFullYear())</script> <a href="/">Viking Fitness Fuengirola</a> · <a href="/metodo.html">Método</a> · <a href="/ciencia.html">Ciencia</a> · <a href="/blog/">Blog</a></p>
+  <p style="margin-top:8px;font-size:.75rem;opacity:.5">Diseñado por <a href="https://wf-studio.es" target="_blank" rel="noopener" style="color:inherit">WF-Studio</a></p>
+</footer>
+
+<a class="whatsapp-horn" href="https://wa.me/34634002661" target="_blank" rel="noopener" aria-label="Llamar al clan por WhatsApp">
+  <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="none">
+    <ellipse cx="11" cy="32" rx="9" ry="18" class="horn-body"/>
+    <ellipse cx="11" cy="32" rx="4.5" ry="11" fill="#0e1114" stroke="none"/>
+    <path d="M18 16 L58 26 L58 38 L18 48 Z" class="horn-body"/>
+    <line x1="32" y1="18.5" x2="32" y2="45.5" stroke="#251a09" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="44" y1="21.5" x2="44" y2="42.5" stroke="#251a09" stroke-width="1.8" stroke-linecap="round"/>
+    <ellipse cx="58" cy="32" rx="3.5" ry="7" class="horn-mouth"/>
+    <ellipse cx="58" cy="32" rx="1.5" ry="3.5" fill="#0e1114" stroke="none"/>
+  </svg>
+  <span>WhatsApp</span>
+</a>
+
+</body>
+</html>
