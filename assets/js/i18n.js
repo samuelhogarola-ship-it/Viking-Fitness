@@ -35,7 +35,7 @@ es: {
   'method.s4.t':'Consejo del clan','method.s4.short':'Revisión quincenal y videollamada.',
 
   'train.eyebrow':'Entrenamiento',
-  'train.lede':'El entrenamiento se adapta a tu objetivo y tu punto de partida, no a una plantilla genérica. El eje es siempre la fuerza máxima: la definición viene del control de la alimentación y el cardio, no de hacer repeticiones como un loco.',
+  'train.lede':'El entrenamiento se adapta a tu objetivo y tu punto de partida. El eje es la fuerza máxima, respaldada por décadas de evidencia científica. La composición corporal —definición o volumen— se regula desde la dieta y los ajustes del entrenamiento, no del número de repeticiones.',
   'train.b1.t':'Fuerza máxima',
   'train.b1.d':'Sentadilla, peso muerto, press y remo entre el 80 y el 95 % de tu máximo. Series bajas, descansos completos, técnica intachable. La carga sube cuando el movimiento lo permite.',
   'train.b1.l1':'3–5 series de 3–5 repeticiones','train.b1.l2':'Progresión de carga registrada semana a semana','train.b1.l3':'Vídeo de técnica revisado por tu entrenador',
@@ -86,11 +86,11 @@ es: {
   'plans.p2.price':'Consultar','plans.p3.price':'Consultar','plans.p4.price':'Consultar',
   'plans.choose':'Elegir','plans.popular':'El más elegido',
   'plans.p2.t':'Berserker','plans.p2.s':'Explosividad. Powerlifting y potencia con estructura.',
-  'plans.p2.l1':'Programación de fuerza máxima y potencia','plans.p2.l2':'Periodización por bloques con picos de rendimiento','plans.p2.l3':'Plan nutricional orientado a fuerza y recuperación','plans.p2.l4':'Acceso completo a la app de registro','plans.p2.l5':'Soporte por chat',
+  'plans.p2.l1':'Programación de fuerza máxima y potencia','plans.p2.l2':'Progresión de carga adaptada a tu evolución','plans.p2.l3':'Plan nutricional orientado a fuerza y recuperación','plans.p2.l4':'Acceso completo a la app de registro','plans.p2.l5':'Soporte por chat',
   'plans.p3.t':'Cazador','plans.p3.s':'Resistencia y durabilidad. Un cuerpo hecho para aguantar, correr y remar.',
   'plans.p3.l1':'Rutina de fuerza-resistencia personalizada','plans.p3.l2':'Programación de cardio y acondicionamiento','plans.p3.l3':'Plan nutricional orientado a rendimiento aeróbico','plans.p3.l4':'Acceso completo a la app de registro','plans.p3.l5':'Soporte por chat',
   'plans.p4.t':'Titán','plans.p4.s':'Hipertrofia. Volumen y densidad muscular con criterio.',
-  'plans.p4.l1':'Rutina de hipertrofia con técnicas avanzadas','plans.p4.l2':'Periodización por volumen, intensidad y descarga','plans.p4.l3':'Plan nutricional por fases de ganancia y definición','plans.p4.l4':'Acceso completo a la app de registro','plans.p4.l5':'Soporte por chat',
+  'plans.p4.l1':'Rutina de hipertrofia con técnicas avanzadas','plans.p4.l2':'Progresión de volumen e intensidad adaptada semana a semana','plans.p4.l3':'Plan nutricional ajustado a las fases de ganancia y definición','plans.p4.l4':'Acceso completo a la app de registro','plans.p4.l5':'Soporte por chat',
 
   'about.eyebrow':'Quién está detrás','about.title':'Sobre mí',
   'about.p1':'Deportista y profesor de Educación Física. Llevo años combinando el entrenamiento de fuerza con el estudio de la historia del movimiento humano. Viking Fitness nace de una pregunta: ¿y si los métodos de entrenamiento que hoy valida la ciencia moderna ya los practicaban los pueblos del norte de Europa hace siglos?',
