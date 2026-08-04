@@ -2,8 +2,6 @@
    VIKING FITNESS — Sistema visual
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 :root {
   /* Superficies */
   --void:      #0a0c0f;
@@ -788,6 +786,22 @@ tr:hover td { background: rgba(255,255,255,.02); }
   .rank-bar { min-width: 100%; }
   .acc-head strong { font-size: 1.05rem; }
 }
+
+/* ============================================================
+   COOKIE BANNER
+   ============================================================ */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9000;
+  background: var(--stone); border-top: 1px solid var(--line);
+  padding: 18px clamp(16px, 4vw, 32px);
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  box-shadow: 0 -10px 40px rgba(0,0,0,.4);
+  animation: slideUp .4s var(--ease);
+}
+.cookie-banner p { flex: 1; min-width: 260px; font-size: .84rem; color: var(--ash); line-height: 1.5; }
+.cookie-banner a { color: var(--gold-lit); border-bottom: 1px dotted var(--gold-lit); }
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

@@ -180,4 +180,18 @@
 
   /* ---------- Año ---------- */
   const y = $('#year'); if (y) y.textContent = new Date().getFullYear();
+
+  /* ---------- Cookie banner ---------- */
+  const cb = $('#cookieBanner');
+  if (cb && !localStorage.getItem('vf_cookies')) {
+    cb.style.display = 'flex';
+    $('#cookieAccept').addEventListener('click', () => {
+      localStorage.setItem('vf_cookies', 'all');
+      cb.style.display = 'none';
+    });
+    $('#cookieReject').addEventListener('click', () => {
+      localStorage.setItem('vf_cookies', 'essential');
+      cb.style.display = 'none';
+    });
+  }
 })();

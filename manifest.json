@@ -1,0 +1,26 @@
+{
+  "name": "Viking Fitness",
+  "short_name": "VikingFit",
+  "description": "Entrenador personal en Fuengirola — fuerza explosiva y nutrición nórdica",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0c0f",
+  "theme_color": "#0a0c0f",
+  "icons": [
+    {
+      "src": "/assets/img/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/logo.webp",
+      "sizes": "400x400",
+      "type": "image/webp"
+    }
+  ]
+}
