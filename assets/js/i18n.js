@@ -10,7 +10,7 @@ es: {
   'portal.enterSilent':'Entrar en silencio',
   'portal.hint2':'Puedes silenciarlo cuando quieras desde el icono del menú',
 
-  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.cta':'Próximamente',
+  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.shop':'Tienda','nav.cta':'Próximamente',
   'sound.on':'Activar el sonido del Valhalla','sound.off':'Silenciar el sonido',
   'soon.msg':'La app llega muy pronto.',
 
@@ -92,6 +92,16 @@ es: {
   'plans.p4.t':'Titán','plans.p4.s':'Hipertrofia. Volumen y densidad muscular con criterio.',
   'plans.p4.l1':'Rutina de hipertrofia con técnicas avanzadas','plans.p4.l2':'Progresión de volumen e intensidad adaptada semana a semana','plans.p4.l3':'Plan nutricional ajustado a las fases de ganancia y definición','plans.p4.l4':'Acceso completo a la app de registro','plans.p4.l5':'Soporte por chat',
 
+  'shop.eyebrow':'Tienda online','shop.title':'Hacha Vikinga decorativa',
+  'shop.lede':'Piezas de inspiración nórdica para pared, estantería o rincón de entrenamiento. Todos los modelos se anuncian y venden como artículos decorativos, no como herramienta ni arma de uso.',
+  'shop.decorative':'Decorativa','shop.measure':'Medida','shop.finish':'Acabado','shop.ask':'Consultar',
+  'shop.p1.t':'Hacha Vikinga Forja','shop.p1.d':'Modelo compacto con mango oscuro y cabeza envejecida. Pensada para exposición en pared o soporte.','shop.p1.f':'Hierro oscuro',
+  'shop.p2.t':'Hacha Vikinga Runas','shop.p2.d':'Cabeza grabada con motivo rúnico y empuñadura trenzada. La pieza más ceremonial de la colección.','shop.p2.f':'Bronce y madera',
+  'shop.p3.t':'Hacha Vikinga Jarl','shop.p3.d':'Silueta amplia, detalles nórdicos y presencia de vitrina. Ideal como regalo o pieza de colección.','shop.p3.f':'Grabado ornamental',
+  'shop.legal.t':'Nota legal de venta',
+  'shop.legal.p1':'En España, el Reglamento de Armas clasifica las armas blancas no prohibidas como categoría 5.ª y su adquisición y tenencia es libre para personas mayores de edad. La limitación explícita de 11 cm indicada por Interior se refiere a navajas no automáticas, no a hachas decorativas.',
+  'shop.legal.p2':'Venta solo a mayores de 18 años, con verificación de edad. Uso exclusivo ornamental o de coleccionismo en domicilio. No portar, exhibir ni usar en vía pública, locales o concentraciones. Ante dudas sobre un modelo concreto, consultar con la Intervención de Armas de la Guardia Civil.',
+
   'about.eyebrow':'Quién está detrás','about.title':'Sobre mí',
   'about.p1':'Deportista y profesor de Educación Física. Llevo años combinando el entrenamiento de fuerza con el estudio de la historia del movimiento humano. Viking Fitness nace de una pregunta: ¿y si los métodos de entrenamiento que hoy valida la ciencia moderna ya los practicaban los pueblos del norte de Europa hace siglos?',
   'about.p2':'Los vikingos levantaban piedras naturales como prueba de fuerza — el Húsafell Stone en Islandia o las piedras de vigor escandinavas eran ritos de paso. Remaban distancias enormes, luchaban glíma y cargaban troncos. Su alimentación se basaba en lo que hoy llamamos paleo: pescado salvaje, caza, tubérculos, bayas, lácteos fermentados como el skyr y grasas animales de calidad.',
@@ -136,7 +146,7 @@ en: {
   'portal.enterSound':'Enter with sound','portal.enterSilent':'Enter in silence',
   'portal.hint2':'You can mute it any time from the icon in the menu',
 
-  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.cta':'Coming soon',
+  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.shop':'Shop','nav.cta':'Coming soon',
   'sound.on':'Turn the sound of Valhalla on','sound.off':'Mute the sound',
   'soon.msg':'The app is coming very soon.',
 
@@ -218,6 +228,16 @@ en: {
   'plans.p4.t':'Titan','plans.p4.s':'Hypertrophy. Volume and muscle density, done with judgement.',
   'plans.p4.l1':'Hypertrophy programme with advanced techniques','plans.p4.l2':'Volume, intensity and deload periodisation','plans.p4.l3':'Nutrition plan by gaining and cutting phases','plans.p4.l4':'Full access to the tracking app','plans.p4.l5':'Chat support',
 
+  'shop.eyebrow':'Online shop','shop.title':'Decorative Viking axe',
+  'shop.lede':'Nordic-inspired pieces for a wall, shelf or training corner. Every model is listed and sold as a decorative item, not as a tool or weapon for use.',
+  'shop.decorative':'Decorative','shop.measure':'Size','shop.finish':'Finish','shop.ask':'Enquire',
+  'shop.p1.t':'Forge Viking Axe','shop.p1.d':'Compact model with a dark handle and aged head. Designed for wall or stand display.','shop.p1.f':'Dark iron',
+  'shop.p2.t':'Runes Viking Axe','shop.p2.d':'Engraved head with runic motif and wrapped grip. The most ceremonial piece in the collection.','shop.p2.f':'Bronze and wood',
+  'shop.p3.t':'Jarl Viking Axe','shop.p3.d':'Wide silhouette, Nordic details and display presence. Ideal as a gift or collector piece.','shop.p3.f':'Ornamental engraving',
+  'shop.legal.t':'Legal sales note',
+  'shop.legal.p1':'In Spain, the Weapons Regulation classifies non-prohibited bladed items as category 5, and acquisition and possession are free for adults. The explicit 11 cm limit cited by Interior applies to non-automatic folding knives, not decorative axes.',
+  'shop.legal.p2':'Sales only to people over 18, with age verification. Ornamental or home-collection use only. Do not carry, display or use in public streets, venues or gatherings. For doubts about a specific model, consult the Guardia Civil Weapons Intervention office.',
+
   'about.eyebrow':'Who\'s behind this','about.title':'About me',
   'about.p1':'Athlete and Physical Education teacher. I\'ve spent years combining strength training with the study of the history of human movement. Viking Fitness was born from a question: what if the training methods that modern science validates today were already practised by the peoples of northern Europe centuries ago?',
   'about.p2':'Vikings lifted natural stones as tests of strength — the Húsafell Stone in Iceland or the Scandinavian vigour stones were rites of passage. They rowed vast distances, wrestled glíma and carried logs. Their diet was based on what we now call paleo: wild fish, game, root vegetables, berries, fermented dairy like skyr and quality animal fats.',
@@ -261,7 +281,7 @@ fi: {
   'portal.enterSound':'Astu sisään äänellä','portal.enterSilent':'Astu sisään hiljaisuudessa',
   'portal.hint2':'Voit mykistää sen milloin tahansa valikon kuvakkeesta',
 
-  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.cta':'Tulossa pian',
+  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.shop':'Kauppa','nav.cta':'Tulossa pian',
   'sound.on':'Kytke Valhallan ääni päälle','sound.off':'Mykistä ääni',
   'soon.msg':'Sovellus julkaistaan hyvin pian.',
 
@@ -343,6 +363,16 @@ fi: {
   'plans.p4.t':'Titaani','plans.p4.s':'Hypertrofia. Volyymi ja lihastiheys harkiten.',
   'plans.p4.l1':'Hypertrofiaohjelma edistyneillä tekniikoilla','plans.p4.l2':'Volyymi-, intensiteetti- ja kevennysjaksotus','plans.p4.l3':'Ravintosuunnitelma massa- ja rasvanpudotusvaiheisiin','plans.p4.l4':'Täysi pääsy seurantasovellukseen','plans.p4.l5':'Chat-tuki',
 
+  'shop.eyebrow':'Verkkokauppa','shop.title':'Koristeellinen viikinkikirves',
+  'shop.lede':'Pohjoisesta inspiroituja esineitä seinälle, hyllylle tai treeninurkkaukseen. Kaikki mallit ilmoitetaan ja myydään koriste-esineinä, ei työkaluna tai käyttöaseena.',
+  'shop.decorative':'Koriste','shop.measure':'Mitta','shop.finish':'Viimeistely','shop.ask':'Kysy',
+  'shop.p1.t':'Forja-viikinkikirves','shop.p1.d':'Kompakti malli tummalla varrella ja patinoidulla terällä. Tarkoitettu seinälle tai telineeseen.','shop.p1.f':'Tumma rauta',
+  'shop.p2.t':'Runes-viikinkikirves','shop.p2.d':'Kaiverrettu pää riimumotiivilla ja punottu ote. Kokoelman seremoniallisin kappale.','shop.p2.f':'Pronssi ja puu',
+  'shop.p3.t':'Jarl-viikinkikirves','shop.p3.d':'Leveä siluetti, pohjoiset yksityiskohdat ja vitriiniin sopiva olemus. Hyvä lahja tai keräilyesine.','shop.p3.f':'Koristekaiverrus',
+  'shop.legal.t':'Myynnin oikeudellinen huomautus',
+  'shop.legal.p1':'Espanjassa asetus aseista luokittelee kiellettyihin kuulumattomat teräaseet luokkaan 5, ja niiden hankinta ja hallussapito on vapaata täysi-ikäisille. Sisäministeriön mainitsema nimenomainen 11 cm raja koskee ei-automaattisia taittoveitsiä, ei koristekirveitä.',
+  'shop.legal.p2':'Myynti vain yli 18-vuotiaille iän tarkistuksella. Vain koriste- tai kotikeräilykäyttöön. Ei saa kantaa, esitellä tai käyttää julkisilla paikoilla, tilaisuuksissa tai kokoontumisissa. Yksittäisen mallin epäselvissä tapauksissa ota yhteyttä Guardia Civilin asevalvontaan.',
+
   'about.eyebrow':'Kuka tämän takana on','about.title':'Minusta',
   'about.p1':'Urheilija ja liikunnanopettaja. Olen yhdistänyt voimaharjoittelun ja ihmisen liikkumisen historian tutkimisen vuosien ajan. Viking Fitness syntyi kysymyksestä: entä jos nykytiede vahvistaa harjoitusmenetelmiä, joita Pohjois-Euroopan kansat harjoittivat jo vuosisatoja sitten?',
   'about.p2':'Viikingit nostivat luonnonkiviä voiman osoituksena — Húsafell-kivi Islannissa ja skandinaaviset voimakivet olivat siirtymäriittejä. He soutivat valtavia matkoja, painivat glímaa ja kantoivat tukkeja. Heidän ruokavalionsa perustui siihen, mitä nykyään kutsumme paleoksi: villikala, riista, juurekset, marjat, fermentoidut maitotuotteet kuten skyr ja laadukkaat eläinrasvat.',
@@ -386,7 +416,7 @@ no: {
   'portal.enterSound':'Gå inn med lyd','portal.enterSilent':'Gå inn i stillhet',
   'portal.hint2':'Du kan slå den av når som helst fra ikonet i menyen',
 
-  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.cta':'Kommer snart',
+  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.shop':'Butikk','nav.cta':'Kommer snart',
   'sound.on':'Slå på lyden fra Valhall','sound.off':'Slå av lyden',
   'soon.msg':'Appen kommer veldig snart.',
 
@@ -467,6 +497,16 @@ no: {
   'plans.p3.l1':'Personlig styrke-utholdenhets-program','plans.p3.l2':'Kardio- og kondisjonsprogrammering','plans.p3.l3':'Ernæringsplan for aerob ytelse','plans.p3.l4':'Full tilgang til sporingsappen','plans.p3.l5':'Chat-støtte',
   'plans.p4.t':'Titan','plans.p4.s':'Hypertrofi. Volum og muskeltetthet med skjønn.',
   'plans.p4.l1':'Hypertrofiprogram med avanserte teknikker','plans.p4.l2':'Volum-, intensitets- og nedtrappingsperiodisering','plans.p4.l3':'Ernæringsplan for oppbyggings- og nedtrappingsfaser','plans.p4.l4':'Full tilgang til sporingsappen','plans.p4.l5':'Chat-støtte',
+
+  'shop.eyebrow':'Nettbutikk','shop.title':'Dekorativ vikingøks',
+  'shop.lede':'Nordisk-inspirerte stykker for vegg, hylle eller treningshjørne. Alle modeller annonseres og selges som dekorative gjenstander, ikke som verktøy eller våpen til bruk.',
+  'shop.decorative':'Dekorativ','shop.measure':'Mål','shop.finish':'Finish','shop.ask':'Forespør',
+  'shop.p1.t':'Forja vikingøks','shop.p1.d':'Kompakt modell med mørkt skaft og eldet hode. Laget for vegg eller stativ.','shop.p1.f':'Mørkt jern',
+  'shop.p2.t':'Runer vikingøks','shop.p2.d':'Gravert hode med runemotiv og flettet grep. Det mest seremonielle stykket i kolleksjonen.','shop.p2.f':'Bronse og tre',
+  'shop.p3.t':'Jarl vikingøks','shop.p3.d':'Bred silhuett, nordiske detaljer og tydelig vitrinetilstedeværelse. Ideell som gave eller samleobjekt.','shop.p3.f':'Ornamental gravering',
+  'shop.legal.t':'Juridisk salgsmerknad',
+  'shop.legal.p1':'I Spania klassifiserer våpenforskriften ikke-forbudte blankvåpen som kategori 5, og kjøp og besittelse er fritt for myndige personer. Den uttrykkelige grensen på 11 cm som Interior viser til gjelder ikke-automatiske foldekniver, ikke dekorative økser.',
+  'shop.legal.p2':'Salg kun til personer over 18 år, med alderskontroll. Kun til dekorasjon eller samling i hjemmet. Ikke bær, vis frem eller bruk på offentlig sted, i lokaler eller ved samlinger. Ved tvil om en bestemt modell, kontakt Guardia Civils våpenkontor.',
 
   'about.eyebrow':'Hvem står bak','about.title':'Om meg',
   'about.p1':'Idrettsutøver og kroppsøvingslærer. Jeg har i årevis kombinert styrketrening med studiet av menneskets bevegelseshistorie. Viking Fitness ble født av et spørsmål: hva om treningsmetodene som moderne vitenskap bekrefter i dag, allerede ble praktisert av Nord-Europas folk for århundrer siden?',

@@ -505,6 +505,115 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .plan li::before { content: '✓'; color: var(--gold-lit); flex: none; }
 
 /* ============================================================
+   TIENDA ONLINE
+   ============================================================ */
+.shop { background: linear-gradient(180deg, var(--void), var(--obsidian)); }
+.shop-hero {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(360px, 1.22fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  margin-bottom: 24px;
+}
+.shop-copy h2 {
+  font-size: clamp(1.9rem, 1.35rem + 2.2vw, 3.2rem);
+  margin: .5rem 0 1rem;
+}
+.shop-visual {
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--stone);
+  box-shadow: 0 30px 80px -48px #000;
+}
+.shop-visual img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+}
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--stone);
+}
+.shop-card--featured { border-color: rgba(216,182,103,.74); }
+.shop-tag {
+  align-self: flex-start;
+  padding: .28rem .65rem;
+  border-radius: 999px;
+  background: rgba(111,168,184,.12);
+  color: var(--ice);
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.shop-card h3 { font-size: 1.2rem; }
+.shop-card p { color: var(--ash); font-size: .92rem; }
+.shop-card dl {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+.shop-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 10px;
+}
+.shop-card dt {
+  color: var(--fog);
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.shop-card dd {
+  color: var(--bone);
+  font-size: .88rem;
+  text-align: right;
+}
+.shop-card .btn { justify-content: center; margin-top: 2px; }
+.shop-legal {
+  margin-top: 18px;
+  padding: 24px 26px;
+  border: 1px solid rgba(216,182,103,.3);
+  border-radius: var(--radius);
+  background: rgba(184,146,60,.07);
+}
+.shop-legal h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.shop-legal p {
+  color: var(--ash);
+  font-size: .88rem;
+  max-width: 104ch;
+}
+.shop-legal p + p { margin-top: 10px; }
+.shop-sources {
+  display: flex;
+  gap: 12px 18px;
+  flex-wrap: wrap;
+}
+.shop-sources a {
+  color: var(--gold-lit);
+  border-bottom: 1px dotted currentColor;
+}
+
+/* ============================================================
    TESTIMONIOS
    ============================================================ */
 .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
@@ -713,6 +822,8 @@ tr:hover td { background: rgba(255,255,255,.02); }
    ============================================================ */
 @media (max-width: 960px) {
   .app-showcase { grid-template-columns: 1fr; }
+  .shop-hero,
+  .shop-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .nav-links {
     position: fixed; inset: 78px 0 auto; flex-direction: column; gap: 0;

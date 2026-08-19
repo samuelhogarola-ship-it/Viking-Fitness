@@ -49,6 +49,72 @@
   </url>
 
   <url>
+    <loc>https://www.vikingfitness.es/blog/creatina-fuerza.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/blog/creatina-fuerza-viking-fitness.jpg</image:loc>
+      <image:title>Creatina para fuerza Viking Fitness</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.vikingfitness.es/blog/cafeina-preentreno.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/blog/cafeina-preentreno-viking-fitness.jpg</image:loc>
+      <image:title>Cafeína pre-entreno Viking Fitness</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.vikingfitness.es/blog/proteina-whey-comida-real.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/blog/proteina-whey-comida-real-viking-fitness.jpg</image:loc>
+      <image:title>Proteína y whey Viking Fitness</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.vikingfitness.es/blog/hidratacion-electrolitos-calor.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/blog/hidratacion-electrolitos-viking-fitness.jpg</image:loc>
+      <image:title>Hidratación y electrolitos Viking Fitness</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.vikingfitness.es/blog/rutina-fuerza-hipertrofia.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/blog/rutina-fuerza-hipertrofia-viking-fitness.jpg</image:loc>
+      <image:title>Rutina de fuerza e hipertrofia Viking Fitness</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.vikingfitness.es/blog/recuperacion-sueno-descarga.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/blog/recuperacion-descanso-viking-fitness.jpg</image:loc>
+      <image:title>Recuperación y descarga Viking Fitness</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://www.vikingfitness.es/metodo.html</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
