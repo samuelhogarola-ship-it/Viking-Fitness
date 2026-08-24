@@ -3,6 +3,7 @@
   background:
     linear-gradient(180deg, rgba(10,12,15,.82), rgba(10,12,15,.96)),
     url('../img/hero.webp') center top / cover fixed;
+  touch-action: manipulation;
 }
 
 .sudoku-shell {
@@ -198,6 +199,7 @@
   font-family: var(--f-display);
   font-size: clamp(1rem, 2.8vw, 2rem);
   font-weight: 700;
+  touch-action: manipulation;
 }
 
 .cell:nth-child(3n) {
@@ -239,6 +241,7 @@
 }
 
 .side-panel {
+  display: grid;
   padding: 18px;
 }
 
@@ -302,6 +305,12 @@
 }
 
 @media (max-width: 900px) {
+  .sudoku-body {
+    background:
+      linear-gradient(180deg, rgba(10,12,15,.88), rgba(10,12,15,.98)),
+      url('../img/hero.webp') center top / cover scroll;
+  }
+
   .sudoku-body .nav-inner {
     height: auto;
     min-height: 78px;
@@ -331,20 +340,242 @@
   }
 
   .sudoku-shell {
-    padding-top: 92px;
+    padding-top: 116px;
+    padding-bottom: 34px;
+  }
+
+  .sudoku-hero {
+    padding: 10px 0 22px;
+  }
+
+  .sudoku-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .sudoku-hero .lede {
+    font-size: .98rem;
+    line-height: 1.55;
+  }
+
+  .game-toolbar {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .segmented button {
+    min-height: 44px;
+    padding: .7rem .45rem;
+  }
+
+  .select-wrap,
+  .timer {
+    min-height: 58px;
+  }
+
+  .game-layout {
+    gap: 12px;
+  }
+
+  .sudoku-board {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .side-panel {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .number-pad {
+    order: -3;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
+  .number-pad button {
+    min-height: 42px;
+    aspect-ratio: auto;
+    font-size: 1.05rem;
+  }
+
+  .actions-grid {
+    order: -2;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .actions-grid .btn {
+    justify-content: center;
+    min-height: 42px;
+    padding: .62rem .35rem;
+    font-size: .78rem;
+  }
+
+  .game-message {
+    order: -1;
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .stats-grid,
+  .records-panel {
+    gap: 6px;
+    margin-bottom: 0;
+  }
+
+  .stats-grid div,
+  .records-panel div {
+    padding: 8px 6px;
+  }
+
+  .stats-grid span,
+  .records-panel span {
+    font-size: .68rem;
+    letter-spacing: .04em;
+  }
+
+  .stats-grid strong,
+  .records-panel strong {
+    font-size: .98rem;
+  }
+
+  .login-panel {
+    margin-top: 4px;
   }
 }
 
 @media (max-width: 560px) {
   .sudoku-shell {
-    width: min(100% - 24px, 480px);
+    width: min(100% - 16px, 480px);
+    padding-top: 126px;
+  }
+
+  .sudoku-body .nav-inner {
+    gap: 8px;
+  }
+
+  .sudoku-body .brand-name {
+    font-size: .86rem;
+  }
+
+  .sudoku-body .brand img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .sudoku-body .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .sudoku-body .nav-links a {
+    font-size: .76rem;
+  }
+
+  .sudoku-body .nav-inner > .btn {
+    min-height: 34px;
+    padding: .45rem .7rem;
+    font-size: .75rem;
+  }
+
+  .sudoku-hero {
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+
+  .sudoku-hero h1 {
+    font-size: 1.95rem;
+  }
+
+  .sudoku-hero .lede {
+    font-size: .92rem;
+  }
+
+  .game-toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .segmented {
+    grid-column: 1 / -1;
+  }
+
+  .timer strong {
+    font-size: 1.08rem;
+  }
+
+  .sudoku-board {
+    border-width: 2px;
+    border-radius: 6px;
   }
 
   .login-row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .cell {
-    font-size: 1.08rem;
+    font-size: .98rem;
+    border-width: .5px;
+  }
+
+  .cell.is-selected {
+    box-shadow: inset 0 0 0 1.5px var(--ice);
+  }
+
+  .side-panel {
+    padding: 10px;
+  }
+
+  .number-pad {
+    position: sticky;
+    bottom: 8px;
+    z-index: 5;
+    padding: 6px;
+    border: 1px solid rgba(216,182,103,.18);
+    border-radius: 8px;
+    background: rgba(10,12,15,.92);
+    box-shadow: 0 14px 40px rgba(0,0,0,.34);
+  }
+
+  .number-pad button {
+    min-height: 38px;
+    font-size: .95rem;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .actions-grid .btn {
+    font-size: .82rem;
+  }
+
+  .login-note {
+    font-size: .84rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .sudoku-shell {
+    width: min(100% - 10px, 370px);
+  }
+
+  .sudoku-body .nav-links a {
+    font-size: .7rem;
+  }
+
+  .cell {
+    font-size: .9rem;
+  }
+
+  .number-pad {
+    gap: 3px;
+  }
+
+  .number-pad button {
+    min-height: 34px;
+    font-size: .88rem;
   }
 }
