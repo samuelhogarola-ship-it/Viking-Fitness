@@ -126,6 +126,19 @@
     }
   }
 
+  function sameValueIndexes(state, index) {
+    const value = state[index];
+    if (!value || value === '0') return [];
+    return [...state].reduce((matches, current, currentIndex) => {
+      if (current === value) matches.push(currentIndex);
+      return matches;
+    }, []);
+  }
+
+  function isGameLost(mistakes) {
+    return Number(mistakes) >= 3;
+  }
+
   function summarizeProgress(progress) {
     const completed = progress && progress.completed && typeof progress.completed === 'object' ? progress.completed : {};
     const best = progress && progress.best && typeof progress.best === 'object' ? progress.best : {};
@@ -145,5 +158,17 @@
     };
   }
 
-  return { LEVELS, puzzles, getPuzzle, canEdit, isMoveCorrect, setValue, isSolved, conflicts, summarizeProgress };
+  return {
+    LEVELS,
+    puzzles,
+    getPuzzle,
+    canEdit,
+    isMoveCorrect,
+    setValue,
+    isSolved,
+    conflicts,
+    sameValueIndexes,
+    isGameLost,
+    summarizeProgress,
+  };
 });

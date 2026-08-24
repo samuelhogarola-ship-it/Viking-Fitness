@@ -28,6 +28,10 @@ assert.strictEqual(engine.canEdit(puzzle, 0), puzzle.grid[0] === '0', 'clues are
 assert.strictEqual(engine.isMoveCorrect(puzzle, firstBlank, correct), true, 'correct move is accepted');
 assert.strictEqual(engine.isMoveCorrect(puzzle, firstBlank, wrong), false, 'wrong move is rejected');
 assert.strictEqual(engine.isSolved(puzzle.grid, puzzle), false, 'starting puzzle is not solved');
+assert.deepStrictEqual(engine.sameValueIndexes('100200100', 0), [0, 6], 'same values are found across the board');
+assert.deepStrictEqual(engine.sameValueIndexes('100200100', 1), [], 'blank values do not highlight matches');
+assert.strictEqual(engine.isGameLost(2), false, 'two mistakes still allow play');
+assert.strictEqual(engine.isGameLost(3), true, 'three mistakes lose the game');
 
 const summary = engine.summarizeProgress({
   completed: { 'facil-01': true, 'facil-02': true, 'medio-01': true },

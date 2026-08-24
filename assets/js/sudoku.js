@@ -25,6 +25,7 @@
   let state = loadState() || puzzle.grid;
   let selected = -1;
   let mistakes = 0;
+  let gameOver = false;
   let elapsed = Number(localStorage.getItem(timeKey()) || 0);
   let timerId = null;
   let pendingEmail = '';
@@ -83,10 +84,11 @@
   function renderBoard() {
     board.innerHTML = '';
     const peerIndexes = selected >= 0 ? peers(selected) : new Set();
+    const sameIndexes = selected >= 0 ? new Set(engine.sameValueIndexes(state, selected)) : new Set();
     for (let index = 0; index < 81; index++) {
       const cell = document.createElement('button');
       cell.type = 'button';
-      cell.className = cellClass(index, peerIndexes);
+      cell.className = cellClass(index, peerIndexes, sameIndexes);
       cell.textContent = state[index] === '0' ? '' : state[index];
       cell.setAttribute('role', 'gridcell');
       cell.setAttribute('aria-label', `Fila ${Math.floor(index / 9) + 1}, columna ${index % 9 + 1}`);
@@ -98,12 +100,14 @@
     }
   }
 
-  function cellClass(index, peerIndexes) {
+  function cellClass(index, peerIndexes, sameIndexes) {
     const classes = ['cell'];
     if (!engine.canEdit(puzzle, index)) classes.push('is-clue');
     if (index === selected) classes.push('is-selected');
+    if (sameIndexes.has(index)) classes.push('is-same');
     if (peerIndexes.has(index)) classes.push('is-peer');
     if (engine.conflicts(state, index).length) classes.push('is-wrong');
+    if (gameOver) classes.push('is-locked');
     return classes.join(' ');
   }
 
@@ -130,6 +134,7 @@
     state = loadState() || puzzle.grid;
     selected = -1;
     mistakes = 0;
+    gameOver = false;
     elapsed = Number(localStorage.getItem(timeKey()) || 0);
     localStorage.setItem('vf_sudoku_level', level);
     localStorage.setItem('vf_sudoku_index', String(puzzleIndex));
@@ -141,13 +146,18 @@
   }
 
   function placeValue(value) {
+    if (gameOver) return setMessage('Partida perdida. Reinicia el tablero o elige otro.');
     if (selected < 0) return setMessage('Elige una casilla vacía.');
     if (!engine.canEdit(puzzle, selected)) return setMessage('Esa casilla pertenece al tablero.');
-    if (value && !engine.isMoveCorrect(puzzle, selected, value)) mistakes += 1;
+    if (value && !engine.isMoveCorrect(puzzle, selected, value)) {
+      mistakes += 1;
+      if (engine.isGameLost(mistakes)) gameOver = true;
+    }
     state = engine.setValue(state, puzzle, selected, value);
     saveCurrent();
     renderBoard();
     updateStats();
+    if (gameOver) return setMessage('Has hecho 3 fallos. Partida perdida.');
     if (engine.isSolved(state, puzzle)) completePuzzle();
   }
 
@@ -155,6 +165,7 @@
     state = puzzle.grid;
     selected = -1;
     mistakes = 0;
+    gameOver = false;
     elapsed = 0;
     saveCurrent();
     renderBoard();
@@ -163,6 +174,7 @@
   }
 
   function hint() {
+    if (gameOver) return setMessage('Partida perdida. Reinicia el tablero o elige otro.');
     const index = selected >= 0 && engine.canEdit(puzzle, selected) ? selected : state.indexOf('0');
     if (index < 0) return;
     selected = index;
@@ -174,6 +186,7 @@
   }
 
   function checkBoard() {
+    if (gameOver) return setMessage('Partida perdida. Reinicia para intentarlo otra vez.');
     if (engine.isSolved(state, puzzle)) return completePuzzle();
     const filled = [...state].filter(value => value !== '0').length;
     setMessage(`Vas por ${filled}/81. Sigue, que aun queda batalla.`);
