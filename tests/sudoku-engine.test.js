@@ -29,4 +29,14 @@ assert.strictEqual(engine.isMoveCorrect(puzzle, firstBlank, correct), true, 'cor
 assert.strictEqual(engine.isMoveCorrect(puzzle, firstBlank, wrong), false, 'wrong move is rejected');
 assert.strictEqual(engine.isSolved(puzzle.grid, puzzle), false, 'starting puzzle is not solved');
 
+const summary = engine.summarizeProgress({
+  completed: { 'facil-01': true, 'facil-02': true, 'medio-01': true },
+  best: { 'facil-01': 300, 'facil-02': 240, 'medio-01': 600 },
+});
+assert.strictEqual(summary.completedTotal, 3, 'summary counts completed puzzles');
+assert.strictEqual(summary.byLevel.facil.completed, 2, 'summary counts easy records');
+assert.strictEqual(summary.byLevel.medio.completed, 1, 'summary counts medium records');
+assert.strictEqual(summary.byLevel.dificil.completed, 0, 'summary counts hard records');
+assert.strictEqual(summary.bestOverall, 240, 'summary exposes best global time');
+
 console.log('sudoku-engine tests passed');

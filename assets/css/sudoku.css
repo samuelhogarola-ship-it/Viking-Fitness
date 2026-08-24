@@ -12,10 +12,7 @@
 }
 
 .sudoku-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
-  gap: 28px;
-  align-items: end;
+  max-width: 760px;
   padding: 24px 0 36px;
 }
 
@@ -33,13 +30,27 @@
 }
 
 .login-panel {
-  padding: 18px;
+  margin-top: 18px;
+  padding: 14px;
+}
+
+.sync-title {
+  color: var(--bone);
+  font-family: var(--f-display);
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .login-status {
   color: var(--gold-lit);
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+}
+
+.login-note {
+  color: var(--ash);
+  font-size: .9rem;
+  line-height: 1.45;
 }
 
 .login-form {
@@ -51,7 +62,8 @@
 .login-form label,
 .select-wrap span,
 .timer span,
-.stats-grid span {
+.stats-grid span,
+.records-panel span {
   color: var(--fog);
   font-size: .78rem;
   font-weight: 700;
@@ -60,7 +72,7 @@
 }
 
 .login-row {
-  display: flex;
+  display: grid;
   gap: 8px;
 }
 
@@ -224,20 +236,29 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
-.stats-grid div {
+.stats-grid div,
+.records-panel div {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: rgba(6,8,10,.58);
   padding: 10px;
 }
 
-.stats-grid strong {
+.stats-grid strong,
+.records-panel strong {
   display: block;
   margin-top: 2px;
   font-size: 1.15rem;
+}
+
+.records-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
 .number-pad {

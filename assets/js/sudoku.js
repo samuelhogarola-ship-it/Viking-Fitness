@@ -8,6 +8,9 @@
   const mistakesEl = $('#mistakes');
   const completedEl = $('#completed');
   const bestTimeEl = $('#bestTime');
+  const recordFacilEl = $('#recordFacil');
+  const recordMedioEl = $('#recordMedio');
+  const recordDificilEl = $('#recordDificil');
   const gameMessage = $('#gameMessage');
   const numberPad = $('#numberPad');
   const loginForm = $('#loginForm');
@@ -190,9 +193,13 @@
 
   function updateStats() {
     const progress = getProgress();
+    const summary = engine.summarizeProgress(progress);
     mistakesEl.textContent = String(mistakes);
-    completedEl.textContent = String(Object.keys(progress.completed).length);
+    completedEl.textContent = String(summary.completedTotal);
     bestTimeEl.textContent = progress.best[puzzle.id] ? formatTime(progress.best[puzzle.id]) : '--:--';
+    recordFacilEl.textContent = `${summary.byLevel.facil.completed}/20`;
+    recordMedioEl.textContent = `${summary.byLevel.medio.completed}/20`;
+    recordDificilEl.textContent = `${summary.byLevel.dificil.completed}/20`;
   }
 
   function tick() {
@@ -317,7 +324,7 @@
 
   function syncLoginUi() {
     const logged = Boolean(user && user.email);
-    loginStatus.textContent = logged ? `Sesión: ${user.email}` : 'Jugando como invitado';
+    loginStatus.textContent = logged ? `Online: ${user.email}` : 'Invitado: guardado local';
     loginForm.classList.toggle('is-hidden', logged);
     codeForm.classList.add('is-hidden');
     logoutBtn.classList.toggle('is-hidden', !logged);

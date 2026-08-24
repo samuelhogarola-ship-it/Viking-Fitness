@@ -126,5 +126,24 @@
     }
   }
 
-  return { LEVELS, puzzles, getPuzzle, canEdit, isMoveCorrect, setValue, isSolved, conflicts };
+  function summarizeProgress(progress) {
+    const completed = progress && progress.completed && typeof progress.completed === 'object' ? progress.completed : {};
+    const best = progress && progress.best && typeof progress.best === 'object' ? progress.best : {};
+    const byLevel = {};
+    Object.keys(LEVELS).forEach(level => {
+      const ids = Object.keys(completed).filter(id => id.startsWith(`${level}-`) && completed[id]);
+      byLevel[level] = {
+        completed: ids.length,
+        total: puzzles[level].length,
+      };
+    });
+    const times = Object.values(best).filter(value => Number.isFinite(value));
+    return {
+      completedTotal: Object.keys(completed).filter(id => completed[id]).length,
+      bestOverall: times.length ? Math.min(...times) : null,
+      byLevel,
+    };
+  }
+
+  return { LEVELS, puzzles, getPuzzle, canEdit, isMoveCorrect, setValue, isSolved, conflicts, summarizeProgress };
 });
