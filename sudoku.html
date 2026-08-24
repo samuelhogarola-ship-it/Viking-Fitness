@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudoku Vikingo | Viking Fitness</title>
+<meta name="description" content="Sudoku vikingo de Viking Fitness con 3 niveles, 20 sudokus por nivel, temporizador y login por email.">
+<meta name="theme-color" content="#06080a">
+<link rel="canonical" href="https://www.vikingfitness.es/sudoku.html">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/sudoku.css">
+</head>
+<body class="sudoku-body">
+<header class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="Viking Fitness">
+      <img src="assets/img/logo.webp" alt="Logo Viking Fitness">
+      <span class="brand-name">VIKING<span>·</span>FITNESS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#camino">Método</a>
+      <a href="index.html#planes">Planes</a>
+      <a href="index.html#tienda">Tienda</a>
+      <a href="sudoku.html" aria-current="page">Sudoku</a>
+    </nav>
+    <a class="btn btn--ghost btn--sm" href="index.html#contacto">Contacto</a>
+  </div>
+</header>
+
+<main class="sudoku-shell">
+  <section class="sudoku-hero" aria-labelledby="sudokuTitle">
+    <div>
+      <p class="eyebrow">Entrena la mente</p>
+      <h1 id="sudokuTitle">Sudoku Vikingo</h1>
+      <p class="lede">Tres niveles, sesenta tableros y un temporizador para dejar tu mejor marca escrita en la saga.</p>
+    </div>
+    <aside class="login-panel" aria-label="Login por email">
+      <div class="login-status" id="loginStatus">Jugando como invitado</div>
+      <form id="loginForm" class="login-form">
+        <label for="loginEmail">Email</label>
+        <div class="login-row">
+          <input id="loginEmail" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required>
+          <button class="btn btn--solid btn--sm" type="submit">Enviar código</button>
+        </div>
+      </form>
+      <form id="codeForm" class="login-form is-hidden">
+        <label for="loginCode">Código</label>
+        <div class="login-row">
+          <input id="loginCode" name="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="000000" required>
+          <button class="btn btn--solid btn--sm" type="submit">Entrar</button>
+        </div>
+      </form>
+      <button id="logoutBtn" class="link-btn is-hidden" type="button">Cerrar sesión</button>
+      <p id="loginMessage" class="login-message" role="status"></p>
+    </aside>
+  </section>
+
+  <section class="sudoku-game" aria-label="Juego de sudoku">
+    <div class="game-toolbar">
+      <div class="segmented" id="levelTabs" role="tablist" aria-label="Nivel"></div>
+      <label class="select-wrap">
+        <span>Tablero</span>
+        <select id="puzzleSelect"></select>
+      </label>
+      <div class="timer" aria-label="Temporizador">
+        <span>Tiempo</span>
+        <strong id="timer">00:00</strong>
+      </div>
+    </div>
+
+    <div class="game-layout">
+      <div class="board-wrap">
+        <div id="sudokuBoard" class="sudoku-board" role="grid" aria-label="Tablero 9 por 9"></div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="stats-grid">
+          <div><span>Errores</span><strong id="mistakes">0</strong></div>
+          <div><span>Completados</span><strong id="completed">0</strong></div>
+          <div><span>Mejor</span><strong id="bestTime">--:--</strong></div>
+        </div>
+
+        <div class="number-pad" id="numberPad" aria-label="Números"></div>
+
+        <div class="actions-grid">
+          <button class="btn btn--ghost" id="eraseBtn" type="button">Borrar</button>
+          <button class="btn btn--ghost" id="hintBtn" type="button">Pista</button>
+          <button class="btn btn--ghost" id="resetBtn" type="button">Reiniciar</button>
+          <button class="btn btn--solid" id="checkBtn" type="button">Comprobar</button>
+        </div>
+
+        <p id="gameMessage" class="game-message" role="status">Elige una casilla vacía para empezar.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/sudoku-engine.js"></script>
+<script src="assets/js/sudoku.js"></script>
+</body>
+</html>

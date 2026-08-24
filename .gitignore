@@ -3,3 +3,5 @@
 .local-noindex/
 dist/
 *.zip
+api/config.local.php
+data/*.json

@@ -10,7 +10,7 @@ es: {
   'portal.enterSilent':'Entrar en silencio',
   'portal.hint2':'Puedes silenciarlo cuando quieras desde el icono del menú',
 
-  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.shop':'Tienda','nav.cta':'Próximamente',
+  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.shop':'Tienda','nav.sudoku':'Sudoku','nav.cta':'Próximamente',
   'sound.on':'Activar el sonido del Valhalla','sound.off':'Silenciar el sonido',
   'soon.msg':'La app llega muy pronto.',
 
@@ -146,7 +146,7 @@ en: {
   'portal.enterSound':'Enter with sound','portal.enterSilent':'Enter in silence',
   'portal.hint2':'You can mute it any time from the icon in the menu',
 
-  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.shop':'Shop','nav.cta':'Coming soon',
+  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.shop':'Shop','nav.sudoku':'Sudoku','nav.cta':'Coming soon',
   'sound.on':'Turn the sound of Valhalla on','sound.off':'Mute the sound',
   'soon.msg':'The app is coming very soon.',
 
@@ -281,7 +281,7 @@ fi: {
   'portal.enterSound':'Astu sisään äänellä','portal.enterSilent':'Astu sisään hiljaisuudessa',
   'portal.hint2':'Voit mykistää sen milloin tahansa valikon kuvakkeesta',
 
-  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.shop':'Kauppa','nav.cta':'Tulossa pian',
+  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.shop':'Kauppa','nav.sudoku':'Sudoku','nav.cta':'Tulossa pian',
   'sound.on':'Kytke Valhallan ääni päälle','sound.off':'Mykistä ääni',
   'soon.msg':'Sovellus julkaistaan hyvin pian.',
 
@@ -416,7 +416,7 @@ no: {
   'portal.enterSound':'Gå inn med lyd','portal.enterSilent':'Gå inn i stillhet',
   'portal.hint2':'Du kan slå den av når som helst fra ikonet i menyen',
 
-  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.shop':'Butikk','nav.cta':'Kommer snart',
+  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.shop':'Butikk','nav.sudoku':'Sudoku','nav.cta':'Kommer snart',
   'sound.on':'Slå på lyden fra Valhall','sound.off':'Slå av lyden',
   'soon.msg':'Appen kommer veldig snart.',
 
