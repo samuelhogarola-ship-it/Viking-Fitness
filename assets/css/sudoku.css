@@ -23,6 +23,7 @@
 }
 
 .login-panel,
+.install-panel,
 .side-panel {
   border: 1px solid rgba(216,182,103,.22);
   border-radius: 8px;
@@ -33,6 +34,30 @@
 .login-panel {
   margin-top: 18px;
   padding: 14px;
+}
+
+.install-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+  padding: 12px;
+}
+
+.install-panel strong,
+.install-panel span {
+  display: block;
+}
+
+.install-panel strong {
+  color: var(--bone);
+  font-weight: 800;
+}
+
+.install-panel span {
+  color: var(--ash);
+  font-size: .86rem;
 }
 
 .sync-title {
@@ -443,6 +468,11 @@
 
   .login-panel {
     margin-top: 4px;
+  }
+
+  .install-panel {
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 

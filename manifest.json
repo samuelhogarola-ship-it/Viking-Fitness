@@ -1,26 +1,60 @@
 {
   "name": "Viking Fitness",
   "short_name": "VikingFit",
-  "description": "Entrenador personal en Fuengirola — fuerza explosiva y nutrición nórdica",
-  "start_url": "/",
+  "description": "Viking Fitness: entrenamiento nórdico y Sudoku Vikingo instalable.",
+  "start_url": "/sudoku.html",
+  "scope": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "background_color": "#0a0c0f",
   "theme_color": "#0a0c0f",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/assets/img/favicon-32.png",
       "sizes": "32x32",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/assets/img/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/assets/img/logo.webp",
       "sizes": "400x400",
-      "type": "image/webp"
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sudoku Vikingo",
+      "short_name": "Sudoku",
+      "description": "Abrir el Sudoku Vikingo offline.",
+      "url": "/sudoku.html",
+      "icons": [
+        {
+          "src": "/assets/img/logo.webp",
+          "sizes": "400x400",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Viking Fitness",
+      "short_name": "Inicio",
+      "description": "Abrir la home de Viking Fitness.",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/assets/img/logo.webp",
+          "sizes": "400x400",
+          "type": "image/webp"
+        }
+      ]
     }
   ]
 }

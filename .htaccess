@@ -11,7 +11,7 @@ RewriteRule ^ https://www.vikingfitness.es%{REQUEST_URI} [L,R=301]
   Header always set X-Frame-Options "DENY"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self'; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self'; worker-src 'self'; manifest-src 'self'; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
 </IfModule>
 
 <IfModule mod_expires.c>
@@ -24,5 +24,13 @@ RewriteRule ^ https://www.vikingfitness.es%{REQUEST_URI} [L,R=301]
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType application/json "access plus 1 week"
+  ExpiresByType application/manifest+json "access plus 1 week"
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
+
+<Files "sw.js">
+  <IfModule mod_headers.c>
+    Header set Service-Worker-Allowed "/"
+    Header set Cache-Control "no-cache"
+  </IfModule>
+</Files>
