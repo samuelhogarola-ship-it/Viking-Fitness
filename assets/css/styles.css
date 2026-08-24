@@ -505,6 +505,48 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .plan li::before { content: '✓'; color: var(--gold-lit); flex: none; }
 
 /* ============================================================
+   RECURSOS
+   ============================================================ */
+#recursos { background: linear-gradient(180deg, var(--obsidian), var(--void)); }
+.resources-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+.resource-card {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  padding: 26px;
+  border: 1px solid rgba(216,182,103,.28);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(216,182,103,.12), transparent 42%),
+    var(--stone);
+}
+.resource-mark {
+  width: 76px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(216,182,103,.35);
+  border-radius: 8px;
+  background: rgba(6,8,10,.54);
+  color: var(--gold-lit);
+  font-family: var(--f-display);
+  font-size: 2rem;
+}
+.resource-card h3 {
+  font-size: 1.35rem;
+  margin: .25rem 0 .35rem;
+}
+.resource-card p:not(.eyebrow) {
+  color: var(--ash);
+  max-width: 68ch;
+}
+
+/* ============================================================
    TIENDA ONLINE
    ============================================================ */
 .shop { background: linear-gradient(180deg, var(--void), var(--obsidian)); }
@@ -822,6 +864,8 @@ tr:hover td { background: rgba(255,255,255,.02); }
    ============================================================ */
 @media (max-width: 960px) {
   .app-showcase { grid-template-columns: 1fr; }
+  .resource-card { grid-template-columns: 1fr; }
+  .resource-mark { width: 58px; }
   .shop-hero,
   .shop-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }

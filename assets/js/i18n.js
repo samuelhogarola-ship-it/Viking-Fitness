@@ -10,7 +10,7 @@ es: {
   'portal.enterSilent':'Entrar en silencio',
   'portal.hint2':'Puedes silenciarlo cuando quieras desde el icono del menú',
 
-  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.shop':'Tienda','nav.sudoku':'Sudoku','nav.cta':'Próximamente',
+  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.shop':'Tienda','nav.resources':'Recursos','nav.sudoku':'Sudoku','nav.cta':'Próximamente',
   'sound.on':'Activar el sonido del Valhalla','sound.off':'Silenciar el sonido',
   'soon.msg':'La app llega muy pronto.',
 
@@ -81,6 +81,12 @@ es: {
   'app.cta':'Próximamente',
   'app.p.today':'Hoy','app.p.kg':'kg movidos','app.p.cal':'Calorías','app.p.prot':'Prot','app.p.carb':'Carb','app.p.fat':'Grasa','app.p.week':'Volumen 7 semanas','app.p.rank':'Rango',
 
+  'resources.eyebrow':'Recursos','resources.title':'Herramientas del clan',
+  'resources.lede':'Accesos rápidos para entrenar cabeza, constancia y registro. Empieza sin cuenta y guarda online solo si quieres sincronizar records.',
+  'resources.sudoku.eyebrow':'Juego mental','resources.sudoku.title':'Sudoku Vikingo',
+  'resources.sudoku.text':'Tres niveles, sesenta tableros, temporizador, records locales y sincronización opcional por email.',
+  'resources.sudoku.cta':'Abrir Sudoku',
+
   'plans.eyebrow':'Acompañamiento mensual','plans.title':'Tres énfasis, el mismo método',
   'plans.lede':'El método no cambia; cambia el acento. Elige el que quieras que domine tu año de entrenamiento. Sin permanencia, pago mensual.',
   'plans.p2.price':'Consultar','plans.p3.price':'Consultar','plans.p4.price':'Consultar',
@@ -146,7 +152,7 @@ en: {
   'portal.enterSound':'Enter with sound','portal.enterSilent':'Enter in silence',
   'portal.hint2':'You can mute it any time from the icon in the menu',
 
-  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.shop':'Shop','nav.sudoku':'Sudoku','nav.cta':'Coming soon',
+  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.shop':'Shop','nav.resources':'Resources','nav.sudoku':'Sudoku','nav.cta':'Coming soon',
   'sound.on':'Turn the sound of Valhalla on','sound.off':'Mute the sound',
   'soon.msg':'The app is coming very soon.',
 
@@ -217,6 +223,12 @@ en: {
   'app.cta':'Coming soon',
   'app.p.today':'Today','app.p.kg':'kg moved','app.p.cal':'Calories','app.p.prot':'Prot','app.p.carb':'Carb','app.p.fat':'Fat','app.p.week':'7-week volume','app.p.rank':'Rank',
 
+  'resources.eyebrow':'Resources','resources.title':'Clan tools',
+  'resources.lede':'Quick tools to train focus, consistency and logging. Start without an account and save online only if you want synced records.',
+  'resources.sudoku.eyebrow':'Mental game','resources.sudoku.title':'Viking Sudoku',
+  'resources.sudoku.text':'Three levels, sixty boards, timer, local records and optional email sync.',
+  'resources.sudoku.cta':'Open Sudoku',
+
   'plans.eyebrow':'Monthly coaching','plans.title':'Three emphases, one method',
   'plans.lede':'The method does not change; the accent does. Choose the one you want to lead your training year. No lock-in, monthly payment.',
   'plans.p2.price':'Enquire','plans.p3.price':'Enquire','plans.p4.price':'Enquire',
@@ -281,7 +293,7 @@ fi: {
   'portal.enterSound':'Astu sisään äänellä','portal.enterSilent':'Astu sisään hiljaisuudessa',
   'portal.hint2':'Voit mykistää sen milloin tahansa valikon kuvakkeesta',
 
-  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.shop':'Kauppa','nav.sudoku':'Sudoku','nav.cta':'Tulossa pian',
+  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.shop':'Kauppa','nav.resources':'Resurssit','nav.sudoku':'Sudoku','nav.cta':'Tulossa pian',
   'sound.on':'Kytke Valhallan ääni päälle','sound.off':'Mykistä ääni',
   'soon.msg':'Sovellus julkaistaan hyvin pian.',
 
@@ -352,6 +364,12 @@ fi: {
   'app.cta':'Tulossa pian',
   'app.p.today':'Tänään','app.p.kg':'kg liikutettu','app.p.cal':'Kalorit','app.p.prot':'Prot','app.p.carb':'Hiil','app.p.fat':'Rasva','app.p.week':'7 viikon volyymi','app.p.rank':'Arvo',
 
+  'resources.eyebrow':'Resurssit','resources.title':'Klaanin työkalut',
+  'resources.lede':'Nopeat työkalut keskittymisen, säännöllisyyden ja kirjaamisen harjoitteluun. Aloita ilman tiliä ja tallenna verkkoon vain, jos haluat synkronoida ennätykset.',
+  'resources.sudoku.eyebrow':'Mielipeli','resources.sudoku.title':'Viking Sudoku',
+  'resources.sudoku.text':'Kolme tasoa, kuusikymmentä lautaa, ajastin, paikalliset ennätykset ja valinnainen sähköpostisynkronointi.',
+  'resources.sudoku.cta':'Avaa Sudoku',
+
   'plans.eyebrow':'Kuukausivalmennus','plans.title':'Kolme painotusta, sama menetelmä',
   'plans.lede':'Menetelmä ei muutu; painotus muuttuu. Valitse se, joka johtaa harjoitusvuottasi. Ei sitoutumista, kuukausimaksu.',
   'plans.p2.price':'Kysy hintaa','plans.p3.price':'Kysy hintaa','plans.p4.price':'Kysy hintaa',
@@ -416,7 +434,7 @@ no: {
   'portal.enterSound':'Gå inn med lyd','portal.enterSilent':'Gå inn i stillhet',
   'portal.hint2':'Du kan slå den av når som helst fra ikonet i menyen',
 
-  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.shop':'Butikk','nav.sudoku':'Sudoku','nav.cta':'Kommer snart',
+  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.shop':'Butikk','nav.resources':'Ressurser','nav.sudoku':'Sudoku','nav.cta':'Kommer snart',
   'sound.on':'Slå på lyden fra Valhall','sound.off':'Slå av lyden',
   'soon.msg':'Appen kommer veldig snart.',
 
@@ -486,6 +504,12 @@ no: {
   'app.l5':'Dataene dine blir i nettleseren din — ingenting forlater enheten',
   'app.cta':'Kommer snart',
   'app.p.today':'I dag','app.p.kg':'kg flyttet','app.p.cal':'Kalorier','app.p.prot':'Prot','app.p.carb':'Karb','app.p.fat':'Fett','app.p.week':'Volum 7 uker','app.p.rank':'Rang',
+
+  'resources.eyebrow':'Ressurser','resources.title':'Klanens verktøy',
+  'resources.lede':'Raske verktøy for fokus, kontinuitet og logging. Start uten konto og lagre på nett bare hvis du vil synkronisere rekorder.',
+  'resources.sudoku.eyebrow':'Mentalt spill','resources.sudoku.title':'Viking Sudoku',
+  'resources.sudoku.text':'Tre nivåer, seksti brett, tidtaker, lokale rekorder og valgfri e-postsynkronisering.',
+  'resources.sudoku.cta':'Åpne Sudoku',
 
   'plans.eyebrow':'Månedlig oppfølging','plans.title':'Tre vektlegginger, én metode',
   'plans.lede':'Metoden endres ikke; vektleggingen gjør det. Velg den du vil at treningsåret ditt skal styres av. Ingen binding, månedlig betaling.',
