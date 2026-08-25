@@ -5,7 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sudoku Vikingo | Viking Fitness</title>
 <meta name="description" content="Sudoku vikingo de Viking Fitness con 3 niveles, 20 sudokus por nivel, temporizador y progreso local opcionalmente sincronizable por email.">
+<meta name="robots" content="index,follow">
 <meta name="theme-color" content="#06080a">
+<meta property="og:site_name" content="Viking Fitness">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Sudoku Vikingo | Viking Fitness">
+<meta property="og:description" content="Entrena la mente con el Sudoku Vikingo de Viking Fitness: niveles, records locales y juego instalable.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.vikingfitness.es/sudoku.html">
+<meta property="og:image" content="https://www.vikingfitness.es/assets/img/sudoku-viking-fitness.webp">
+<meta property="og:image:width" content="1672">
+<meta property="og:image:height" content="941">
+<meta property="og:image:alt" content="Logo de Viking Fitness sobre un tablero de sudoku vikingo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sudoku Vikingo | Viking Fitness">
+<meta name="twitter:description" content="Sudoku Vikingo con niveles, records locales y modo instalable.">
+<meta name="twitter:image" content="https://www.vikingfitness.es/assets/img/sudoku-viking-fitness.webp">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Sudoku Vikingo">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -16,10 +31,35 @@
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="assets/img/sudoku-viking-fitness.webp" as="image">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="stylesheet" href="assets/css/sudoku.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Game",
+  "name": "Sudoku Vikingo | Viking Fitness",
+  "alternateName": "Viking Fitness Sudoku",
+  "description": "Sudoku vikingo de Viking Fitness con tres niveles, sesenta tableros, temporizador, records locales y modo instalable.",
+  "url": "https://www.vikingfitness.es/sudoku.html",
+  "image": "https://www.vikingfitness.es/assets/img/sudoku-viking-fitness.webp",
+  "inLanguage": "es",
+  "genre": "Sudoku",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Viking Fitness",
+    "url": "https://www.vikingfitness.es/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Viking Fitness",
+    "url": "https://www.vikingfitness.es/",
+    "logo": "https://www.vikingfitness.es/assets/img/logo.webp"
+  }
+}
+</script>
 </head>
 <body class="sudoku-body">
 <header class="nav scrolled" id="nav">
@@ -38,6 +78,14 @@
   </div>
 </header>
 
+<a class="sudoku-home" href="index.html" aria-label="Volver al inicio">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="m3 10.5 9-7 9 7"/>
+    <path d="M5 10v10h14V10"/>
+    <path d="M9 20v-6h6v6"/>
+  </svg>
+</a>
+
 <main class="sudoku-shell">
   <section class="sudoku-hero" aria-labelledby="sudokuTitle">
     <div>
@@ -45,6 +93,12 @@
       <h1 id="sudokuTitle">Sudoku Vikingo</h1>
       <p class="lede">Tres niveles, sesenta tableros y un temporizador. Sin login se guarda en este navegador; entra solo si quieres sincronizar progreso y records.</p>
     </div>
+    <figure class="sudoku-visual">
+      <picture>
+        <source srcset="assets/img/sudoku-viking-fitness.webp" type="image/webp">
+        <img src="assets/img/sudoku-viking-fitness.png" alt="Logo Viking Fitness sobre un tablero de sudoku de estilo vikingo" width="1672" height="941" decoding="async" fetchpriority="high">
+      </picture>
+    </figure>
   </section>
 
   <section class="sudoku-game" aria-label="Juego de sudoku">

@@ -79,8 +79,12 @@
 
   const puzzles = buildPuzzles();
 
+  function normalizeLevel(level) {
+    return Object.prototype.hasOwnProperty.call(LEVELS, level) ? level : 'facil';
+  }
+
   function getPuzzle(level, index) {
-    const list = puzzles[level] || puzzles.facil;
+    const list = puzzles[normalizeLevel(level)];
     return list[Math.max(0, Math.min(list.length - 1, Number(index) || 0))];
   }
 
@@ -158,9 +162,20 @@
     };
   }
 
+  function puzzleStatus(id, progress) {
+    const completed = progress && progress.completed && typeof progress.completed === 'object' ? progress.completed : {};
+    const best = progress && progress.best && typeof progress.best === 'object' ? progress.best : {};
+    const bestTime = Number(best[id]);
+    return {
+      completed: Boolean(completed[id]),
+      best: Number.isFinite(bestTime) ? bestTime : null,
+    };
+  }
+
   return {
     LEVELS,
     puzzles,
+    normalizeLevel,
     getPuzzle,
     canEdit,
     isMoveCorrect,
@@ -170,5 +185,6 @@
     sameValueIndexes,
     isGameLost,
     summarizeProgress,
+    puzzleStatus,
   };
 });

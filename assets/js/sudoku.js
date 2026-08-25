@@ -19,17 +19,19 @@
   const loginMessage = $('#loginMessage');
   const logoutBtn = $('#logoutBtn');
 
-  let level = localStorage.getItem('vf_sudoku_level') || 'facil';
+  let level = engine.normalizeLevel(localStorage.getItem('vf_sudoku_level'));
   let puzzleIndex = Number(localStorage.getItem('vf_sudoku_index') || 0);
   let puzzle = engine.getPuzzle(level, puzzleIndex);
   let state = loadState() || puzzle.grid;
   let selected = -1;
+  let activeNumber = normalizeActiveNumber(localStorage.getItem('vf_sudoku_active_number'));
   let mistakes = 0;
   let gameOver = false;
   let elapsed = Number(localStorage.getItem(timeKey()) || 0);
   let timerId = null;
   let pendingEmail = '';
   let user = null;
+  let fullscreenRequested = false;
 
   init();
 
@@ -47,10 +49,11 @@
 
   function renderLevels() {
     levelTabs.innerHTML = '';
+    const summary = engine.summarizeProgress(getProgress());
     Object.entries(engine.LEVELS).forEach(([key, config]) => {
       const button = document.createElement('button');
       button.type = 'button';
-      button.textContent = config.label;
+      button.textContent = `${config.label} ${summary.byLevel[key].completed}/20`;
       button.className = key === level ? 'is-active' : '';
       button.setAttribute('role', 'tab');
       button.setAttribute('aria-selected', String(key === level));
@@ -61,10 +64,12 @@
 
   function renderPuzzleSelect() {
     puzzleSelect.innerHTML = '';
+    const progress = getProgress();
     engine.puzzles[level].forEach((item, index) => {
+      const status = engine.puzzleStatus(item.id, progress);
       const option = document.createElement('option');
       option.value = String(index);
-      option.textContent = `#${String(index + 1).padStart(2, '0')}`;
+      option.textContent = `${status.completed ? '✓ ' : ''}#${String(index + 1).padStart(2, '0')}${status.completed ? ' completado' : ''}`;
       option.selected = index === puzzleIndex;
       puzzleSelect.appendChild(option);
     });
@@ -76,7 +81,12 @@
       const button = document.createElement('button');
       button.type = 'button';
       button.textContent = String(n);
-      button.addEventListener('click', () => placeValue(n));
+      button.className = n === activeNumber ? 'is-active' : '';
+      button.setAttribute('aria-pressed', String(n === activeNumber));
+      button.addEventListener('click', () => {
+        setActiveNumber(n);
+        placeValue(n);
+      });
       numberPad.appendChild(button);
     }
   }
@@ -84,7 +94,7 @@
   function renderBoard() {
     board.innerHTML = '';
     const peerIndexes = selected >= 0 ? peers(selected) : new Set();
-    const sameIndexes = selected >= 0 ? new Set(engine.sameValueIndexes(state, selected)) : new Set();
+    const sameIndexes = activeNumber ? valueIndexes(activeNumber) : selected >= 0 ? new Set(engine.sameValueIndexes(state, selected)) : new Set();
     for (let index = 0; index < 81; index++) {
       const cell = document.createElement('button');
       cell.type = 'button';
@@ -94,6 +104,7 @@
       cell.setAttribute('aria-label', `Fila ${Math.floor(index / 9) + 1}, columna ${index % 9 + 1}`);
       cell.addEventListener('click', () => {
         selected = index;
+        if (state[index] !== '0') setActiveNumber(Number(state[index]), false);
         renderBoard();
       });
       board.appendChild(cell);
@@ -105,6 +116,7 @@
     if (!engine.canEdit(puzzle, index)) classes.push('is-clue');
     if (index === selected) classes.push('is-selected');
     if (sameIndexes.has(index)) classes.push('is-same');
+    if (activeNumber && state[index] === String(activeNumber)) classes.push('is-number-active');
     if (peerIndexes.has(index)) classes.push('is-peer');
     if (engine.conflicts(state, index).length) classes.push('is-wrong');
     if (gameOver) classes.push('is-locked');
@@ -112,13 +124,18 @@
   }
 
   function bindActions() {
+    board.addEventListener('pointerdown', requestMobileFullscreen, { passive: true });
+    numberPad.addEventListener('pointerdown', requestMobileFullscreen, { passive: true });
     puzzleSelect.addEventListener('change', () => switchPuzzle(level, Number(puzzleSelect.value)));
     $('#eraseBtn').addEventListener('click', () => placeValue(0));
     $('#resetBtn').addEventListener('click', resetPuzzle);
     $('#hintBtn').addEventListener('click', hint);
     $('#checkBtn').addEventListener('click', checkBoard);
     document.addEventListener('keydown', event => {
-      if (event.key >= '1' && event.key <= '9') placeValue(Number(event.key));
+      if (event.key >= '1' && event.key <= '9') {
+        setActiveNumber(Number(event.key));
+        placeValue(Number(event.key));
+      }
       if (event.key === 'Backspace' || event.key === 'Delete' || event.key === '0') placeValue(0);
     });
     loginForm.addEventListener('submit', requestLogin);
@@ -128,11 +145,12 @@
 
   function switchPuzzle(nextLevel, nextIndex) {
     saveCurrent();
-    level = nextLevel;
+    level = engine.normalizeLevel(nextLevel);
     puzzleIndex = nextIndex;
     puzzle = engine.getPuzzle(level, puzzleIndex);
     state = loadState() || puzzle.grid;
     selected = -1;
+    renderPad();
     mistakes = 0;
     gameOver = false;
     elapsed = Number(localStorage.getItem(timeKey()) || 0);
@@ -164,12 +182,15 @@
   function resetPuzzle() {
     state = puzzle.grid;
     selected = -1;
+    activeNumber = 0;
+    localStorage.removeItem('vf_sudoku_active_number');
     mistakes = 0;
     gameOver = false;
     elapsed = 0;
     saveCurrent();
     renderBoard();
     updateStats();
+    renderPad();
     setMessage('Tablero reiniciado.');
   }
 
@@ -200,6 +221,8 @@
     progress.best[key] = previous ? Math.min(previous, elapsed) : elapsed;
     localStorage.setItem('vf_sudoku_progress', JSON.stringify(progress));
     syncProgress(progress);
+    renderLevels();
+    renderPuzzleSelect();
     updateStats();
     setMessage(`Completado en ${formatTime(elapsed)}.`);
   }
@@ -224,6 +247,46 @@
   function saveCurrent() {
     localStorage.setItem(stateKey(), state);
     localStorage.setItem(timeKey(), String(elapsed));
+  }
+
+  function setActiveNumber(value, shouldRender = true) {
+    activeNumber = normalizeActiveNumber(value);
+    if (activeNumber) {
+      localStorage.setItem('vf_sudoku_active_number', String(activeNumber));
+    } else {
+      localStorage.removeItem('vf_sudoku_active_number');
+    }
+    if (shouldRender) {
+      renderPad();
+      renderBoard();
+    }
+  }
+
+  function valueIndexes(value) {
+    return new Set([...state].reduce((indexes, current, index) => {
+      if (current === String(value)) indexes.push(index);
+      return indexes;
+    }, []));
+  }
+
+  function normalizeActiveNumber(value) {
+    const number = Number(value);
+    return number >= 1 && number <= 9 ? number : 0;
+  }
+
+  function requestMobileFullscreen() {
+    if (fullscreenRequested || !isMobileSudoku()) return;
+    fullscreenRequested = true;
+    const target = document.documentElement;
+    const request = target.requestFullscreen || target.webkitRequestFullscreen;
+    if (!request || document.fullscreenElement || document.webkitFullscreenElement) return;
+    try {
+      Promise.resolve(request.call(target)).catch(() => {});
+    } catch {}
+  }
+
+  function isMobileSudoku() {
+    return window.matchMedia('(max-width: 900px)').matches || window.matchMedia('(display-mode: standalone)').matches;
   }
 
   function loadState() {
@@ -332,6 +395,8 @@
       merged.best[key] = merged.best[key] ? Math.min(merged.best[key], value) : value;
     });
     localStorage.setItem('vf_sudoku_progress', JSON.stringify(merged));
+    renderLevels();
+    renderPuzzleSelect();
     updateStats();
   }
 

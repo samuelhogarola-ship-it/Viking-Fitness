@@ -136,6 +136,18 @@
   </url>
 
   <url>
+    <loc>https://www.vikingfitness.es/sudoku.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.vikingfitness.es/assets/img/sudoku-viking-fitness.webp</image:loc>
+      <image:title>Sudoku Vikingo | Viking Fitness</image:title>
+      <image:caption>Logo de Viking Fitness sobre un tablero de sudoku vikingo, juego mental instalable de Viking Fitness.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://www.vikingfitness.es/blog/5-desayunos-nordicos.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>

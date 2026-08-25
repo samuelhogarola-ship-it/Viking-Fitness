@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'viking-fitness-pwa-v1';
+const CACHE_VERSION = 'viking-fitness-pwa-v5';
 const OFFLINE_ASSETS = [
   '/',
   '/index.html',
@@ -17,6 +17,7 @@ const OFFLINE_ASSETS = [
   '/assets/img/apple-touch-icon.png',
   '/assets/img/logo.webp',
   '/assets/img/hero.webp',
+  '/assets/img/sudoku-viking-fitness.webp',
   '/assets/img/portal-valhalla.webp',
   '/assets/img/portal-torch-left.webp',
   '/assets/img/portal-torch-right.webp',

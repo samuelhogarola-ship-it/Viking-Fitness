@@ -68,6 +68,6 @@ educación nutricional, no de tratamiento médico.
 ## Pendiente para producción
 
 - Conectar el formulario de contacto a un backend o servicio de formularios (ahora solo muestra confirmación).
-- Sustituir precios, testimonios y la cifra de "guerreros entrenados" por datos reales.
+- Sustituir precios y testimonios por datos reales.
 - Añadir aviso legal, política de privacidad y cookies.
 - Sincronizar la app con un backend si se quiere acceso multidispositivo.

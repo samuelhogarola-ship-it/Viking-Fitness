@@ -18,6 +18,10 @@ for (const level of levels) {
 const uniqueGrids = new Set(levels.flatMap(level => engine.puzzles[level].map(puzzle => puzzle.grid)));
 assert.strictEqual(uniqueGrids.size, 60, 'all 60 puzzles should be unique');
 
+assert.strictEqual(engine.normalizeLevel('medio'), 'medio', 'known levels are kept');
+assert.strictEqual(engine.normalizeLevel('fácil'), 'facil', 'unknown stored levels fall back to easy');
+assert.strictEqual(engine.normalizeLevel(null), 'facil', 'empty stored levels fall back to easy');
+
 const puzzle = engine.getPuzzle('facil', 0);
 const firstBlank = puzzle.grid.indexOf('0');
 const correct = Number(puzzle.solution[firstBlank]);
@@ -42,5 +46,16 @@ assert.strictEqual(summary.byLevel.facil.completed, 2, 'summary counts easy reco
 assert.strictEqual(summary.byLevel.medio.completed, 1, 'summary counts medium records');
 assert.strictEqual(summary.byLevel.dificil.completed, 0, 'summary counts hard records');
 assert.strictEqual(summary.bestOverall, 240, 'summary exposes best global time');
+
+assert.deepStrictEqual(
+  engine.puzzleStatus('facil-01', { completed: { 'facil-01': true }, best: { 'facil-01': 300 } }),
+  { completed: true, best: 300 },
+  'puzzle status exposes completed state and best time'
+);
+assert.deepStrictEqual(
+  engine.puzzleStatus('facil-03', { completed: { 'facil-01': true }, best: { 'facil-01': 300 } }),
+  { completed: false, best: null },
+  'puzzle status defaults unfinished puzzles'
+);
 
 console.log('sudoku-engine tests passed');
