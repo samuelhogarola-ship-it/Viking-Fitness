@@ -92,3 +92,20 @@ test("does not load Umami without a website id", async () => {
 
   assert.equal(tracker, null);
 });
+
+test("versioned production config loads the Viking Fitness website id", async () => {
+  const config = JSON.parse(readFileSync(path.join(projectRoot, "umami-config.json"), "utf8"));
+  const tracker = await runBootstrap(config);
+
+  assert.equal(tracker.dataset.websiteId, "160e32a7-bd01-4482-992e-5bdae718b088");
+  assert.equal(tracker.dataset.hostUrl, "https://analytics.187.124.55.36.sslip.io");
+});
+
+test("fails closed when config points to a different Umami host", async () => {
+  const tracker = await runBootstrap({
+    hostUrl: "https://analytics.2.24.10.239.sslip.io",
+    websiteId: "160e32a7-bd01-4482-992e-5bdae718b088",
+  });
+
+  assert.equal(tracker, null);
+});
