@@ -402,7 +402,7 @@
 
   function syncLoginUi() {
     const logged = Boolean(user && user.email);
-    loginStatus.textContent = logged ? `Online: ${user.email}` : 'Invitado: guardado local';
+    loginStatus.textContent = logged ? `Online: ${user.email}` : 'Regístrate para guardar online';
     loginForm.classList.toggle('is-hidden', logged);
     codeForm.classList.add('is-hidden');
     logoutBtn.classList.toggle('is-hidden', !logged);
@@ -418,7 +418,7 @@
       const response = await fetch(url, options);
       return await response.json();
     } catch {
-      return { ok: false, message: 'Login no disponible todavía. Puedes jugar como invitado.' };
+      return { ok: false, message: 'El registro no está disponible todavía. Tu progreso seguirá guardado en este navegador.' };
     }
   }
 })();

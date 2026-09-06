@@ -44,7 +44,7 @@
   // Prepage y main usan fuentes distintas: el portal intenta arrancar su
   // ambiente sintetico al revelarse, y la main activa YouTube solo al entrar.
   function startMainSoundWhenTitleIsReady() {
-    const heroTitle = $('.hero h1');
+    const heroTitle = $('.hero-intro h1');
     if (!heroTitle || muted) return;
     requestAnimationFrame(() => {
       heroTitle.scrollIntoView({ block: 'center' });

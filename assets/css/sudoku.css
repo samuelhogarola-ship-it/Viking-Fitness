@@ -12,10 +12,6 @@
   padding: 110px 0 70px;
 }
 
-.sudoku-home {
-  display: none;
-}
-
 .sudoku-hero {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(340px, 1.1fr);
@@ -225,10 +221,10 @@
   grid-template-columns: repeat(9, 1fr);
   width: min(100%, 680px);
   aspect-ratio: 1;
-  border: 3px solid var(--gold);
+  border: 3px solid #4b2f1f;
   border-radius: 8px;
   overflow: hidden;
-  background: #080a0c;
+  background: #4b2f1f;
   box-shadow: 0 24px 70px rgba(0,0,0,.42);
 }
 
@@ -237,9 +233,9 @@
   place-items: center;
   width: 100%;
   aspect-ratio: 1;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(18,22,27,.9);
-  color: var(--bone);
+  border: 1px solid rgba(75,47,31,.26);
+  background: #fbf8f0;
+  color: #3d281b;
   cursor: pointer;
   font-family: var(--f-display);
   font-size: clamp(1rem, 2.8vw, 2rem);
@@ -248,42 +244,42 @@
 }
 
 .cell:nth-child(3n) {
-  border-right-color: rgba(216,182,103,.5);
+  border-right-color: #5c3924;
 }
 
 .cell:nth-child(n+19):nth-child(-n+27),
 .cell:nth-child(n+46):nth-child(-n+54) {
-  border-bottom-color: rgba(216,182,103,.5);
+  border-bottom-color: #5c3924;
 }
 
 .cell.is-clue {
-  background: rgba(8,10,12,.98);
-  color: var(--gold-lit);
+  background: #f0e8da;
+  color: #4b2f1f;
 }
 
 .cell.is-selected {
-  background: rgba(111,168,184,.25);
-  box-shadow: inset 0 0 0 2px var(--ice);
+  background: #e4c8a4;
+  box-shadow: inset 0 0 0 2px #6b4028;
 }
 
 .cell.is-same {
-  background: rgba(216,182,103,.24);
-  color: #ffe6a3;
+  background: #ead8bf;
+  color: #3d281b;
 }
 
 .cell.is-number-active {
-  background: linear-gradient(180deg, rgba(255,220,112,.46), rgba(111,168,184,.36));
-  color: #fff4bf;
-  box-shadow: inset 0 0 0 2px rgba(255,220,112,.86), 0 0 18px rgba(111,168,184,.28);
+  background: #d8b78e;
+  color: #2c1b12;
+  box-shadow: inset 0 0 0 2px #6b4028;
 }
 
 .cell.is-peer {
-  background: rgba(216,182,103,.11);
+  background: #f5eee3;
 }
 
 .cell.is-wrong {
-  color: #ffb4a8;
-  background: rgba(154,59,59,.32);
+  color: #8c2924;
+  background: #f3d7d2;
 }
 
 .cell.is-locked {
@@ -371,23 +367,6 @@
 
   .sudoku-body .nav {
     display: none;
-  }
-
-  .sudoku-home {
-    position: fixed;
-    top: max(10px, env(safe-area-inset-top));
-    left: max(10px, env(safe-area-inset-left));
-    z-index: 30;
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(216,182,103,.42);
-    border-radius: 50%;
-    background: rgba(6,8,10,.84);
-    color: var(--gold-lit);
-    box-shadow: 0 14px 36px rgba(0,0,0,.36);
-    backdrop-filter: blur(10px);
   }
 
   .sudoku-hero,
@@ -564,7 +543,7 @@
   }
 
   .cell.is-selected {
-    box-shadow: inset 0 0 0 1.5px var(--ice);
+    box-shadow: inset 0 0 0 1.5px #6b4028;
   }
 
   .side-panel {
@@ -624,20 +603,4 @@
     display: none;
   }
 
-  .sudoku-home {
-    position: fixed;
-    top: max(10px, env(safe-area-inset-top));
-    left: max(10px, env(safe-area-inset-left));
-    z-index: 30;
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(216,182,103,.42);
-    border-radius: 50%;
-    background: rgba(6,8,10,.84);
-    color: var(--gold-lit);
-    box-shadow: 0 14px 36px rgba(0,0,0,.36);
-    backdrop-filter: blur(10px);
-  }
 }

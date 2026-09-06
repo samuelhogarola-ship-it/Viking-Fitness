@@ -323,7 +323,7 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .hero-scrim {
   position: absolute; inset: 0;
   background:
-    linear-gradient(0deg, rgba(8,9,11,.88) 0%, rgba(8,9,11,.4) 28%, rgba(8,9,11,.05) 55%, rgba(8,9,11,.15) 100%);
+    linear-gradient(0deg, rgba(8,9,11,.5) 0%, rgba(8,9,11,.08) 38%, rgba(8,9,11,.04) 66%, rgba(8,9,11,.16) 100%);
 }
 .hero-credit {
   position: absolute; right: 16px; bottom: 12px; z-index: 1;
@@ -331,17 +331,32 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 }
 .hero-credit a { color: inherit; border-bottom: 1px dotted currentColor; }
 
-.hero-content { max-width: 660px; text-align: center; margin-inline: auto; }
+.hero-discover {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(8,9,11,.48);
+  color: var(--bone);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+.hero-intro { padding: clamp(56px, 7vw, 92px) 0; background: var(--void); }
+.hero-content { max-width: 700px; text-align: center; margin-inline: auto; }
 .hero-emblem { display: none; }
 .rune-badge { position: relative; width: clamp(140px, 18vw, 200px); height: clamp(140px, 18vw, 200px); margin: 0 auto; display: block; }
 .rune-badge svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 32s linear infinite; }
 .rune-badge img { position: absolute; inset: 0; margin: auto; width: 55%; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-.hero .eyebrow { margin-bottom: 8px; }
-.hero h1 { font-size: clamp(2rem, 1.5rem + 2.2vw, 3.2rem); font-weight: 600; }
-.hero h1 span { color: var(--gold-lit); }
-.hero .lede { margin-top: 12px; font-size: clamp(.92rem, .9rem + .25vw, 1.05rem); margin-inline: auto; }
+.hero-intro .eyebrow { margin-bottom: 8px; }
+.hero-intro h1 { font-size: clamp(2rem, 1.5rem + 2.2vw, 3.2rem); font-weight: 600; }
+.hero-intro h1 span { color: var(--gold-lit); }
+.hero-intro .lede { margin-top: 12px; font-size: clamp(.92rem, .9rem + .25vw, 1.05rem); margin-inline: auto; }
 .hero-cta { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 20px; }
 .hero-fineprint { margin-top: 18px; font-size: .78rem; color: rgba(236,232,224,.5); }
 
@@ -449,6 +464,7 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .sci h4 { font-size: 1rem; font-weight: 600; margin-bottom: .5rem; color: var(--bone); }
 .sci p { font-size: .88rem; color: var(--ash); }
 .sci .ref { display: inline-block; margin-top: 12px; font-size: .78rem; color: var(--ice); border-bottom: 1px dotted currentColor; }
+.science-more { margin-top: 22px; }
 .disclaimer { margin-top: 28px; font-size: .82rem; color: var(--fog); max-width: 78ch; }
 
 /* ============================================================
@@ -479,6 +495,31 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .macro-row span { font-size: .6rem; letter-spacing: .04em; text-transform: uppercase; color: var(--fog); }
 .spark { display: flex; align-items: flex-end; gap: 4px; height: 42px; margin-top: 8px; }
 .spark i { flex: 1; background: var(--gold); opacity: .8; border-radius: 2px 2px 0 0; }
+.app-feature-grid { display: grid; gap: 14px; }
+.app-feature {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 2px 16px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(216,182,103,.1), transparent 42%), var(--stone);
+}
+.app-feature > span {
+  grid-row: 1 / 3;
+  width: 48px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(216,182,103,.34);
+  border-radius: 50%;
+  color: var(--gold-lit);
+  font-family: var(--f-display);
+  font-size: 1.35rem;
+}
+.app-feature h3 { font-size: 1.05rem; }
+.app-feature p { color: var(--ash); font-size: .86rem; }
 
 /* ============================================================
    PLANES
@@ -842,22 +883,10 @@ tr:hover td { background: rgba(255,255,255,.02); }
   background: rgba(20,24,29,.94);
 }
 .whatsapp-horn svg {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   flex: 0 0 auto;
 }
-.horn-body { fill: #d8b667; stroke: #251a09; stroke-width: 2.2; stroke-linejoin: round; }
-.horn-mouth { fill: #f0d888; stroke: #251a09; stroke-width: 2.2; stroke-linejoin: round; }
-.horn-rim,
-.horn-wrap,
-.horn-call {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.horn-call { opacity: .72; }
 
 /* ============================================================
    RESPONSIVE
@@ -917,12 +946,13 @@ tr:hover td { background: rgba(255,255,255,.02); }
   .hero {
     min-height: 100svh;
     align-items: flex-end;
-    padding-top: 104px;
-    padding-bottom: 24px;
+    padding-top: 84px;
+    padding-bottom: 22px;
   }
   .hero-content { max-width: min(92vw, 420px); }
-  .hero h1 { font-size: clamp(1.72rem, 8.8vw, 2.28rem); line-height: 1.08; }
-  .hero .lede { font-size: .84rem; line-height: 1.48; margin-top: 10px; }
+  .hero-intro { padding: 54px 0 62px; }
+  .hero-intro h1 { font-size: clamp(1.72rem, 8.8vw, 2.28rem); line-height: 1.08; }
+  .hero-intro .lede { font-size: .92rem; line-height: 1.55; margin-top: 14px; }
   .hero-cta { gap: 10px; margin-top: 14px; }
   .hero .btn { min-height: 48px; padding: 0 20px; }
   .hero-fineprint { margin-top: 12px; font-size: .72rem; }
