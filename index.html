@@ -44,7 +44,7 @@
 <link rel="preload" href="assets/img/portal-valhalla.webp" as="image">
 <link rel="preload" href="assets/img/portal-torch-left.webp" as="image">
 <link rel="preload" href="assets/img/portal-torch-right.webp" as="image">
-<link rel="stylesheet" href="assets/css/styles.css?v=7">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -176,14 +176,13 @@
 
     <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
       <a href="#camino" data-i18n="nav.method">Método</a>
-      <a href="#entreno" data-i18n="nav.training">Entreno</a>
-      <a href="#nutricion" data-i18n="nav.nutrition">Nutrición</a>
-      <a href="#ciencia" data-i18n="nav.science">Ciencia</a>
-      <a href="#app" data-i18n="nav.app">La App</a>
-      <a href="#recursos" data-i18n="nav.resources">Recursos</a>
+      <a href="metodo.html" data-i18n="nav.training">Entreno</a>
+      <a href="nutricion.html" data-i18n="nav.nutrition">Nutrición</a>
+      <a href="ciencia.html" data-i18n="nav.science">Ciencia</a>
+      <a href="app.html" data-i18n="nav.app">La App</a>
+      <a href="blog/index.html" data-i18n="nav.wiki">Wiki-Viki</a>
       <a href="/sudoku.html" data-i18n="nav.sudoku">Sudoku</a>
       <a href="#planes" data-i18n="nav.plans">Planes</a>
-      <a href="#tienda" data-i18n="nav.shop">Tienda</a>
       <a href="#sobre" data-i18n="nav.about">Sobre mí</a>
       <a href="#" class="only-mobile is-disabled" data-coming-soon data-i18n="nav.cta">Abrir la App</a>
     </nav>
@@ -231,10 +230,10 @@
     <div class="hero-scrim"></div>
   </div>
 
-  <a class="hero-discover" href="#presentacion" data-i18n="hero.discover">Descubre el método ↓</a>
+  <a class="hero-discover" href="#camino" data-i18n="hero.discover">Descubre el método ↓</a>
 </section>
 
-<section class="hero-intro" id="presentacion">
+<section class="hero-intro" id="camino">
   <div class="shell hero-content">
     <p class="eyebrow" data-i18n="hero.eyebrow">Raíz nórdica, método contemporáneo</p>
     <h1>Entrenador personal en <span>Fuengirola</span> — Viking Fitness</h1>
@@ -242,15 +241,28 @@
 
     <div class="hero-cta">
       <a class="btn btn--solid" href="#contacto" data-i18n="hero.cta1">Quiero empezar</a>
-      <a class="btn-link" href="#camino" data-i18n="hero.cta2">Ver el método ↓</a>
+      <a class="btn-link" href="metodo.html" data-i18n="hero.cta2">Ver el método →</a>
     </div>
 
     <p class="hero-fineprint" data-i18n="hero.fineprint">Asesoramiento en Español, English, Suomi y Norsk</p>
+
+    <div class="home-paths">
+      <a class="home-path" href="metodo.html">
+        <span class="home-path-num">01</span>
+        <strong data-i18n="train.eyebrow">Entrenamiento</strong>
+        <small data-i18n="path.train.sub">Fuerza, potencia y acondicionamiento físico</small>
+      </a>
+      <a class="home-path" href="nutricion.html">
+        <span class="home-path-num">02</span>
+        <strong data-i18n="food.eyebrow">Nutrición</strong>
+        <small data-i18n="home.food.short">Recetas y formas de alimentación para encontrar la que mejor te funciona</small>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ══════════════ CAMINO: ENTRENAMIENTOS / NUTRICIÓN ══════════════ -->
-<section id="camino">
+<section id="camino-detalle" hidden>
   <div class="shell">
     <div class="section-head reveal">
       <p class="eyebrow" data-i18n="path.eyebrow">El concepto</p>
@@ -339,7 +351,7 @@
 </section>
 
 <!-- ══════════════ CIENCIA ══════════════ -->
-<section id="ciencia" class="science">
+<section id="ciencia" class="science" hidden>
   <div class="shell">
     <div class="section-head reveal">
       <p class="eyebrow" data-i18n="sci.eyebrow">Fundamentación</p>
@@ -371,7 +383,7 @@
 <hr class="edge">
 
 <!-- ══════════════ APP ══════════════ -->
-<section id="app">
+<section id="app" hidden>
   <div class="shell app-showcase">
     <div class="reveal">
       <p class="eyebrow" data-i18n="app.eyebrow">Tu saga, registrada</p>
@@ -412,7 +424,7 @@
 <hr class="edge">
 
 <!-- ══════════════ RECURSOS ══════════════ -->
-<section id="recursos">
+<section id="recursos" hidden>
   <div class="shell">
     <div class="section-head reveal">
       <p class="eyebrow" data-i18n="resources.eyebrow">Recursos</p>
@@ -437,7 +449,7 @@
 <hr class="edge">
 
 <!-- ══════════════ PLANES ══════════════ -->
-<section id="planes">
+<section id="planes" class="home-plans">
   <div class="shell">
     <div class="section-head reveal">
       <p class="eyebrow" data-i18n="plans.eyebrow">Acompañamiento mensual</p>
@@ -495,7 +507,7 @@
 <hr class="edge">
 
 <!-- ══════════════ TIENDA ONLINE ══════════════ -->
-<section id="tienda" class="shop">
+<section id="tienda" class="shop" hidden>
   <div class="shell">
     <div class="shop-hero reveal">
       <div class="shop-copy">
@@ -559,7 +571,7 @@
 <hr class="edge">
 
 <!-- ══════════════ FAQ ══════════════ -->
-<section>
+<section hidden>
   <div class="shell" style="max-width:900px">
     <div class="section-head reveal">
       <p class="eyebrow" data-i18n="faq.eyebrow">Dudas</p>
@@ -605,8 +617,6 @@
     </div>
     <div class="about-body reveal">
       <p data-i18n="about.p1">Deportista y profesor de Educación Física. Llevo años combinando el entrenamiento de fuerza con el estudio de la historia del movimiento humano. Viking Fitness nace de una pregunta: ¿y si los métodos de entrenamiento que hoy valida la ciencia moderna ya los practicaban los pueblos del norte de Europa hace siglos?</p>
-      <p data-i18n="about.p2">Los vikingos levantaban piedras naturales como prueba de fuerza — el Húsafell Stone en Islandia o las piedras de vigor escandinavas eran ritos de paso. Remaban distancias enormes, luchaban glíma y cargaban troncos. Su alimentación se basaba en lo que hoy llamamos paleo: pescado salvaje, caza, tubérculos, bayas, lácteos fermentados como el skyr y grasas animales de calidad.</p>
-      <p data-i18n="about.p3">Hoy sabemos por qué funcionaba. La ciencia confirma que el entrenamiento de fuerza explosiva aumenta la densidad ósea, que las dietas ricas en proteína y grasas saludables optimizan la composición corporal, y que la periodización por bloques — algo que los guerreros nórdicos hacían por instinto entre campañas — es el estándar en rendimiento deportivo moderno.</p>
       <p data-i18n="about.p4">Este método no es mejor ni peor que otro. Es una forma de entender la optimización física apoyada en evidencia y enraizada en la tradición de fuerza del norte de Europa. Sin marketing de suplementos y sin dietas de hambre: hierro, comida real y un plan que se mide.</p>
     </div>
   </div>
@@ -668,26 +678,20 @@
       <div>
         <h5 data-i18n="footer.h1">Método</h5>
         <ul>
-          <li><a href="#camino" data-i18n="nav.method">Método</a></li>
-          <li><a href="#entreno" data-i18n="nav.training">Entreno</a></li>
-          <li><a href="#nutricion" data-i18n="nav.nutrition">Nutrición</a></li>
-          <li><a href="#ciencia" data-i18n="nav.science">Ciencia</a></li>
-          <li><a href="/metodo.html">↗ Método completo</a></li>
-          <li><a href="/nutricion.html">↗ Nutrición y recetas</a></li>
-          <li><a href="/ciencia.html">↗ Ciencia completa</a></li>
+          <li><a href="metodo.html" data-i18n="nav.training">Entrenamiento</a></li>
+          <li><a href="nutricion.html" data-i18n="nav.nutrition">Nutrición</a></li>
+          <li><a href="ciencia.html" data-i18n="nav.science">Ciencia</a></li>
         </ul>
       </div>
       <div>
         <h5 data-i18n="footer.h2">Clan</h5>
         <ul>
           <li><a href="#planes" data-i18n="nav.plans">Planes</a></li>
-          <li><a href="#tienda" data-i18n="nav.shop">Tienda</a></li>
-          <li><a href="#app" data-i18n="nav.app">La App</a></li>
-          <li><a href="#recursos" data-i18n="nav.resources">Recursos</a></li>
+          <li><a href="app.html" data-i18n="nav.app">La App</a></li>
           <li><a href="/sudoku.html" data-i18n="nav.sudoku">Sudoku Vikingo</a></li>
           <li><a href="#sobre" data-i18n="nav.about">Sobre mí</a></li>
           <li><a href="#contacto" data-i18n="footer.contact">Contacto</a></li>
-          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/">Wiki-Viki</a></li>
         </ul>
       </div>
       <div>
@@ -736,9 +740,9 @@
   </div>
 </div>
 
-<script src="assets/js/i18n.js?v=7"></script>
-<script src="assets/js/audio.js?v=7"></script>
-<script src="assets/js/main.js?v=7"></script>
-<script src="assets/js/pwa.js?v=7"></script>
+<script src="assets/js/i18n.js?v=11"></script>
+<script src="assets/js/audio.js?v=11"></script>
+<script src="assets/js/main.js?v=11"></script>
+<script src="assets/js/pwa.js?v=11"></script>
 </body>
 </html>

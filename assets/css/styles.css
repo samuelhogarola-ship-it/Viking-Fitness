@@ -78,6 +78,7 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .section-head h2 { font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.7rem); margin: .5rem 0 1rem; }
 
 .edge { height: 1px; border: 0; background: var(--line); }
+section[hidden] + .edge { display: none; }
 
 /* ============================================================
    PORTAL DE ENTRADA (mínimo)
@@ -359,6 +360,22 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
 .hero-intro .lede { margin-top: 12px; font-size: clamp(.92rem, .9rem + .25vw, 1.05rem); margin-inline: auto; }
 .hero-cta { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 20px; }
 .hero-fineprint { margin-top: 18px; font-size: .78rem; color: rgba(236,232,224,.5); }
+.home-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 34px; text-align: left; }
+.home-path {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 14px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--stone);
+  transition: transform .2s var(--ease), border-color .2s var(--ease);
+}
+.home-path:hover { transform: translateY(-2px); border-color: rgba(216,182,103,.55); }
+.home-path-num { grid-row: 1 / 3; color: var(--gold-lit); font-family: var(--f-display); font-size: 1.2rem; }
+.home-path strong { font-family: var(--f-display); }
+.home-path small { color: var(--ash); line-height: 1.45; }
 
 @media (prefers-reduced-motion: reduce) {
   .rune-badge svg.ring { animation: none; }
@@ -525,6 +542,8 @@ section { position: relative; padding: clamp(64px, 8vw, 120px) 0; }
    PLANES
    ============================================================ */
 .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; align-items: stretch; }
+.home-plans .plan li:nth-child(n+3) { display: none; }
+.home-plans .plan { padding: 26px 24px; }
 .plan {
   position: relative; display: flex; flex-direction: column; gap: 16px; padding: 32px 28px;
   border: 1px solid var(--line); border-radius: var(--radius);
@@ -953,9 +972,11 @@ tr:hover td { background: rgba(255,255,255,.02); }
   .hero-intro { padding: 54px 0 62px; }
   .hero-intro h1 { font-size: clamp(1.72rem, 8.8vw, 2.28rem); line-height: 1.08; }
   .hero-intro .lede { font-size: .92rem; line-height: 1.55; margin-top: 14px; }
+  .home-paths { grid-template-columns: 1fr; margin-top: 28px; }
   .hero-cta { gap: 10px; margin-top: 14px; }
   .hero .btn { min-height: 48px; padding: 0 20px; }
   .hero-fineprint { margin-top: 12px; font-size: .72rem; }
+  .about-photo img { max-height: 48svh; object-fit: cover; object-position: center 24%; }
   .whatsapp-horn {
     right: 14px;
     bottom: 14px;
