@@ -1,6 +1,7 @@
 .vercel
 .DS_Store
 .local-noindex/
+.worktrees/
 dist/
 *.zip
 api/config.local.php
