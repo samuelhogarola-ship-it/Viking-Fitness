@@ -15,7 +15,8 @@ Luego abre `http://localhost:8000`. Hace falta servirlo por HTTP (no `file://`) 
 
 ```
 index.html          Landing: portal, hero, método, entreno, nutrición, ciencia, planes, FAQ, contacto
-app.html            App del clan: panel, entreno, comida, progreso
+app.html            App de seguimiento: panel, entreno, comida, progreso
+herramientas.html   Directorio de calculadoras, temporizador, registros y juegos
 assets/css/         Sistema visual completo
 assets/js/i18n.js   Diccionarios ES · EN · FI · NO + motor de traducción
 assets/js/audio.js  Ambiente del Valhalla sintetizado con Web Audio (sin archivos de audio)

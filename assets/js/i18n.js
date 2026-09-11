@@ -10,7 +10,7 @@ es: {
   'portal.enterSilent':'Entrar en silencio',
   'portal.hint2':'Puedes silenciarlo cuando quieras desde el icono del menú',
 
-  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.shop':'Tienda','nav.resources':'Recursos','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Próximamente',
+  'nav.method':'Método','nav.training':'Entreno','nav.nutrition':'Nutrición','nav.science':'Ciencia','nav.app':'La App','nav.about':'Sobre mí','nav.plans':'Planes','nav.shop':'Tienda','nav.resources':'Herramientas','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Próximamente',
   'sound.on':'Activar el sonido del Valhalla','sound.off':'Silenciar el sonido',
   'soon.msg':'La app llega muy pronto.',
 
@@ -33,7 +33,7 @@ es: {
   'method.s1.t':'Forja — semanas 1 a 4','method.s1.short':'Base técnica y evaluación inicial.',
   'method.s2.t':'Yunque — semanas 5 a 9','method.s2.short':'Sube la carga y entran los movimientos explosivos.',
   'method.s3.t':'Travesía — semanas 10 a 14','method.s3.short':'Picos de intensidad y ajuste al objetivo.',
-  'method.s4.t':'Consejo del clan','method.s4.short':'Revisión quincenal y videollamada.',
+  'method.s4.t':'Seguimiento personal','method.s4.short':'Revisión quincenal y videollamada.',
 
   'train.eyebrow':'Entrenamiento',
   'train.lede':'El entrenamiento se adapta a tu objetivo y tu punto de partida. El eje es la fuerza máxima, respaldada por décadas de evidencia científica. La composición corporal —definición o volumen— se regula desde la dieta y los ajustes del entrenamiento, no del número de repeticiones.',
@@ -83,8 +83,9 @@ es: {
   'app.cta':'Próximamente',
   'app.p.today':'Hoy','app.p.kg':'kg movidos','app.p.cal':'Calorías','app.p.prot':'Prot','app.p.carb':'Carb','app.p.fat':'Grasa','app.p.week':'Volumen 7 semanas','app.p.rank':'Rango',
 
-  'resources.eyebrow':'Recursos','resources.title':'Herramientas del clan',
-  'resources.lede':'Accesos rápidos para entrenar cabeza, constancia y registro. Empieza sin cuenta y guarda online solo si quieres sincronizar records.',
+  'resources.eyebrow':'Recursos','resources.title':'Herramientas Viking Fitness',
+  'resources.lede':'Calculadoras, temporizador, registros y juegos que funcionan sin cuenta y respetan tu privacidad.',
+  'resources.tools.eyebrow':'Utilidades gratuitas','resources.tools.title':'Todas las herramientas','resources.tools.text':'Calcula tu 1RM y metabolismo basal, controla intervalos y registra calorías o entrenamientos.','resources.tools.cta':'Ver herramientas',
   'resources.sudoku.eyebrow':'Juego mental','resources.sudoku.title':'Sudoku Vikingo',
   'resources.sudoku.text':'Tres niveles, sesenta tableros, temporizador, records locales y sincronización opcional por email.',
   'resources.sudoku.cta':'Abrir Sudoku',
@@ -130,7 +131,7 @@ es: {
   'cta.sent':'Mensaje enviado. Te respondo en 48 h.',
 
   'footer.tag':'Fuerza explosiva, comida del norte y un registro honesto. Entrenar hoy para que el cuerpo siga funcionando dentro de cuarenta años.',
-  'footer.h1':'Método','footer.h2':'Clan','footer.h3':'Idiomas','footer.contact':'Contacto','footer.legal':'Aviso legal · Privacidad · No sustituye consejo médico',
+  'footer.h1':'Método','footer.h2':'Viking Fitness','footer.h3':'Idiomas','footer.contact':'Contacto','footer.legal':'Aviso legal · Privacidad · No sustituye consejo médico',
 
   /* ---- App ---- */
   'a.back':'Volver al salón','a.title':'Tu saga','a.sub':'Registra el hierro, la comida y el progreso. Todo se guarda en tu navegador.',
@@ -154,7 +155,7 @@ en: {
   'portal.enterSound':'Enter with sound','portal.enterSilent':'Enter in silence',
   'portal.hint2':'You can mute it any time from the icon in the menu',
 
-  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.shop':'Shop','nav.resources':'Resources','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Coming soon',
+  'nav.method':'Method','nav.training':'Training','nav.nutrition':'Nutrition','nav.science':'Science','nav.app':'The App','nav.about':'About me','nav.plans':'Plans','nav.shop':'Shop','nav.resources':'Tools','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Coming soon',
   'sound.on':'Turn the sound of Valhalla on','sound.off':'Mute the sound',
   'soon.msg':'The app is coming very soon.',
 
@@ -177,7 +178,7 @@ en: {
   'method.s1.t':'Forge — weeks 1 to 4','method.s1.short':'Technical base and initial assessment.',
   'method.s2.t':'Anvil — weeks 5 to 9','method.s2.short':'The load rises and explosive movements begin.',
   'method.s3.t':'Voyage — weeks 10 to 14','method.s3.short':'Intensity peaks and goal-specific tuning.',
-  'method.s4.t':'Clan council','method.s4.short':'Fortnightly review and video call.',
+  'method.s4.t':'Personal review','method.s4.short':'Fortnightly review and video call.',
 
   'train.eyebrow':'Training',
   'train.lede':'Four sessions a week, none of them filler. Every block has a measurable purpose and every exercise is logged in the app.',
@@ -227,8 +228,9 @@ en: {
   'app.cta':'Coming soon',
   'app.p.today':'Today','app.p.kg':'kg moved','app.p.cal':'Calories','app.p.prot':'Prot','app.p.carb':'Carb','app.p.fat':'Fat','app.p.week':'7-week volume','app.p.rank':'Rank',
 
-  'resources.eyebrow':'Resources','resources.title':'Clan tools',
-  'resources.lede':'Quick tools to train focus, consistency and logging. Start without an account and save online only if you want synced records.',
+  'resources.eyebrow':'Resources','resources.title':'Viking Fitness tools',
+  'resources.lede':'Calculators, a timer, logs and games that work without an account and respect your privacy.',
+  'resources.tools.eyebrow':'Free utilities','resources.tools.title':'All tools','resources.tools.text':'Estimate 1RM and BMR, time intervals and log calories or training.','resources.tools.cta':'View tools',
   'resources.sudoku.eyebrow':'Mental game','resources.sudoku.title':'Viking Sudoku',
   'resources.sudoku.text':'Three levels, sixty boards, timer, local records and optional email sync.',
   'resources.sudoku.cta':'Open Sudoku',
@@ -274,7 +276,7 @@ en: {
   'cta.sent':'Message sent. I will reply within 48 h.',
 
   'footer.tag':'Explosive strength, food from the north and an honest log. Train today so the body still works forty years from now.',
-  'footer.h1':'Method','footer.h2':'Clan','footer.h3':'Languages','footer.contact':'Contact','footer.legal':'Legal notice · Privacy · Not a substitute for medical advice',
+  'footer.h1':'Method','footer.h2':'Viking Fitness','footer.h3':'Languages','footer.contact':'Contact','footer.legal':'Legal notice · Privacy · Not a substitute for medical advice',
 
   'a.back':'Back to the hall','a.title':'Your saga','a.sub':'Log the iron, the food and the progress. Everything is stored in your browser.',
   'a.tab1':'Dashboard','a.tab2':'Training','a.tab3':'Food','a.tab4':'Progress',
@@ -297,7 +299,7 @@ fi: {
   'portal.enterSound':'Astu sisään äänellä','portal.enterSilent':'Astu sisään hiljaisuudessa',
   'portal.hint2':'Voit mykistää sen milloin tahansa valikon kuvakkeesta',
 
-  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.shop':'Kauppa','nav.resources':'Resurssit','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Tulossa pian',
+  'nav.method':'Menetelmä','nav.training':'Harjoittelu','nav.nutrition':'Ravinto','nav.science':'Tiede','nav.app':'Sovellus','nav.about':'Minusta','nav.plans':'Paketit','nav.shop':'Kauppa','nav.resources':'Työkalut','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Tulossa pian',
   'sound.on':'Kytke Valhallan ääni päälle','sound.off':'Mykistä ääni',
   'soon.msg':'Sovellus julkaistaan hyvin pian.',
 
@@ -320,7 +322,7 @@ fi: {
   'method.s1.t':'Ahjo — viikot 1–4','method.s1.short':'Tekninen perusta ja alkukartoitus.',
   'method.s2.t':'Alasin — viikot 5–9','method.s2.short':'Kuorma nousee ja räjähtävät liikkeet alkavat.',
   'method.s3.t':'Merimatka — viikot 10–14','method.s3.short':'Intensiteetin huiput ja tavoitteen mukainen säätö.',
-  'method.s4.t':'Klaanin neuvosto','method.s4.short':'Kahden viikon tarkastelu ja videopuhelu.',
+  'method.s4.t':'Henkilökohtainen seuranta','method.s4.short':'Kahden viikon tarkastelu ja videopuhelu.',
 
   'train.eyebrow':'Harjoittelu',
   'train.lede':'Neljä harjoitusta viikossa, yksikään ei ole täytettä. Jokaisella osiolla on mitattava tarkoitus ja jokainen liike kirjataan sovellukseen.',
@@ -370,8 +372,9 @@ fi: {
   'app.cta':'Tulossa pian',
   'app.p.today':'Tänään','app.p.kg':'kg liikutettu','app.p.cal':'Kalorit','app.p.prot':'Prot','app.p.carb':'Hiil','app.p.fat':'Rasva','app.p.week':'7 viikon volyymi','app.p.rank':'Arvo',
 
-  'resources.eyebrow':'Resurssit','resources.title':'Klaanin työkalut',
-  'resources.lede':'Nopeat työkalut keskittymisen, säännöllisyyden ja kirjaamisen harjoitteluun. Aloita ilman tiliä ja tallenna verkkoon vain, jos haluat synkronoida ennätykset.',
+  'resources.eyebrow':'Resurssit','resources.title':'Viking Fitness -työkalut',
+  'resources.lede':'Laskurit, ajastin, seuranta ja pelit ilman käyttäjätiliä ja yksityisyyttä kunnioittaen.',
+  'resources.tools.eyebrow':'Ilmaiset työkalut','resources.tools.title':'Kaikki työkalut','resources.tools.text':'Arvioi 1RM ja perusaineenvaihdunta, ajasta intervallit ja kirjaa kalorit tai harjoitukset.','resources.tools.cta':'Katso työkalut',
   'resources.sudoku.eyebrow':'Mielipeli','resources.sudoku.title':'Viking Sudoku',
   'resources.sudoku.text':'Kolme tasoa, kuusikymmentä lautaa, ajastin, paikalliset ennätykset ja valinnainen sähköpostisynkronointi.',
   'resources.sudoku.cta':'Avaa Sudoku',
@@ -417,7 +420,7 @@ fi: {
   'cta.sent':'Viesti lähetetty. Vastaan 48 tunnissa.',
 
   'footer.tag':'Räjähtävää voimaa, pohjoisen ruokaa ja rehellinen kirjanpito. Harjoittele nyt, jotta keho toimii vielä neljänkymmenen vuoden päästä.',
-  'footer.h1':'Menetelmä','footer.h2':'Klaani','footer.h3':'Kielet','footer.contact':'Yhteystiedot','footer.legal':'Oikeudellinen huomautus · Tietosuoja · Ei korvaa lääkärin neuvoa',
+  'footer.h1':'Menetelmä','footer.h2':'Viking Fitness','footer.h3':'Kielet','footer.contact':'Yhteystiedot','footer.legal':'Oikeudellinen huomautus · Tietosuoja · Ei korvaa lääkärin neuvoa',
 
   'a.back':'Takaisin saliin','a.title':'Sinun saagasi','a.sub':'Kirjaa rauta, ruoka ja edistyminen. Kaikki tallentuu selaimeesi.',
   'a.tab1':'Kojelauta','a.tab2':'Harjoittelu','a.tab3':'Ruoka','a.tab4':'Edistyminen',
@@ -440,7 +443,7 @@ no: {
   'portal.enterSound':'Gå inn med lyd','portal.enterSilent':'Gå inn i stillhet',
   'portal.hint2':'Du kan slå den av når som helst fra ikonet i menyen',
 
-  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.shop':'Butikk','nav.resources':'Ressurser','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Kommer snart',
+  'nav.method':'Metoden','nav.training':'Trening','nav.nutrition':'Ernæring','nav.science':'Vitenskap','nav.app':'Appen','nav.about':'Om meg','nav.plans':'Pakker','nav.shop':'Butikk','nav.resources':'Verktøy','nav.wiki':'Wiki-Viki','nav.sudoku':'Sudoku','nav.cta':'Kommer snart',
   'sound.on':'Slå på lyden fra Valhall','sound.off':'Slå av lyden',
   'soon.msg':'Appen kommer veldig snart.',
 
@@ -463,7 +466,7 @@ no: {
   'method.s1.t':'Smie — uke 1 til 4','method.s1.short':'Teknisk grunnlag og innledende kartlegging.',
   'method.s2.t':'Ambolt — uke 5 til 9','method.s2.short':'Belastningen øker og eksplosive bevegelser begynner.',
   'method.s3.t':'Ferden — uke 10 til 14','method.s3.short':'Intensitetstopper og målrettet justering.',
-  'method.s4.t':'Klanrådet','method.s4.short':'Gjennomgang annenhver uke og videosamtale.',
+  'method.s4.t':'Personlig oppfølging','method.s4.short':'Gjennomgang annenhver uke og videosamtale.',
 
   'train.eyebrow':'Trening',
   'train.lede':'Fire økter i uken, ingen av dem fyllstoff. Hver bolk har et målbart formål og hver øvelse loggføres i appen.',
@@ -513,8 +516,9 @@ no: {
   'app.cta':'Kommer snart',
   'app.p.today':'I dag','app.p.kg':'kg flyttet','app.p.cal':'Kalorier','app.p.prot':'Prot','app.p.carb':'Karb','app.p.fat':'Fett','app.p.week':'Volum 7 uker','app.p.rank':'Rang',
 
-  'resources.eyebrow':'Ressurser','resources.title':'Klanens verktøy',
-  'resources.lede':'Raske verktøy for fokus, kontinuitet og logging. Start uten konto og lagre på nett bare hvis du vil synkronisere rekorder.',
+  'resources.eyebrow':'Ressurser','resources.title':'Viking Fitness-verktøy',
+  'resources.lede':'Kalkulatorer, timer, loggføring og spill uten brukerkonto og med respekt for personvernet.',
+  'resources.tools.eyebrow':'Gratis verktøy','resources.tools.title':'Alle verktøy','resources.tools.text':'Beregn 1RM og basalstoffskifte, ta tiden på intervaller og loggfør kalorier eller trening.','resources.tools.cta':'Se verktøy',
   'resources.sudoku.eyebrow':'Mentalt spill','resources.sudoku.title':'Viking Sudoku',
   'resources.sudoku.text':'Tre nivåer, seksti brett, tidtaker, lokale rekorder og valgfri e-postsynkronisering.',
   'resources.sudoku.cta':'Åpne Sudoku',
@@ -560,7 +564,7 @@ no: {
   'cta.sent':'Melding sendt. Jeg svarer innen 48 timer.',
 
   'footer.tag':'Eksplosiv styrke, mat fra nord og en ærlig logg. Tren i dag, slik at kroppen fortsatt virker om førti år.',
-  'footer.h1':'Metoden','footer.h2':'Klanen','footer.h3':'Språk','footer.contact':'Kontakt','footer.legal':'Juridisk · Personvern · Erstatter ikke medisinske råd',
+  'footer.h1':'Metoden','footer.h2':'Viking Fitness','footer.h3':'Språk','footer.contact':'Kontakt','footer.legal':'Juridisk · Personvern · Erstatter ikke medisinske råd',
 
   'a.back':'Tilbake til hallen','a.title':'Sagaen din','a.sub':'Loggfør jernet, maten og fremgangen. Alt lagres i nettleseren din.',
   'a.tab1':'Oversikt','a.tab2':'Trening','a.tab3':'Mat','a.tab4':'Fremgang',
