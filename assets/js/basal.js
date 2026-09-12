@@ -64,8 +64,9 @@
     }
 
     const metric = VFBasal.toMetric(input);
-    const basalValue = Math.round(VFBasal.bmr({ sex:input.sex, age:input.age, kg:metric.kg, cm:metric.cm }));
-    const maintenance = VFBasal.tdee(basalValue, VFBasal.ACTIVITY[input.activity]);
+    const exactBasalValue = VFBasal.bmr({ sex:input.sex, age:input.age, kg:metric.kg, cm:metric.cm });
+    const basalValue = Math.round(exactBasalValue);
+    const maintenance = VFBasal.tdee(exactBasalValue, VFBasal.ACTIVITY[input.activity]);
     const range = VFBasal.goalRange(maintenance, input.goal);
     document.getElementById('basalValue').textContent = `${VFTools.formatNumber(basalValue, copy.locale, 0)} ${copy.kcalDay}`;
     document.getElementById('maintenanceValue').textContent = `${VFTools.formatNumber(maintenance, copy.locale, 0)} ${copy.kcalDay}`;
