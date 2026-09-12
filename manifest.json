@@ -31,6 +31,32 @@
   ],
   "shortcuts": [
     {
+      "name": "Herramientas Viking Fitness",
+      "short_name": "Herramientas",
+      "description": "Abrir las calculadoras, registros y utilidades gratuitas.",
+      "url": "/herramientas.html",
+      "icons": [
+        {
+          "src": "/assets/img/logo.webp",
+          "sizes": "400x400",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Temporizador Vikingo",
+      "short_name": "Temporizador",
+      "description": "Abrir el temporizador de descanso, intervalos y EMOM.",
+      "url": "/temporizador-vikingo.html",
+      "icons": [
+        {
+          "src": "/assets/img/logo.webp",
+          "sizes": "400x400",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
       "name": "Sudoku Vikingo",
       "short_name": "Sudoku",
       "description": "Abrir el Sudoku Vikingo offline.",

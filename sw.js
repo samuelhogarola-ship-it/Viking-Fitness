@@ -1,18 +1,38 @@
-const CACHE_VERSION = 'viking-fitness-pwa-v11';
+const CACHE_VERSION = 'viking-fitness-pwa-v12';
 const OFFLINE_ASSETS = [
   '/',
   '/index.html',
+  '/herramientas.html',
+  '/calculadora-1rm.html',
+  '/calculadora-metabolismo-basal.html',
+  '/temporizador-vikingo.html',
+  '/contador-calorias.html',
+  '/diario-guerrero.html',
   '/sudoku.html',
   '/manifest.json',
   '/favicon.ico',
-  '/assets/css/styles.css?v=11',
-  '/assets/css/sudoku.css?v=11',
-  '/assets/js/i18n.js?v=11',
-  '/assets/js/audio.js?v=11',
-  '/assets/js/main.js?v=11',
-  '/assets/js/sudoku-engine.js?v=11',
-  '/assets/js/sudoku.js?v=11',
-  '/assets/js/pwa.js?v=11',
+  '/assets/css/styles.css?v=12',
+  '/assets/css/tools.css?v=12',
+  '/assets/css/sudoku.css?v=12',
+  '/assets/js/i18n.js?v=12',
+  '/assets/js/audio.js?v=12',
+  '/assets/js/main.js?v=12',
+  '/assets/js/tools-common.js?v=12',
+  '/assets/js/one-rm-engine.js?v=12',
+  '/assets/js/one-rm.js?v=12',
+  '/assets/js/basal-engine.js?v=12',
+  '/assets/js/basal.js?v=12',
+  '/assets/js/timer-engine.js?v=12',
+  '/assets/js/timer-audio.js?v=12',
+  '/assets/js/timer.js?v=12',
+  '/assets/js/calorie-engine.js?v=12',
+  '/assets/js/calorie-counter.js?v=12',
+  '/assets/js/journal-engine.js?v=12',
+  '/assets/js/warrior-journal.js?v=12',
+  '/assets/js/sudoku-engine.js?v=12',
+  '/assets/js/sudoku-copy.js?v=12',
+  '/assets/js/sudoku.js?v=12',
+  '/assets/js/pwa.js?v=12',
   '/assets/img/favicon-32.png',
   '/assets/img/apple-touch-icon.png',
   '/assets/img/logo.webp',
@@ -59,6 +79,13 @@ self.addEventListener('fetch', event => {
   }
 
   if (request.mode === 'navigate') {
+    const localizedDirectory = url.pathname.startsWith('/en/')
+      ? '/en/tools.html'
+      : url.pathname.startsWith('/fi/')
+        ? '/fi/tyokalut.html'
+        : url.pathname.startsWith('/no/')
+          ? '/no/verktoy.html'
+          : '/herramientas.html';
     event.respondWith(
       fetch(request)
         .then(response => {
@@ -66,7 +93,12 @@ self.addEventListener('fetch', event => {
           caches.open(CACHE_VERSION).then(cache => cache.put(request, copy));
           return response;
         })
-        .catch(() => caches.match(request).then(cached => cached || caches.match('/sudoku.html')))
+        .catch(async () => (
+          await caches.match(request)
+          || await caches.match(localizedDirectory)
+          || await caches.match('/herramientas.html')
+          || caches.match('/sudoku.html')
+        ))
     );
     return;
   }
