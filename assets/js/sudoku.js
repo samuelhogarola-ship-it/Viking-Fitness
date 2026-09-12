@@ -1,5 +1,8 @@
 (function () {
   const engine = window.VFSudokuEngine;
+  const lang = document.documentElement.lang.split('-')[0];
+  const copy = window.VFSudokuCopy[lang] || window.VFSudokuCopy.es;
+  const levelNames = { facil:copy.easy, medio:copy.medium, dificil:copy.hard };
   const $ = selector => document.querySelector(selector);
   const board = $('#sudokuBoard');
   const levelTabs = $('#levelTabs');
@@ -53,7 +56,7 @@
     Object.entries(engine.LEVELS).forEach(([key, config]) => {
       const button = document.createElement('button');
       button.type = 'button';
-      button.textContent = `${config.label} ${summary.byLevel[key].completed}/20`;
+      button.textContent = `${levelNames[key]} ${summary.byLevel[key].completed}/20`;
       button.className = key === level ? 'is-active' : '';
       button.setAttribute('role', 'tab');
       button.setAttribute('aria-selected', String(key === level));
@@ -69,7 +72,7 @@
       const status = engine.puzzleStatus(item.id, progress);
       const option = document.createElement('option');
       option.value = String(index);
-      option.textContent = `${status.completed ? '✓ ' : ''}#${String(index + 1).padStart(2, '0')}${status.completed ? ' completado' : ''}`;
+      option.textContent = `${status.completed ? '✓ ' : ''}#${String(index + 1).padStart(2, '0')}${status.completed ? ` ${copy.completedLabel}` : ''}`;
       option.selected = index === puzzleIndex;
       puzzleSelect.appendChild(option);
     });
@@ -101,7 +104,7 @@
       cell.className = cellClass(index, peerIndexes, sameIndexes);
       cell.textContent = state[index] === '0' ? '' : state[index];
       cell.setAttribute('role', 'gridcell');
-      cell.setAttribute('aria-label', `Fila ${Math.floor(index / 9) + 1}, columna ${index % 9 + 1}`);
+      cell.setAttribute('aria-label', interpolate(copy.rowColumn, { row:Math.floor(index / 9) + 1, column:index % 9 + 1 }));
       cell.addEventListener('click', () => {
         selected = index;
         if (state[index] !== '0') setActiveNumber(Number(state[index]), false);
@@ -160,13 +163,13 @@
     renderPuzzleSelect();
     renderBoard();
     updateStats();
-    setMessage('Nuevo tablero preparado.');
+    setMessage(copy.newBoard);
   }
 
   function placeValue(value) {
-    if (gameOver) return setMessage('Partida perdida. Reinicia el tablero o elige otro.');
-    if (selected < 0) return setMessage('Elige una casilla vacía.');
-    if (!engine.canEdit(puzzle, selected)) return setMessage('Esa casilla pertenece al tablero.');
+    if (gameOver) return setMessage(copy.lost);
+    if (selected < 0) return setMessage(copy.chooseCell);
+    if (!engine.canEdit(puzzle, selected)) return setMessage(copy.fixedCell);
     if (value && !engine.isMoveCorrect(puzzle, selected, value)) {
       mistakes += 1;
       if (engine.isGameLost(mistakes)) gameOver = true;
@@ -175,7 +178,7 @@
     saveCurrent();
     renderBoard();
     updateStats();
-    if (gameOver) return setMessage('Has hecho 3 fallos. Partida perdida.');
+    if (gameOver) return setMessage(copy.threeMistakes);
     if (engine.isSolved(state, puzzle)) completePuzzle();
   }
 
@@ -191,11 +194,11 @@
     renderBoard();
     updateStats();
     renderPad();
-    setMessage('Tablero reiniciado.');
+    setMessage(copy.reset);
   }
 
   function hint() {
-    if (gameOver) return setMessage('Partida perdida. Reinicia el tablero o elige otro.');
+    if (gameOver) return setMessage(copy.lost);
     const index = selected >= 0 && engine.canEdit(puzzle, selected) ? selected : state.indexOf('0');
     if (index < 0) return;
     selected = index;
@@ -207,10 +210,10 @@
   }
 
   function checkBoard() {
-    if (gameOver) return setMessage('Partida perdida. Reinicia para intentarlo otra vez.');
+    if (gameOver) return setMessage(copy.lost);
     if (engine.isSolved(state, puzzle)) return completePuzzle();
     const filled = [...state].filter(value => value !== '0').length;
-    setMessage(`Vas por ${filled}/81. Sigue, que aun queda batalla.`);
+    setMessage(interpolate(copy.progress, { filled }));
   }
 
   function completePuzzle() {
@@ -224,7 +227,7 @@
     renderLevels();
     renderPuzzleSelect();
     updateStats();
-    setMessage(`Completado en ${formatTime(elapsed)}.`);
+    setMessage(interpolate(copy.complete, { time:formatTime(elapsed) }));
   }
 
   function updateStats() {
@@ -336,17 +339,21 @@
     gameMessage.textContent = message;
   }
 
+  function interpolate(template, values) {
+    return Object.entries(values).reduce((text, [key, value]) => text.replace(`{${key}}`, String(value)), template);
+  }
+
   async function requestLogin(event) {
     event.preventDefault();
     pendingEmail = new FormData(loginForm).get('email').trim();
-    loginMessage.textContent = 'Enviando código...';
+    loginMessage.textContent = copy.sendingCode;
     const result = await api('/api/request-login.php', { email: pendingEmail });
     if (!result.ok) {
-      loginMessage.textContent = result.message || 'No se pudo enviar el código.';
+      loginMessage.textContent = copy.sendCodeFailed;
       return;
     }
     codeForm.classList.remove('is-hidden');
-    loginMessage.textContent = 'Código enviado. Revisa tu email.';
+    loginMessage.textContent = copy.codeSent;
   }
 
   async function verifyLogin(event) {
@@ -354,13 +361,13 @@
     const code = new FormData(codeForm).get('code').trim();
     const result = await api('/api/verify-login.php', { email: pendingEmail, code });
     if (!result.ok) {
-      loginMessage.textContent = result.message || 'Código incorrecto.';
+      loginMessage.textContent = copy.wrongCode;
       return;
     }
     user = result.user;
     syncLoginUi();
     syncProgress(getProgress());
-    loginMessage.textContent = 'Sesión iniciada.';
+    loginMessage.textContent = copy.loginSuccess;
   }
 
   async function loadUser() {
@@ -374,7 +381,7 @@
     await api('/api/logout.php', {});
     user = null;
     syncLoginUi();
-    loginMessage.textContent = 'Sesión cerrada.';
+    loginMessage.textContent = copy.logout;
   }
 
   async function syncProgress(progress) {
@@ -402,7 +409,7 @@
 
   function syncLoginUi() {
     const logged = Boolean(user && user.email);
-    loginStatus.textContent = logged ? `Online: ${user.email}` : 'Regístrate para guardar online';
+    loginStatus.textContent = logged ? interpolate(copy.online, { email:user.email }) : copy.loginPrompt;
     loginForm.classList.toggle('is-hidden', logged);
     codeForm.classList.add('is-hidden');
     logoutBtn.classList.toggle('is-hidden', !logged);
@@ -418,7 +425,7 @@
       const response = await fetch(url, options);
       return await response.json();
     } catch {
-      return { ok: false, message: 'El registro no está disponible todavía. Tu progreso seguirá guardado en este navegador.' };
+      return { ok: false, message:copy.offline };
     }
   }
 })();

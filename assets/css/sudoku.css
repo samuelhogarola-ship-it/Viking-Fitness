@@ -12,6 +12,31 @@
   padding: 110px 0 70px;
 }
 
+.sudoku-lang {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(6,8,10,.76);
+  color: var(--bone);
+  padding: 0 10px;
+}
+
+.sudoku-guide {
+  max-width: 860px;
+  margin: 54px auto 0;
+  padding: clamp(22px,4vw,38px);
+  border: 1px solid rgba(216,182,103,.22);
+  border-radius: 8px;
+  background: rgba(10,12,15,.88);
+}
+
+.sudoku-guide h2 { margin-bottom: 16px; }
+.sudoku-guide h3 { margin: 28px 0 8px; color: var(--gold-lit); }
+.sudoku-guide p,
+.sudoku-guide li { color: var(--ash); }
+.sudoku-guide ul { margin: 12px 0 0 20px; }
+.sudoku-guide__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+
 .sudoku-hero {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(340px, 1.1fr);
