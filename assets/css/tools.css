@@ -7,6 +7,7 @@
     radial-gradient(circle at 50% 0, rgba(184,146,60,.09), transparent 34rem),
     var(--void);
 }
+.tools-body [hidden] { display: none !important; }
 .sr-only {
   position: absolute;
   width: 1px;
@@ -172,6 +173,15 @@
 .related-tools { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
 .related-tools__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
 .privacy-note { margin-top: 18px; color: var(--fog); font-size: .8rem; }
+
+.timer-display { text-align: center; padding: clamp(24px,6vw,48px) 12px; }
+.timer-display__phase { color: var(--gold-lit); font: 600 1rem var(--f-display); letter-spacing: .12em; text-transform: uppercase; }
+.timer-display__time { margin: 10px 0; color: var(--bone); font: 700 clamp(4rem,14vw,7.5rem)/.95 var(--f-display); font-variant-numeric: tabular-nums; }
+.timer-display__round { color: var(--ash); }
+.timer-options { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 4px; }
+.timer-option { display: inline-flex; align-items: center; gap: 8px; color: var(--ash); font-size: .82rem; }
+.timer-option input[type="checkbox"] { width: 20px; min-height: 20px; accent-color: var(--gold); }
+.timer-option input[type="range"] { width: 120px; min-height: 44px; accent-color: var(--gold); }
 
 @media (max-width: 900px) {
   .tools-directory { grid-template-columns: repeat(2,minmax(0,1fr)); }
