@@ -236,4 +236,7 @@
   .tool-card,
   .tool-guide,
   .tool-result { background: #fff; color: #111; border-color: #bbb; box-shadow: none; }
+  .journal-page .tool-guide,
+  .journal-page .journal-history,
+  .journal-page .journal-import-preview { display: none !important; }
 }
