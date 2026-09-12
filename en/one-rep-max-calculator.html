@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free one-rep max calculator: estimate your 1RM | Viking Fitness</title>
+<meta name="description" content="Estimate your one-rep max with the Epley formula and get a 40–100% training load table. Free 1RM calculator in kilograms and pounds.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0a0c0f">
+<link rel="canonical" href="https://www.vikingfitness.es/en/one-rep-max-calculator.html">
+<link rel="alternate" hreflang="es" href="https://www.vikingfitness.es/calculadora-1rm.html">
+<link rel="alternate" hreflang="en" href="https://www.vikingfitness.es/en/one-rep-max-calculator.html">
+<link rel="alternate" hreflang="fi" href="https://www.vikingfitness.es/fi/1rm-laskuri.html">
+<link rel="alternate" hreflang="no" href="https://www.vikingfitness.es/no/1rm-kalkulator.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vikingfitness.es/calculadora-1rm.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Free one-rep max calculator | Viking Fitness">
+<meta property="og:description" content="Estimate your 1RM and view training loads from 40 to 100 percent.">
+<meta property="og:url" content="https://www.vikingfitness.es/en/one-rep-max-calculator.html">
+<meta property="og:image" content="https://www.vikingfitness.es/assets/img/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=12">
+<link rel="stylesheet" href="/assets/css/tools.css?v=12">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":["WebApplication","SportsApplication"],"name":"Viking Fitness one-rep max calculator","url":"https://www.vikingfitness.es/en/one-rep-max-calculator.html","description":"Free estimated one-rep max calculator with a percentage table.","applicationCategory":"SportsApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vikingfitness.es/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://www.vikingfitness.es/en/tools.html"},{"@type":"ListItem","position":3,"name":"1RM calculator","item":"https://www.vikingfitness.es/en/one-rep-max-calculator.html"}]}]}
+</script>
+</head>
+<body class="tools-body">
+<header class="tools-nav">
+  <div class="tools-nav__inner">
+    <a class="brand" href="/" aria-label="Viking Fitness home"><img src="/assets/img/logo.webp" alt="Viking Fitness logo" width="46" height="46"><span class="brand-name">VIKING<span>·</span>FITNESS</span></a>
+    <nav class="tools-nav__links" aria-label="Navigation"><a href="/en/tools.html">Tools</a><a href="/en/one-rep-max-calculator.html" aria-current="page">1RM</a></nav>
+    <label><span class="sr-only">Language</span><select class="tools-lang" aria-label="Language" onchange="location.href=this.value"><option value="/calculadora-1rm.html">ES</option><option value="/en/one-rep-max-calculator.html" selected>EN</option><option value="/fi/1rm-laskuri.html">FI</option><option value="/no/1rm-kalkulator.html">NO</option></select></label>
+  </div>
+</header>
+<main class="tool-shell">
+  <nav class="tool-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/en/tools.html">Tools</a><span>/</span><span aria-current="page">1RM calculator</span></nav>
+  <header class="tool-hero"><p class="eyebrow">Estimated maximal strength</p><h1>One-rep max <em>calculator</em></h1><p class="lede">Enter the weight you lifted and the completed repetitions. You will get an estimated one-rep max and a practical table of training loads.</p></header>
+  <div class="tool-layout">
+    <section class="tool-card" aria-labelledby="rmHeading">
+      <h2 id="rmHeading">Estimate your one-rep max</h2>
+      <form class="tool-form" id="rmForm" novalidate>
+        <div class="tool-form__grid">
+          <div class="tool-field tool-field--full"><label for="rmExercise">Exercise <span class="tool-help">(optional)</span></label><input id="rmExercise" maxlength="80" placeholder="For example: squat"></div>
+          <div class="tool-field"><label for="rmWeight">Weight lifted</label><input id="rmWeight" type="number" inputmode="decimal" min="0.5" max="2000" step="0.5" value="100" required><span class="tool-error" data-error-for="rmWeight"></span></div>
+          <div class="tool-field"><label for="rmReps">Completed repetitions</label><input id="rmReps" type="number" inputmode="numeric" min="1" max="12" step="1" value="5" required><span class="tool-error" data-error-for="rmReps"></span></div>
+          <div class="tool-field"><label for="rmUnit">Unit</label><select id="rmUnit"><option value="kg">Kilograms</option><option value="lb">Pounds</option></select><span class="tool-error" data-error-for="rmUnit"></span></div>
+        </div>
+        <div class="tool-actions"><button class="btn btn--solid" type="submit">Calculate 1RM</button></div>
+      </form>
+      <p class="tool-status" id="rmStatus" role="status" hidden></p>
+      <section class="tool-result" id="rmResult" hidden>
+        <h2 id="rmResultTitle" tabindex="-1">Your estimated 1RM</h2>
+        <p class="tool-result__value" id="rmValue"></p>
+        <p class="privacy-note">A mathematical estimate, not an instruction to attempt that load.</p>
+        <div class="tool-table-wrap"><table class="tool-table"><caption>Estimated load table</caption><thead><tr><th>Percentage</th><th>Load</th><th>General orientation</th></tr></thead><tbody id="rmTableBody"></tbody></table></div>
+        <div class="tool-actions" style="margin-top:18px"><button class="btn btn--ghost" id="rmCopy" type="button">Copy result</button><button class="btn btn--ghost" id="rmPrint" type="button">Print</button></div>
+      </section>
+    </section>
+    <article class="tool-guide">
+      <h2>How the 1RM calculator works</h2>
+      <p>A one-rep max is the estimated heaviest load you could lift once with sound technique. This tool uses the Epley formula: weight × (1 + repetitions ÷ 30).</p>
+      <h3>Worked example</h3><p>Five repetitions with 100 kg produce 100 × (1 + 5 ÷ 30) = 116.7 kg. The tool rounds that to a practical 116.5 kg.</p>
+      <h3>Reading the percentages</h3><p>Lower loads favour technique and speed, middle loads help accumulate volume, and higher loads lean towards strength. They are general references: exercise, experience, fatigue and programming all change the response.</p>
+      <h3>Limits and safety</h3><p>Accuracy falls as repetitions rise, so the calculator accepts no more than 12. Do not test a true maximum without suitable technique, preparation, safety equipment and supervision where needed.</p>
+      <p class="privacy-note">Privacy: exercise, weight, repetitions and results are neither saved nor sent off the device.</p>
+      <div class="related-tools"><h3>Related tools</h3><div class="related-tools__links"><a class="btn btn--ghost" href="/en/viking-workout-timer.html">Workout timer</a><a class="btn btn--ghost" href="/en/warrior-journal.html">Warrior journal</a><a class="btn btn--ghost" href="/metodo.html">Training method</a></div></div>
+    </article>
+  </div>
+</main>
+<footer class="page-footer"><p>© <script>document.write(new Date().getFullYear())</script> Viking Fitness · <a href="/privacidad.html">Privacy</a> · <a href="/aviso-legal.html">Legal notice</a></p></footer>
+<script>window.VFPageCopy={locale:'en-GB',result:'Your estimated 1RM',resultFor:'Estimated 1RM for',ready:'Calculation updated.',copied:'Result copied.',errors:{weight:'Enter a weight above zero.',reps:'Enter between 1 and 12 complete repetitions.',unit:'Select kg or lb.',form:'Check the highlighted fields.'},zones:{power:'Power and technique',volume:'Volume and hypertrophy',strength:'Strength',max:'Estimated maximum'}};</script>
+<script src="/assets/js/tools-common.js?v=12"></script><script src="/assets/js/one-rm-engine.js?v=12"></script><script src="/assets/js/one-rm.js?v=12"></script>
+</body>
+</html>

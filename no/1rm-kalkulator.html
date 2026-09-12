@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gratis 1RM-kalkulator: beregn repetisjonsmaks | Viking Fitness</title>
+<meta name="description" content="Beregn estimert repetisjonsmaks med Epley-formelen og se treningsvekter fra 40 til 100 prosent. Gratis 1RM-kalkulator for kilo og pund.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0a0c0f">
+<link rel="canonical" href="https://www.vikingfitness.es/no/1rm-kalkulator.html">
+<link rel="alternate" hreflang="es" href="https://www.vikingfitness.es/calculadora-1rm.html">
+<link rel="alternate" hreflang="en" href="https://www.vikingfitness.es/en/one-rep-max-calculator.html">
+<link rel="alternate" hreflang="fi" href="https://www.vikingfitness.es/fi/1rm-laskuri.html">
+<link rel="alternate" hreflang="no" href="https://www.vikingfitness.es/no/1rm-kalkulator.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vikingfitness.es/calculadora-1rm.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Gratis 1RM-kalkulator | Viking Fitness">
+<meta property="og:description" content="Beregn estimert repetisjonsmaks og se treningsvekter fra 40 til 100 prosent.">
+<meta property="og:url" content="https://www.vikingfitness.es/no/1rm-kalkulator.html">
+<meta property="og:image" content="https://www.vikingfitness.es/assets/img/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=12">
+<link rel="stylesheet" href="/assets/css/tools.css?v=12">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":["WebApplication","SportsApplication"],"name":"Viking Fitness 1RM-kalkulator","url":"https://www.vikingfitness.es/no/1rm-kalkulator.html","description":"Gratis kalkulator for estimert repetisjonsmaks med prosenttabell.","applicationCategory":"SportsApplication","operatingSystem":"Any","inLanguage":"no","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forside","item":"https://www.vikingfitness.es/"},{"@type":"ListItem","position":2,"name":"Verktøy","item":"https://www.vikingfitness.es/no/verktoy.html"},{"@type":"ListItem","position":3,"name":"1RM-kalkulator","item":"https://www.vikingfitness.es/no/1rm-kalkulator.html"}]}]}
+</script>
+</head>
+<body class="tools-body">
+<header class="tools-nav">
+<div class="tools-nav__inner">
+<a class="brand" href="/" aria-label="Viking Fitness forside"><img src="/assets/img/logo.webp" alt="Viking Fitness-logo" width="46" height="46"><span class="brand-name">VIKING<span>·</span>FITNESS</span></a>
+<nav class="tools-nav__links" aria-label="Navigasjon"><a href="/no/verktoy.html">Verktøy</a><a href="/no/1rm-kalkulator.html" aria-current="page">1RM</a></nav>
+<label><span class="sr-only">Språk</span><select class="tools-lang" aria-label="Språk" onchange="location.href=this.value"><option value="/calculadora-1rm.html">ES</option><option value="/en/one-rep-max-calculator.html">EN</option><option value="/fi/1rm-laskuri.html">FI</option><option value="/no/1rm-kalkulator.html" selected>NO</option></select></label>
+</div>
+</header>
+<main class="tool-shell">
+<nav class="tool-breadcrumbs" aria-label="Brødsmuler"><a href="/">Forside</a><span>/</span><a href="/no/verktoy.html">Verktøy</a><span>/</span><span aria-current="page">1RM-kalkulator</span></nav>
+<header class="tool-hero"><p class="eyebrow">Estimert maksimal styrke</p><h1><em>1RM</em>-kalkulator</h1><p class="lede">Skriv inn vekten du løftet og antall fullførte repetisjoner. Du får estimert repetisjonsmaks og en praktisk tabell med treningsvekter.</p></header>
+<div class="tool-layout">
+<section class="tool-card" aria-labelledby="rmHeading">
+<h2 id="rmHeading">Beregn repetisjonsmaks</h2>
+<form class="tool-form" id="rmForm" novalidate>
+<div class="tool-form__grid">
+<div class="tool-field tool-field--full"><label for="rmExercise">Øvelse <span class="tool-help">(valgfritt)</span></label><input id="rmExercise" maxlength="80" placeholder="For eksempel: knebøy"></div>
+<div class="tool-field"><label for="rmWeight">Løftet vekt</label><input id="rmWeight" type="number" inputmode="decimal" min="0.5" max="2000" step="0.5" value="100" required><span class="tool-error" data-error-for="rmWeight"></span></div>
+<div class="tool-field"><label for="rmReps">Fullførte repetisjoner</label><input id="rmReps" type="number" inputmode="numeric" min="1" max="12" step="1" value="5" required><span class="tool-error" data-error-for="rmReps"></span></div>
+<div class="tool-field"><label for="rmUnit">Enhet</label><select id="rmUnit"><option value="kg">Kilogram</option><option value="lb">Pund</option></select><span class="tool-error" data-error-for="rmUnit"></span></div>
+</div>
+<div class="tool-actions"><button class="btn btn--solid" type="submit">Beregn 1RM</button></div>
+</form>
+<p class="tool-status" id="rmStatus" role="status" hidden></p>
+<section class="tool-result" id="rmResult" hidden>
+<h2 id="rmResultTitle" tabindex="-1">Estimert 1RM</h2>
+<p class="tool-result__value" id="rmValue"></p>
+<p class="privacy-note">Et matematisk estimat, ikke en oppfordring til å prøve denne vekten.</p>
+<div class="tool-table-wrap"><table class="tool-table"><caption>Estimerte treningsvekter</caption><thead><tr><th>Prosent</th><th>Vekt</th><th>Generell retning</th></tr></thead><tbody id="rmTableBody"></tbody></table></div>
+<div class="tool-actions" style="margin-top:18px"><button class="btn btn--ghost" id="rmCopy" type="button">Kopier resultat</button><button class="btn btn--ghost" id="rmPrint" type="button">Skriv ut</button></div>
+</section>
+</section>
+<article class="tool-guide">
+<h2>Hvordan fungerer 1RM-kalkulatoren?</h2>
+<p>1RM er den høyeste estimerte vekten du kan løfte én gang med god teknikk. Kalkulatoren bruker Epley-formelen: vekt × (1 + repetisjoner ÷ 30).</p>
+<h3>Eksempel</h3>
+<p>Fem repetisjoner med 100 kg gir 100 × (1 + 5 ÷ 30) = 116,7 kg. Kalkulatoren runder resultatet til en praktisk belastning på 116,5 kg.</p>
+<h3>Slik tolker du prosentene</h3>
+<p>Lettere belastning passer til teknikk og hastighet, mellomområdet til treningsvolum og tyngre belastning til styrke. Dette er generelle referanser; øvelse, erfaring, tretthet og program påvirker resultatet.</p>
+<h3>Begrensninger og sikkerhet</h3>
+<p>Estimatet blir mindre presist ved mange repetisjoner, derfor er grensen 12. Ikke prøv en reell maksimal belastning uten god teknikk, forberedelse, egnet sikkerhetsutstyr og veiledning når det er nødvendig.</p>
+<p class="privacy-note">Personvern: øvelse, vekt, repetisjoner og resultat lagres ikke og sendes ikke ut av enheten.</p>
+<div class="related-tools"><h3>Relaterte verktøy</h3><div class="related-tools__links"><a class="btn btn--ghost" href="/no/viking-treningstimer.html">Treningstimer</a><a class="btn btn--ghost" href="/no/krigerens-dagbok.html">Krigerens dagbok</a><a class="btn btn--ghost" href="/metodo.html">Treningsmetoden</a></div></div>
+</article>
+</div>
+</main>
+<footer class="page-footer"><p>© <script>document.write(new Date().getFullYear())</script> Viking Fitness · <a href="/privacidad.html">Personvern</a> · <a href="/aviso-legal.html">Juridisk informasjon</a></p></footer>
+<script>window.VFPageCopy={locale:'nb-NO',result:'Estimert 1RM',resultFor:'Estimert 1RM for',ready:'Beregningen er oppdatert.',copied:'Resultatet er kopiert.',errors:{weight:'Skriv inn en vekt større enn null.',reps:'Skriv inn mellom 1 og 12 hele repetisjoner.',unit:'Velg kg eller lb.',form:'Kontroller de markerte feltene.'},zones:{power:'Kraft og teknikk',volume:'Volum og hypertrofi',strength:'Styrke',max:'Estimert maksimum'}};</script>
+<script src="/assets/js/tools-common.js?v=12"></script>
+<script src="/assets/js/one-rm-engine.js?v=12"></script>
+<script src="/assets/js/one-rm.js?v=12"></script>
+</body>
+</html>
