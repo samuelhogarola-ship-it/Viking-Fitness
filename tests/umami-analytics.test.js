@@ -109,3 +109,10 @@ test("fails closed when config points to a different Umami host", async () => {
 
   assert.equal(tracker, null);
 });
+
+test("public pages do not load Google Analytics", () => {
+  const pagesWithGoogle = collectHtmlFiles().filter((file) =>
+    /googletagmanager\.com|google-analytics\.com|gtag\s*\(/.test(readFileSync(file, "utf8")),
+  ).map((file) => path.relative(projectRoot, file));
+  assert.deepEqual(pagesWithGoogle, []);
+});
