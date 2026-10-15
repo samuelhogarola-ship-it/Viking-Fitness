@@ -116,3 +116,17 @@ test("public pages do not load Google Analytics", () => {
   ).map((file) => path.relative(projectRoot, file));
   assert.deepEqual(pagesWithGoogle, []);
 });
+
+test("production CSP allows the configured Umami script and collection origin", () => {
+  const config = JSON.parse(readFileSync(path.join(projectRoot, "umami-config.json"), "utf8"));
+  const htaccess = readFileSync(path.join(projectRoot, ".htaccess"), "utf8");
+  const policy = htaccess.match(/Content-Security-Policy "([^"]+)"/)[1];
+  const directives = Object.fromEntries(policy.split(";").map((entry) => {
+    const [name, ...sources] = entry.trim().split(/\s+/);
+    return [name, sources];
+  }));
+  assert.ok(directives["script-src"].includes(config.hostUrl));
+  assert.ok(directives["connect-src"].includes(config.hostUrl));
+  assert.deepEqual(directives["object-src"], ["'none'"]);
+  assert.deepEqual(directives["frame-ancestors"], ["'none'"]);
+});
